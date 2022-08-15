@@ -1,0 +1,74 @@
+Given an array of integers nums, find the maximum length of a subarray where the product of all its elements is positive.
+
+A subarray of an array is a consecutive sequence of zero or more values taken out of that array.
+
+Return the maximum length of a subarray with positive product.
+
+ 
+
+Example 1:
+
+Input: nums = [1,-2,-3,4]
+Output: 4
+Explanation: The array nums already has a positive product of 24.
+Example 2:
+
+Input: nums = [0,1,-2,-3,-4]
+Output: 3
+Explanation: The longest subarray with positive product is [1,-2,-3] which has a product of 6.
+Notice that we cannot include 0 in the subarray since that'll make the product 0 which is not positive.
+Example 3:
+
+Input: nums = [-1,-2,-3,0,1]
+Output: 2
+Explanation: The longest subarray with positive product is [-1,-2] or [-2,-3].
+
+
+
+solution steps;
+
+// the idea is preety simple if 
+// case 1:[-1,-2,-3,-4] even negative return length;
+// case 2: [7,-1,-2,4,-3,6] odd negative then [(7,-1),-2,4,(-3,6)] either remove 1st part until 1stnegative or remove last negative until last 0;
+// case 3 : when 0 comes [1,0,-3,-4,0,-1] then divide the array in sub section and apply the above trick
+ 
+class Solution {
+public:
+    // for case 1 and 2
+    int Cal(int start,int last,vector<int>& nums)
+    {
+        int len=(last-start+1);
+        if(start>last)return 0;
+        int count=0,fm=-1,lm=-1;
+        for(int i=start;i<=last;i++)
+        {
+            if(nums[i]<0)
+            {
+                if(fm==-1) fm=i;
+                lm=i;
+                count++;
+            }
+        }
+        if(count %2==0) return len;
+        return len-min(fm-start+1,last-lm+1);
+    }
+    
+    int getMaxLen(vector<int>& nums) {
+       nums.push_back(0);
+        int s=0,e=0;
+        int ans=0;
+        // for mading sections
+        for(int i=0;i<nums.size();i++)
+        {
+            e=i;
+            if(nums[i]==0 )
+            {
+                e=i-1;
+                ans=max(ans,Cal(s,e,nums));
+                s=i+1; e=i+1;
+            }
+        }
+        
+        return ans;
+    }
+};
