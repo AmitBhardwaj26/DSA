@@ -1,0 +1,28 @@
+//break 50 => ans=max(ans,i*f(50-i)), check all the possibility and return the maximum answer 
+
+class Solution {
+public:
+    int dp[59]={0};
+    int solve(int index,int n )
+    {
+        // base case
+         if(n<0)return 0;
+        if(n>=0 && n<=2) return 1;
+       
+        //memo
+        if(dp[n]!=-1) return dp[n];
+        
+        int ans=0;
+        for(int i=index;i<=9;i++)
+        {
+            ans=max(ans,i*solve(i,n-i));
+        }
+        return dp[n]=ans;
+    }
+    int integerBreak(int n) {
+        if(n==3) return 2;
+        
+        memset(dp,-1,sizeof(dp));
+       return solve(1,n);
+    }
+};
