@@ -15,8 +15,10 @@ Return the maximum product you can get.
 </pre>
 
 Explanation: 2 = 1 + 1, 1 × 1 = 1.
-Example 2:
 
-Input: n = 10
-Output: 36
+<p><strong>Example 2:</strong></p>
+<pre><strong>Input:</strong> Input: n = 10
+<strong>Output:</strong> 36
+</pre>
+
 Explanation: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36.
