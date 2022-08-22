@@ -1,0 +1,9 @@
+class Solution {
+public:
+    bool isPowerOfFour(float n) {
+        if(n==0) return 0;
+        float x=log2(n)/2;
+        if(floor(x)==ceil(x)) return 1;
+        return 0;
+    }
+};
