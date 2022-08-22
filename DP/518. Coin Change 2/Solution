@@ -1,0 +1,28 @@
+// simple application of unbounded knapsack problem
+
+class Solution {
+public:
+    int dp[301][5001];
+    int solve(int n,int amount, vector<int>& coins )
+    {
+        //base case
+        if(amount==0) return 1;
+        if(n==0 || amount<0) return 0;
+        
+        // memo
+        if(dp[n][amount]!=-1) return dp[n][amount];
+        
+        //choice diagram
+        int ans=0;
+        if(amount<coins[n-1])   ans=solve(n-1,amount,coins);
+        else 
+            ans=solve(n,amount-coins[n-1],coins)+ solve(n-1,amount,coins);
+        
+        return dp[n][amount]=ans;
+    }
+    
+    int change(int amount, vector<int>& coins) {
+        memset(dp,-1,sizeof(dp));
+        return solve(coins.size(),amount,coins);
+    }
+};
