@@ -23,7 +23,9 @@ horse -> rorse (replace 'h' with 'r')
 rorse -> rose (remove 'r')
 rose -> ros (remove 'e')
 <br>
-Example 2:
 
-Input: word1 = "intention", word2 = "execution"
-Output: 5
+<p><strong>Example 2:</strong></p>
+<pre><strong>Input:</strong> word1 = "intention", word2 = "execution"
+<strong>Output:</strong> 5
+</pre>
+
