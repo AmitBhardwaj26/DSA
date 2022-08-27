@@ -22,10 +22,13 @@ The answer is guaranteed to fit into a signed 32-bit integer.
 5=2+1+1+1
 5=1+1+1+1+1
 
-Example 2:
+ 
+ <p><strong>Example 2:</strong></p>
+<pre><strong>Input:</strong> Input: amount = 3, coins = [2]
+<strong>Output:</strong> 0
+</pre>
+ 
 
-Input: amount = 3, coins = [2]
-Output: 0
 Explanation: the amount of 3 cannot be made up just with coins of 2.
   
 Example 3:
