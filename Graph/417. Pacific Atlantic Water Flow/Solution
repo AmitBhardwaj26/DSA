@@ -1,0 +1,40 @@
+class Solution {
+public:
+    void  check(vector<vector<int>>& grid,int i,int j,vector<vector<bool>>& vis,bool& atl,bool& pac){
+        int n=grid.size();
+        int m=grid[0].size();
+        vector<array<int,2>> dir={{0,1},{1,0},{0,-1},{-1,0}};
+        bool ans=false;
+        if(i==n-1 || j==m-1) atl=true;
+        if(j==0 || i==0) pac=true;
+        if(pac && atl) return;
+        for(auto el:dir){
+            int r=i+el[0],c=j+el[1];
+            if(r<n && r>=0 && c<m && c>=0){
+                if(grid[r][c]<=grid[i][j] && !vis[r][c]){
+                    vis[r][c]=true;
+                    check(grid,r,c,vis,atl,pac);
+                    vis[r][c]=false;
+                }
+            }
+        }
+        return;
+    }
+    vector<vector<int>> pacificAtlantic(vector<vector<int>>& heights) {
+        vector<vector<int>> res;
+        bool atl=false,pac=false;
+        vector<vector<bool>> vis(heights.size(),vector<bool>(heights[0].size(),false));
+        for(int i=0;i<heights.size();i++){
+            for(int j=0;j<heights[0].size();j++){
+                atl=false;
+                pac=false;
+                check(heights,i,j,vis,atl,pac);
+                if(atl && pac){
+                    vector<int> v1={i,j};
+                    res.push_back(v1);
+                }
+            }
+        }
+        return res;
+    }
+};
