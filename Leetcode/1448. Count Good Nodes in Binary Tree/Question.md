@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/count-good-nodes-in-binary-tree/">1448. Count Good Nodes in Binary Tree</a></h2>
-<h3>Easy</h3>
+<h3>Medium</h3>
 <hr>
 <div><p>Given a binary tree root, a node X in the tree is named good if in the path from root to X there are no nodes with a value greater than X.
 
