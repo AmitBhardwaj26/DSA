@@ -14,14 +14,12 @@ Return the number of good nodes in the binary tree.
 <strong>Output:</strong> 4
 </pre>
 
+ 
+ <p><strong>Example 2:</strong></p>
+<pre><strong>Input:</strong> root = [3,3,null,4,2]
+<strong>Output:</strong> 3
+</pre>
 
-Example 2:
-
-
-
-Input: root = [3,3,null,4,2]
-Output: 3
-Explanation: Node 2 -> (3, 3, 2) is not good, because "3" is higher than it.
 Example 3:
 
 Input: root = [1]
