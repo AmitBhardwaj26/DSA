@@ -1,0 +1,18 @@
+// easy recurrsion based
+class Solution {
+public:
+    int traverse(TreeNode *root ,int m)
+    {
+        if(!root) return 0;
+        int ans=0;
+        if(root->val>=m) {ans++;}
+        
+          ans+=traverse(root->left,max(m,root->val))+
+               traverse(root->right,max(m, root->val));
+        return ans;
+    }
+    
+    int goodNodes(TreeNode* root) {
+        return traverse(root,INT_MIN);
+    }
+};
