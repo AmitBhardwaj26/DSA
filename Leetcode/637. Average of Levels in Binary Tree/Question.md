@@ -12,12 +12,13 @@
 <pre><strong>Input:</strong> root = [3,9,20,null,null,15,7]
 <strong>Output:</strong>  [3.00000,14.50000,11.00000]
 </pre>
+  
+  
+  <p><strong>Example 2:</strong></p>
+<pre><strong>Input:</strong> root = [3,9,20,15,7]
+<strong>Output:</strong>  [3.00000,14.50000,11.00000]
+</pre>
 
-Example 2:
-
-
-Input: root = [3,9,20,15,7]
-Output: [3.00000,14.50000,11.00000]
  
 
 Constraints:
