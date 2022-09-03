@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/numbers-with-same-consecutive-differences/">967. Numbers With Same Consecutive Differences</a></h2>
-<h3>Easy</h3>
+<h3>Medium</h3>
 <hr>
 <div><p>
   Return all non-negative integers of length n such that the absolute difference between every two consecutive digits is k.
