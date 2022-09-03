@@ -19,13 +19,13 @@ You may return the answer in any order.
 <p>Note that 070 is not a valid number, because it has leading zeroes.</p>
 </pre>
 
- 
-Example 2:
+  
+<p><strong>Example 2:</strong></p>
+<pre><strong>Input:</strong> n = 2, k = 1
+<strong>Output:</strong>   [10,12,21,23,32,34,43,45,54,56,65,67,76,78,87,89,98]
 
-Input: n = 2, k = 1
-Output: [10,12,21,23,32,34,43,45,54,56,65,67,76,78,87,89,98]
+</pre>
  
-
 Constraints:
 
 2 <= n <= 9
