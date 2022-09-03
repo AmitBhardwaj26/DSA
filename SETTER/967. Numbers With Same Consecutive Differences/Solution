@@ -1,0 +1,32 @@
+class Solution {
+public:
+    vector<int> ans;
+    map<int,int> m;
+    int p;
+    void solve(int n ,int k,int x,int prev)
+    {
+        if(n==0) {
+            cout<<x<<" ";
+            int l=floor(log10((double)x)+1);
+            if(m[x]==0 && l==p) ans.push_back(x);
+            m[x]++;
+            return;
+        }
+        
+            if((prev+k)<=9 || k==0) solve(n-1,k,(x*10 + prev+k),(prev+k));
+            if((prev-k)>=0 && k!=0) solve(n-1,k,(x*10 + prev-k),(prev-k)); 
+        
+        return ;
+    }
+    vector<int> numsSameConsecDiff(int n, int k) {
+       p=n;// cout<<endl;
+        
+        for(int i=0;i<=9;i++)
+        {
+            if(k==0 && i==0) continue;
+            solve(n,k,0,i);
+        }
+        sort(ans.begin(),ans.end());
+        return ans;
+    }
+};
