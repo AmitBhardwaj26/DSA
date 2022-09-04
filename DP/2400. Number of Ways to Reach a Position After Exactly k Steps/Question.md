@@ -1,6 +1,6 @@
 
-<h2><a href="https://leetcode.com/problems/power-of-four/">342. Power of Four</a></h2>
-<h3>Easy</h3>
+<h2><a href="https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/">2400. Number of Ways to Reach a Position After Exactly k Steps</a></h2>
+<h3>Medium</h3>
 <hr>
 <div><p>You are given two positive integers startPos and endPos. Initially, you are standing at position startPos on an infinite number line. With one step, you can move either one position to the left, or one position to the right.
 
