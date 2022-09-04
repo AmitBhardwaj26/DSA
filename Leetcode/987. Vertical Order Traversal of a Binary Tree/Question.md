@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/">987. Vertical Order Traversal of a Binary Tree</a></h2>
-<h3>Easy</h3>
+<h3>Medium</h3>
 <hr>
 <div><p>Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
 
