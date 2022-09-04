@@ -1,0 +1,38 @@
+
+// by row and colums add in adj[] then check if they are same row number then custom sort
+
+class Solution {
+public:
+    vector<pair<int,int>> ans[2005];
+    void solve(TreeNode *root,int r,int c)
+    {
+        if(!root) return ;
+        ans[c].push_back({r,root->val});
+        // cout<<c<<" "<<root->val<<"\n";
+        if(root->left) solve(root->left,r+1,c-1);
+        if(root->right) solve(root->right,r+1,c+1);
+    }
+ 
+    
+    vector<vector<int>> verticalTraversal(TreeNode* root) {
+        solve(root,1001,1001);
+        for(int i=0;i<2005;i++)
+        sort(ans[i].begin(),ans[i].end(),[](pair<int,int>&a , pair<int,int> &b)
+             
+    {
+        if(a.first==b.first) return a.second<b.second;
+        return a.first<b.first;
+    });
+        vector<vector<int>> real;
+        for(int i=0;i<2005;i++)
+        {
+                vector<int> temp;
+               for(int j=0;j<ans[i].size();j++)
+               {
+                   temp.push_back(ans[i][j].second);
+               }
+              if(temp.size()>0){ real.push_back(temp); } 
+        }
+        return real;
+    }
+};
