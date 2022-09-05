@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/n-ary-tree-level-order-traversal/">429. N-ary Tree Level Order Traversal</a></h2>
-<h3>Easy</h3>
+<h3>Medium</h3>
 <hr>
 <div><p>
   Given an n-ary tree, return the level order traversal of its nodes' values.
