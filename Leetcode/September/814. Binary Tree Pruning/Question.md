@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/binary-tree-pruning/">814. Binary Tree Pruning</a></h2>
-<h3>Easy</h3>
+<h3>Medium</h3>
 <hr>
 <div><p>Given the root of a binary tree, return the same tree where every subtree (of the given tree) not containing a 1 has been removed.
 
