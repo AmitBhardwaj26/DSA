@@ -22,7 +22,7 @@ Input: n=1
 Output: true
 Explanation: the amount of 3 cannot be made up just with coins of 2.
   
-Example 3:
+Example 3 :
 
 Input: n=5
 Output: false
