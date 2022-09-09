@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/">1996. The Number of Weak Characters in the Game</a></h2>
-<h3>Easy</h3>
+<h3>Medium</h3>
 <hr>
 <div><p>
   You are playing a game that contains multiple characters, and each of the characters has two main properties: attack and defense. You are given a 2D integer array properties where properties[i] = [attacki, defensei] represents the properties of the ith character in the game.
