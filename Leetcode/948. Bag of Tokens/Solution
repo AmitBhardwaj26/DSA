@@ -1,0 +1,21 @@
+// simple if power is less than most low power use score to credit most highest power the again check
+class Solution {
+public:
+    int bagOfTokensScore(vector<int>& t, int p) {
+        sort(t.begin(),t.end());
+        int i=0,j=t.size()-1;
+        int s=0,m=0;
+        while(i<=j)
+        {
+            if(p<t[i] && s>0) 
+            {p+=t[j--]; s--;}
+            else if(p>=t[i])
+            {
+                s++;   p-=t[i++];
+                  m=max(s,m);
+            }
+            else break;
+        }
+        return m;
+    }
+};
