@@ -1,0 +1,32 @@
+class Solution {
+public:
+    vector<int> findOriginalArray(vector<int>& c) {
+        int n=c.size();
+        if(n%2!=0) return {};
+        vector<int> ans;
+        sort(c.begin(),c.end());
+        int dp[100001]={0};
+        for(int i=0;i<n;i++)
+        {
+            if(dp[i]==0)
+            {
+               if( binary_search(c.begin()+i+1,c.end(),c[i]*2) )
+               {
+                 int j=lower_bound(c.begin()+i+1,c.end(),c[i]*2)-c.begin();
+                 
+                 while(j<n-1 && dp[j]!=0 && c[i]*2==c[j]) j++; 
+                 if(c[i]*2==c[j] && dp[j]==0)
+                 {  
+                   dp[j]=1;
+                    ans.push_back(c[i]);
+                 }
+                    else return {};
+               }
+                else return {};
+            }
+            
+        }
+        if(ans.size()*2==n) return ans;
+        return {};
+    }
+};
