@@ -22,17 +22,16 @@ An island is surrounded by water and is formed by connecting adjacent lands hori
 <strong>Output:</strong> 1
 </pre>
 
-
-Example 2:
-
-Input: grid = [
+ <p><strong>Example 2:</strong></p>
+<pre><strong>Input:</strong> Input:  grid = [
   ["1","1","0","0","0"],
   ["1","1","0","0","0"],
   ["0","0","1","0","0"],
   ["0","0","0","1","1"]
 ]
-Output: 3
- 
+<strong>Output:</strong> 3
+</pre>
+
 
 Constraints:
 
