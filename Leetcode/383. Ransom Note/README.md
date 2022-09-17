@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/power-of-four/">342. Power of Four</a></h2>
+<h2><a href="https://leetcode.com/problems/ransom-note/">383. Ransom Note</a></h2>
 <h3>Easy</h3>
 <hr>
 <div><p>Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
