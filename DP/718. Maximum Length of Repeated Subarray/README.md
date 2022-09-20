@@ -24,3 +24,35 @@ Constraints:
 1 <= nums1.length, nums2.length <= 1000
 0 <= nums1[i], nums2[i] <= 100
  
+<hr>
+ <strong>solution</strong>
+ class Solution {
+public:
+    int findLength(vector<int>& nums1, vector<int>& nums2) {
+        ios_base::sync_with_stdio(0);
+        int n = nums1.size(),m = nums2.size();
+        vector<vector<int>>dp(n,vector<int>(m,0));
+        for(int i = n-1; i>=0; i--){
+            for(int j = m-1; j>=0; j--){
+                if(i==n-1 || j==m-1){
+                    if(nums1[i]==nums2[j]){
+                        dp[i][j] = 1;
+                    }
+                }
+                else{
+                    if(nums1[i]==nums2[j]){
+                        dp[i][j] = 1+dp[i+1][j+1];
+                    }
+                }
+            }
+        }
+        int ans = 0;
+        for(int i = 0; i<n; i++){
+            for(int j = 0; j<m; j++){
+                ans = max(ans,dp[i][j]);
+            }
+        }
+        return ans;
+    }
+};
+ 
