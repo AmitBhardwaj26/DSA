@@ -2,7 +2,9 @@
 <h2><a href="https://leetcode.com/problems/maximum-length-of-repeated-subarray/">718. Maximum Length of Repeated Subarray</a></h2>
 <h3>Medium</h3>
 <hr>
-<div><p>Given two integer arrays nums1 and nums2, return the maximum length of a subarray that appears in both arrays.
+<div><p>
+ 
+ Given two integer arrays nums1 and nums2, return the maximum length of a subarray that appears in both arrays.
 
 </p>
 
@@ -25,7 +27,7 @@ Constraints:
 0 <= nums1[i], nums2[i] <= 100
  
 <hr>
- <strong>solution</strong>
+ <strong><b>Solution</b></strong>
  <br>
  <p><pre>
  class Solution {
