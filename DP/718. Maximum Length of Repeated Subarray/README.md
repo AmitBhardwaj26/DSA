@@ -26,6 +26,8 @@ Constraints:
  
 <hr>
  <strong>solution</strong>
+ <br>
+ <p><pre>
  class Solution {
 public:
     int findLength(vector<int>& nums1, vector<int>& nums2) {
@@ -55,4 +57,5 @@ public:
         return ans;
     }
 };
- 
+ </pre>
+</p>
