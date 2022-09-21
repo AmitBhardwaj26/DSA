@@ -38,7 +38,7 @@ Constraints:
 0 <= indexi < nums.length
 </pre>
 <hr>
- <strong><b>Solution</b></strong>
+ <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
  
