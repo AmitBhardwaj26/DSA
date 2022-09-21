@@ -41,33 +41,24 @@ Constraints:
  <strong><b>Solution</b></strong>
  <br>
  <p><pre>
- class Solution {
+class Solution {
 public:
-    int findLength(vector<int>& nums1, vector<int>& nums2) {
-        ios_base::sync_with_stdio(0);
-        int n = nums1.size(),m = nums2.size();
-        vector<vector<int>>dp(n,vector<int>(m,0));
-        for(int i = n-1; i>=0; i--){
-            for(int j = m-1; j>=0; j--){
-                if(i==n-1 || j==m-1){
-                    if(nums1[i]==nums2[j]){
-                        dp[i][j] = 1;
-                    }
-                }
-                else{
-                    if(nums1[i]==nums2[j]){
-                        dp[i][j] = 1+dp[i+1][j+1];
-                    }
-                }
-            }
+    vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
+        int ans=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            if(nums[i]%2==0) ans+=nums[i];
         }
-        int ans = 0;
-        for(int i = 0; i<n; i++){
-            for(int j = 0; j<m; j++){
-                ans = max(ans,dp[i][j]);
-            }
+        vector<int> v;
+        for(int i=0;i<q.size();i++)
+        {
+            int val=q[i][0],ind=q[i][1];
+            if(nums[ind]%2==0) ans-=nums[ind];
+            nums[ind]+=val;
+            if(nums[ind]%2==0) ans+=nums[ind];
+            v.push_back(ans);
         }
-        return ans;
+        return v;
     }
 };
  </pre>
