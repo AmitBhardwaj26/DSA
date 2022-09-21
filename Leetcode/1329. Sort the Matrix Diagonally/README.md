@@ -35,8 +35,8 @@ n == mat[i].length
  <br>
  <pre>
  
-       class Solution {
-public:
+ class Solution {
+   public:
     vector<vector<int>> diagonalSort(vector<vector<int>>& mat) {
         int n=mat.size(),m=mat[0].size(); 
       
