@@ -31,9 +31,10 @@ Output: 72
  
 
 Constraints:
-
+<pre>
 1 <= k <= n <= 105
 speed.length == n
 efficiency.length == n
 1 <= speed[i] <= 105
 1 <= efficiency[i] <= 108
+</pre>
