@@ -35,26 +35,47 @@ n == mat[i].length
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+       class Solution {
+public:
+    vector<vector<int>> diagonalSort(vector<vector<int>>& mat) {
+        int n=mat.size(),m=mat[0].size(); 
+      
+        for(int j=0;j<m;j++)
+        {
+              vector<int> v;
+            int x=0,y=j,index=0;
+            while(x<n && y<m)
+            {
+                v.push_back(mat[x][y]);
+                x+=1,y+=1;
+            }
+            sort(v.begin(),v.end());
+            x=0,y=j; 
+            while(x<n && y<m && index<v.size())
+            {
+               mat[x][y]=v[index++];
+                x++,y++;
+            }
+        }
+       for(int i=1;i<n;i++)
+        {
+             vector<int> v;
+            int x=i,y=0,index=0;
+            while(x<n && y<m)
+            {
+                v.push_back(mat[x][y]);
+                x+=1,y+=1;
+            }
+            sort(v.begin(),v.end());
+            x=i,y=0; 
+            while(x<n && y<m && index<v.size())
+            {
+               mat[x][y]=v[index++];
+                x++,y++;
+            }
+        }
+            return mat;
+    }
+};
  </pre>
 
