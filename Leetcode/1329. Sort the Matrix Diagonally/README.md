@@ -22,13 +22,14 @@ Input: mat = [[11,25,66,1,69,7],[23,55,17,45,15,52],[75,31,36,44,58,8],[22,27,33
 Output: [[5,17,4,1,52,7],[11,11,25,45,8,69],[14,23,25,44,58,15],[22,27,31,36,50,66],[84,28,75,33,55,68]]
 
 Constraints:
+    
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+m == mat.length
+n == mat[i].length
+1 <= m, n <= 100
+1 <= mat[i][j] <= 100
 </pre>
+    
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
  <br>
