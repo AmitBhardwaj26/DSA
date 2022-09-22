@@ -15,7 +15,7 @@
 </pre>
 
 
-Constraints:
+<h3>Constraints:</h3>
 <pre>
 1 <= s.length <= 5 * 104
 s contains printable ASCII characters.
@@ -28,18 +28,19 @@ All the words in s are separated by a single space.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-class Solution {
- public:
-    string reverseWords(string s) {
-        int j=0,i=0;
-       for(i=0;i<s.size();i++)
-       {
-           if(s[i]==' ') { reverse(s.begin()+j,s.begin()+i); j=i+1;}
-       }
-        reverse(s.begin()+j,s.begin()+i); 
-        return s;
-    }
-};
+
+    class Solution {
+     public:
+        string reverseWords(string s) {
+            int j=0,i=0;
+           for(i=0;i<s.size();i++)
+           {
+               if(s[i]==' ') { reverse(s.begin()+j,s.begin()+i); j=i+1;}
+           }
+            reverse(s.begin()+j,s.begin()+i); 
+            return s;
+        }
+    };
+    
  </pre>
 
