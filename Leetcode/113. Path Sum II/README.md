@@ -19,8 +19,10 @@ There are two paths whose sum equals targetSum:
 5 + 8 + 4 + 5 = 22
 </pre>
   
-Input: root = [1,2,3], targetSum = 5
-Output: []
+<p><strong>Example 2:</strong></p>
+<pre><strong>Input:</strong>  root = [1,2,3], targetSum = 5
+<strong>Output:</strong> []
+</pre>  
 
 Constraints:
 <pre>
