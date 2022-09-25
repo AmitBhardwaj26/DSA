@@ -22,7 +22,9 @@ After modulo 109 + 7, the result is 505379714.
 </pre>
 
 Constraints:
+<pre>
 1 <= n <= 105
+</pre>
 
 </pre>
 <hr>
