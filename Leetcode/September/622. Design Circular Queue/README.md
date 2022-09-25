@@ -49,27 +49,59 @@ At most 3000 calls will be made to enQueue, deQueue, Front, Rear, isEmpty, and i
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+ // the simple approch is that to made a vector of max  length and take two pointer take the size k=k+1 , 
+ // initailise i and j to 0 and 0 front will be (i+1)%k and rear at j full is (j+1)%k==i empty if i==j
+
+class MyCircularQueue {
+public:
+    int v[1002]; int i=0,j=0, k;
+    MyCircularQueue(int p) 
+    {
+        k=p+1;
+    }
+    
+    bool enQueue(int value) {
+        if(!isFull()) 
+        {
+            j=(j+1)%k; 
+            v[j]=value;
+            return 1;
+        }
+        return 0;
+    }
+    
+    bool deQueue() {
+         if(!isEmpty()) {
+            i=(i+1)%k; 
+            return 1;
+        }
+        return 0;
+    }
+    
+    int Front() {
+        if(isEmpty()) return -1;
+        return v[(i+1)%k];
+    }
+    
+    int Rear() 
+    {
+        if(isEmpty()) return -1;
+        return v[j];
+    }
+    
+    bool isEmpty() {
+        if(i==j) return 1;
+        return 0;
+    }
+    
+    bool isFull() 
+    {
+        if((j+1)%k ==i)    return 1;
+        return 0;
+    }
+};
+
+
           
  </pre>
 
