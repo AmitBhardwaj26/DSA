@@ -18,46 +18,47 @@ An integer a is closer to x than an integer b if:
 <strong>Output:</strong>  [1,2,3,4]
 </pre>
 
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
+<p><strong>Example 2:</strong></p>
+<pre><strong>Input:</strong>  arr = [1,2,3,4,5], k = 4, x = -1
+<strong>Output:</strong>  [1,2,3,4]
+</pre>
+
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= k <= arr.length
+1 <= arr.length <= 104
+arr is sorted in ascending order.
+-104 <= arr[i], x <= 104
 </pre>
+
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+    vector<int> findClosestElements(vector<int>& arr, int k, int x) {
+        sort(arr.begin(),arr.end());
+        vector<pair<int,int>> v;
+        for(int i=0;i<arr.size();i++)
+        {
+            int y=abs(arr[i]-x);
+          v.push_back({y,arr[i]});
+        }
+        sort(v.begin(),v.end());
+        vector<int> ans;
+        for(int i=0;i<k;i++)
+        {
+            ans.push_back(v[i].second);
+        }
+        sort(ans.begin(),ans.end());
+        return ans;
+    }
+};
           
  </pre>
 
