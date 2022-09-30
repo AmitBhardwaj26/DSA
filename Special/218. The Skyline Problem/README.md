@@ -51,26 +51,40 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+        class Solution {
+public:
+    vector<vector<int>> getSkyline(vector<vector<int>>& buildings) 
+  {
+    // upper corner points of all buildings (sorted by x)
+    set<vector<int>> upper_corners;     
+    for (auto& building : buildings) {
+      int L = building[0],  R = building[1], H = building[2];
+      
+      // NOTE: when x coordinates are same:
+      upper_corners.insert({L,-H}); // corner (L,-H): higher left upper corner comes before lower left upper corner;
+      upper_corners.insert({R, H}); // corner (R, H): left upper corner comes before right upper corner
+    }
+    
+    vector<vector<int>> res;
+    multiset<int> heights = {0}; // sorted building heights (up to sweep line) 
+    
+    // sweep line to scan upper_corners (to detect max height change)
+    for (auto& upper_corner : upper_corners) 
+    {
+      int preMaxH = *heights.rbegin(); // previous max height (before upper_corner)
+      int X = upper_corner[0], H = upper_corner[1];
+      if (H < 0)
+        heights.insert(-H); // start a new build
+      else
+        heights.erase(heights.find(H)); // end a previous building
+      
+      int curMaxH = *heights.rbegin(); // current max height
+      if (curMaxH != preMaxH) // max height change found
+        res.push_back({X, curMaxH});
+    }
+    
+    return res;
+  }
+};
  </pre>
 
