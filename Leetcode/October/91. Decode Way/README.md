@@ -29,8 +29,8 @@ The test cases are generated so that the answer fits in a 32-bit integer.
   
 Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
+Input:  s = "226"
+Output: 3
  
 
 Constraints:
@@ -46,26 +46,29 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+        class Solution {
+public:
+    int dp[102];
+    int solve(string s,int i)
+    {
+        if(i>=s.size()  ) return 1;
+        if(s[i]=='0') return 0;
+         if(dp[i]!=-1) return dp[i];
+        
+            int x=s[i]-'0'; bool c=0;
+        if(i+1<s.size()) {x=x*10 +s[i+1]-'0'; c=1;}
+    
+        //choice diagram
+        if(x<=26 && c) dp[i]= solve(s,i+2)+solve(s,i+1);
+        else dp[i]=solve(s,i+1);
+        return dp[i];
+    }
+    
+    
+    int numDecodings(string s) {
+        memset(dp,-1,sizeof(dp));
+       return max(0,solve(s,0));
+    }
+};
  </pre>
 
