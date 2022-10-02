@@ -28,26 +28,30 @@ Expected Auxiliary Space: O(N)
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class Solution {
+public:
+    int minChar(string str)
+    {
+        int n=str.size();
+        int i=0,j=n-1,j2=j,count=0;
+        while(i<j)
+        {
+            if(str[i]==str[j])
+            {
+                i++,j--;
+            }
+            else 
+            {
+                count++;
+                j2--;
+                j=j2; 
+                i=0;
+            }
+        }
+        return count;
+        //Write your code here
+    }
+};
           
  </pre>
 
