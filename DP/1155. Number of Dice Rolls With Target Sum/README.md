@@ -36,27 +36,34 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+ // unbounbed knapsack with check that if n==0 and and target==0 the ans++;
+class Solution {
+public:
+    int M=1e9+7;
+    int dp[31][1001];
+    int solve(int n,int k,int tar)
+    {
+      if(tar==0 && n==0) return 1;
+      if(n==0 || tar<0) return 0;
+      
+      // dp 
+      if(dp[n][tar]!=-1) return dp[n][tar];
+      
+      int ans=0;
+      for(int i=1;i<=k;i++)
+      {
+        
+         ans=(ans+solve(n-1,k,tar-i))%M;
+      }
+      return dp[n][tar]=ans%M; 
+    }
+
+    int numRollsToTarget(int n, int k, int target) {
+        memset(dp,-1,sizeof(dp));
+        return solve(n,k,target);
+        
+    }
+};
           
  </pre>
 
