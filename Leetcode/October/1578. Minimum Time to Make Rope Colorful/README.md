@@ -11,7 +11,6 @@ Return the minimum time Bob needs to make the rope colorful.
 
 </p>
 
-
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong> colors = "abaac", neededTime = [1,2,3,4,5]
 <strong>Output:</strong> 3
@@ -41,21 +40,24 @@ colors contains only lowercase English letters.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
 
-<pre> 
-  class Solution {
+
+  class Solution 
+  {
+  <pre>
    public:
-    int minCost(string col, vector<int>& nt) 
+    int minCost(string col, vector<int>& nit) 
     {
-        int ans=0,z=nt[0],sum=nt[0];         
-        for(int i=1; i<col.size();i++)
+        int ans=0,z=nit[0],sum=nit[0],n=col.size();         
+        while(i!=n)
         {
-            sum+=nt[i];
-            if(col[i]==col[i-1]) z=max(z,nt[i]);
+            sum+=nit[i];
+            if(col[i]==col[i-1]) z=max(z,nit[i]);
             else 
             {
                 ans+=z;
-                z=nt[i];
+                z=nit[i];
             }
+            i++;
         }
         return sum-ans-z;
     }
