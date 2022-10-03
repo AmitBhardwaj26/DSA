@@ -16,11 +16,12 @@ Return the minimum time Bob needs to make the rope colorful.
 <pre><strong>Input:</strong> colors = "abaac", neededTime = [1,2,3,4,5]
 <strong>Output:</strong> 3
 </pre>
+
 <pre>
 Explanation: In the above image, 'a' is blue, 'b' is red, and 'c' is green.
 Bob can remove the blue balloon at index 2. This takes 3 seconds.
 There are no longer two consecutive balloons of the same color. Total time = 3.
-  </pre>
+</pre>
   
 Example 2:
 
@@ -35,16 +36,18 @@ n == colors.length == neededTime.length
 1 <= neededTime[i] <= 104
 colors contains only lowercase English letters.
 </pre>
+
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
  <br>
- <pre>
- class Solution {
-public:
-    int minCost(string col, vector<int>& nt) {
-        int ans=0,z=nt[0],sum=nt[0];
-        // priority_queue<int,vector<int>,greater<int>()> pq; 
-        for(int i=1;i<col.size();i++)
+
+<pre> 
+  class Solution {
+   public:
+    int minCost(string col, vector<int>& nt) 
+    {
+        int ans=0,z=nt[0],sum=nt[0];         
+        for(int i=1; i<col.size();i++)
         {
             sum+=nt[i];
             if(col[i]==col[i-1]) z=max(z,nt[i]);
@@ -56,7 +59,6 @@ public:
         }
         return sum-ans-z;
     }
-};
-          
- </pre>
+  };
+</pre>
 
