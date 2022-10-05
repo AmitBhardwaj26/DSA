@@ -41,27 +41,44 @@ The depth of the tree is in the range [1, 104].
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
+ class Solution {
+public:
+    TreeNode* addOneRow(TreeNode* root, int val, int d) {
+        TreeNode *temp;
+        if(d==1) 
+        {
+            temp=new TreeNode(val); temp->left=root; return temp;
+        }
+
+        queue<TreeNode*> q;
+        q.push(root);
+        while(!q.empty())
+        {
+            int x=q.size();
+            if(d==2)
+            {
+              while(x--)
+              {
+                temp=q.front(); q.pop();
+                TreeNode *leftt= temp->left,*rightt=temp->right ;
+                TreeNode *newleft=new TreeNode(val); 
+                TreeNode *newright=new TreeNode(val);
+                  newleft->left=leftt; 
+                 newright->right=rightt;
+                 temp->left=newleft, temp->right=newright;
               }
-          };
-          
+               return root;
+            }
+            while(x--)
+            {
+                temp=q.front(); q.pop();
+                if(temp->left) q.push(temp->left);
+                if(temp->right) q.push(temp->right);
+            }
+           d--;
+        }
+        return root;
+    }
+};
  </pre>
 
