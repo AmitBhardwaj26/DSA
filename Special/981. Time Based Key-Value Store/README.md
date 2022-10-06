@@ -27,32 +27,42 @@ Output
 
 Constraints:
 <pre>
+1 <= key.length, value.length <= 100
+key and value consist of lowercase English letters and digits.
+1 <= timestamp <= 107
+All the timestamps timestamp of set are strictly increasing.
+At most 2 * 105 calls will be made to set and get.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+        class TimeMap {
+    unordered_map<string, vector<pair<int, string>>> mpp;
+public:
+    TimeMap() {
+        
+    }
+    
+    void set(string key, string value, int timestamp) {
+        mpp[key].push_back(make_pair(timestamp, value));
+    }
+    
+    string get(string key, int timestamp) {
+        string res;
+        int low = 0, high = mpp[key].size() - 1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (mpp[key][mid].first <= timestamp) {
+                res = mpp[key][mid].second;
+                low = mid + 1;
+            }
+            else
+                high = mid - 1;
+        }
+        return res;
+    }
+};
  </pre>
 
