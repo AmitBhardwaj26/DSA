@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/my-calendar-iii/description/">732. My Calendar III</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
  A k-booking happens when k events have some non-empty intersection (i.e., there is some time that is common to all k events.)
@@ -41,27 +41,28 @@ At most 400 calls will be made to book.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+//this question is based on continious allocation and dealcation in the memory 
+//version of kadane algo
+class MyCalendarThree {
+public:
+    map<int,int> m;
+    MyCalendarThree() {
+        
+    }
+    
+    int book(int start, int end) {
+        m[start]++;
+        m[end]--;
+        int val=0,ans=0;
+        for(auto it:m)
+        {
+            val+=it.second;
+            ans=max(ans,val);
+        }
+        return ans;
+    }
+};
+
           
  </pre>
 
