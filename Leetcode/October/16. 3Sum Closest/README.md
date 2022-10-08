@@ -36,19 +36,19 @@ public:
     int threeSumClosest(vector<int>& nums, int tar) {
         sort(nums.begin(),nums.end());
         int ans=0,com=INT_MAX,i=0,n=nums.size();
-        while(i<n-1)
+        while(i < n-1)
         {
             int j=i+1,k=n-1;
-            while(j<k)
+            while(j < k)
             {
                int tsum=nums[i]+nums[j]+nums[k];
-               if(abs(tar-tsum)<com)
+               if(abs(tar-tsum) < com)
                {
                    com=abs(tar-tsum);
                    ans=tsum;
-                //    cout<<com<<" "<<ans<<"\n";
+               
                }
-               if(tsum>tar) k--;
+               if(tsum > tar) k--;
                else j++;
             }
             i++;
