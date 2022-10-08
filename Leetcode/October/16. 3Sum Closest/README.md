@@ -23,37 +23,39 @@ Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+3 <= nums.length <= 1000
+-1000 <= nums[i] <= 1000
+-104 <= target <= 104
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+ class Solution {
+public:
+    int threeSumClosest(vector<int>& nums, int tar) {
+        sort(nums.begin(),nums.end());
+        int ans=0,com=INT_MAX,i=0,n=nums.size();
+        while(i<n-1)
+        {
+            int j=i+1,k=n-1;
+            while(j<k)
+            {
+               int tsum=nums[i]+nums[j]+nums[k];
+               if(abs(tar-tsum)<com)
+               {
+                   com=abs(tar-tsum);
+                   ans=tsum;
+                //    cout<<com<<" "<<ans<<"\n";
+               }
+               if(tsum>tar) k--;
+               else j++;
+            }
+            i++;
+        }
+        return ans;
+    }
+};
           
  </pre>
 
