@@ -32,26 +32,27 @@ palindrome consists of only lowercase English letters.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+    //case 1: length is 1
+//case 2: ab...ba replace b with with a
+//case 3: aabab then abb
+//case 3: aaa last a with b
+//both in case 2 and 3 replace last one
+
+class Solution {
+public:
+    string breakPalindrome(string p) {
+        //case 1
+        if(p.size()==1) return "";
+          int n=p.size(), arr[26]={0};
+          for(int i=0;i<n;i++) arr[p[i]-'a']++;
+          if(arr[0]<n-1) 
+          {
+              for(int i=0;i<n;i++)
+               {if(p[i]!='a') {p[i]='a'; break;}}
+          }
+          else p[n-1]='b';
+          return p;
+    }
+};   
  </pre>
 
