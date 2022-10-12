@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/largest-perimeter-triangle/description/">976. Largest Perimeter Triangle</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
 Given an integer array nums, return the largest perimeter of a triangle with a non-zero area, formed from three of these lengths. If it is impossible to form any triangle of a non-zero area, return 0.
@@ -26,26 +26,19 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class Solution {
+public:
+    int largestPerimeter(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        for(int i=nums.size()-1;i>=2;i--)
+        {
+            if(nums[i]<(nums[i-1]+nums[i-2])) 
+                return nums[i]+nums[i-1]+nums[i-2];
+        }
+        return 0;
+    }
+    
+};
           
  </pre>
 
