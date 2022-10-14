@@ -37,26 +37,23 @@ The number of nodes in the list is in the range [1, 105].
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+    ListNode* deleteMiddle(ListNode* head) {
+        ListNode *t=head; int l=0;
+        while(t) { l++; t=t->next;}
+        int m=l/2;
+        t=head; m--; 
+       if(l==1) return NULL;
+        while(m--)
+        {
+            t=t->next;
+        }
+        if(l>1) t->next=t->next->next;
+       
+        return head;
+    }
+};
           
  </pre>
 
