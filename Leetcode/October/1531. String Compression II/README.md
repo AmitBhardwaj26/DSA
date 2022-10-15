@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/string-compression-ii/description/">1531. String Compression II</a></h2>
-<h3>Medium</h3>
+<h3>hard</h3>
 <hr>
 <div><p>
 Run-length encoding is a string compression method that works by replacing consecutive identical characters (repeated 2 or more times) with the concatenation of the character and the number marking the count of the characters (length of the run). For example, to compress the string "aabccc" we replace "aa" by "a2" and replace "ccc" by "c3". Thus the compressed string becomes "a2bc3".
@@ -28,7 +28,9 @@ Output: [0]
 
 Constraints:
 <pre>
-
+1 <= s.length <= 100
+0 <= k <= s.length
+s contains only lowercase English letters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
