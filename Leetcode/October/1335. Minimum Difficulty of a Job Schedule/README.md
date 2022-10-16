@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/description/">1335. Minimum Difficulty of a Job Schedule</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
 You want to schedule a list of jobs in d days. Jobs are dependent (i.e To work on the ith job, you have to finish all the jobs j where 0 <= j < i).
@@ -35,6 +35,35 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
+ class Solution {
+public:
+    int t[301][11];
+    int solve(vector<int>& mat, int n, int idx, int d) {
+        if(d == 1)
+            return *max_element(begin(mat)+idx, end(mat));
+        
+        if(t[idx][d] != -1)
+            return t[idx][d];
+    
+        
+        int Max = INT_MIN;
+        int result = INT_MAX;
+        
+        for(int i = idx; i<=n-d; i++) {
+            Max = max(Max, mat[i]);
+            result = min(result, Max + solve(mat, n, i+1, d-1));
+        }
+        return t[idx][d] = result;
+    }
+    
+    int minDifficulty(vector<int>& jobDifficulty, int d) {
+        int n = jobDifficulty.size();
+        if(n < d)
+            return -1;
+        memset(t, -1, sizeof(t));
+        return solve(jobDifficulty, n, 0, d);
+    }
+};
           
  </pre>
 
