@@ -28,11 +28,11 @@ sentence consists of lowercase English letters.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
-      class Solution {
+   class Solution {
      public:
          bool checkIfPangram(string s) {
              int a[26]={0};
-             for(int i=0;i<s.size();i++)
+             for(int i=0;i < s.size();i++)
                  a[s[i]-'a']++;
              for(int i=0;i<26;i++) if(a[i]==0) return 0;
              return 1;
