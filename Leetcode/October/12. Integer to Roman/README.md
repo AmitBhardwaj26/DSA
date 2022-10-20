@@ -46,26 +46,21 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+    string intToRoman(int num) {
+        int normal[]={1000,900,500,400,100,90,50,40,10,9,5,4,1};
+        string roman[]={"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+        string res;
+        for(int i=0;i<13;i++){
+            while(num>=normal[i]){
+                res.append(roman[i]);
+                num-=normal[i];
+            }
+        }
+        return res;
+    }
+};
           
  </pre>
 
