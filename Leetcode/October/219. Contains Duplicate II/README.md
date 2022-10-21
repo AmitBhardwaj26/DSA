@@ -25,8 +25,8 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-public:
+class Solution {
+ public:
     bool containsNearbyDuplicate(vector<int>& nums, int k) {
      vector<pair<int,int>> v;
         for(int i=0;i<nums.size();i++)
