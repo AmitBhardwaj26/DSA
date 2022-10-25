@@ -36,22 +36,22 @@ word1[i] and word2[i] consist of lowercase letters.
  <br>
  <pre>
  
-        class Solution {
-public:
-    bool arrayStringsAreEqual(vector<string>& w1, vector<string>& w2) {
-        int i=0,ii=0,j=0,jj=0;
-        while(i<w1.size() && j<w2.size())
-        {
-            while(ii<w1[i].size() && jj<w2[j].size())
-            {
-               if(w1[i][ii] != w2[j][jj]) return 0;
-               ii++,jj++;
-            }
-            if(ii==w1[i].size()) { ii=0; i++; }
-            if(jj==w2[j].size()) { jj=0; j++; }
-        }
-        if(i!=w1.size() || j!=w2.size()) return 0;
-        return 1;
+     class Solution {
+          public:
+              bool arrayStringsAreEqual(vector<string>& w1, vector<string>& w2) {
+                  int i=0,ii=0,j=0,jj=0;
+                  while(i<w1.size() && j<w2.size())
+                  {
+                      while(ii<w1[i].size() && jj<w2[j].size())
+                      {
+                         if(w1[i][ii] != w2[j][jj]) return 0;
+                         ii++,jj++;
+                      }
+                      if(ii==w1[i].size()) { ii=0; i++; }
+                      if(jj==w2[j].size()) { jj=0; j++; }
+                  }
+                  if(i!=w1.size() || j!=w2.size()) return 0;
+                  return 1;
 
     }
 };
