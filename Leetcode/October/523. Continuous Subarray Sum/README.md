@@ -32,26 +32,26 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class Solution {
+                 public:
+                     bool checkSubarraySum(vector<int>& nums, int k) {
+                         int n=nums.size();
+                         long long pre[100001]={0};
+                         pre[0]=nums[0];
+                         for(int i=1;i<n;i++) pre[i]=nums[i]+pre[i-1];
+                         map<long long,int> m;
+                         int temp=k-(nums[0]%k);
+                         for(int i=1;i<n;i++)
+                         {
+                             if(pre[i]%k==0) { return 1;}
+                             int x=k-(pre[i]%k);
+                             if(m[x]==1) {  return 1;}
+                             m[temp]=1;
+                             temp=k- (pre[i]%k);
+                         }
+                       return 0;
+                     }
+                 };
           
  </pre>
 
