@@ -40,26 +40,31 @@ img2[i][j] is either 0 or 1.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+          // brute force of all 1 that collide they have same difference of indexes
+// we can use pair as a key in map
+class Solution {
+public:
+    int largestOverlap(vector<vector<int>>& img1, vector<vector<int>>& img2) {
+        vector<pair<int,int>> p1,p2;
+        int n=img1.size();
+        for(int i=0;i<n;i++) for(int j=0;j<n;j++) if(img1[i][j]==1) p1.push_back({i,j});
+        for(int i=0;i<n;i++) for(int j=0;j<n;j++) if(img2[i][j]==1) p2.push_back({i,j});
+        
+        map<pair<int,int>,int> m;
+        int ans=0;
+        for(int i=0;i<p1.size();i++)
+        {
+            for(int j=0;j<p2.size();j++)
+            {
+                int x=p2[j].first-p1[i].first,y=p2[j].second- p1[i].second;
+                m[{x,y }]++;
+                ans=max(ans,m[{x,y}]);
+            }
+        }
+    return ans;
+
+    }
+};
           
  </pre>
 
