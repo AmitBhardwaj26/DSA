@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/earliest-possible-day-of-full-bloom/description/">2136. Earliest Possible Day of Full Bloom</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
   
@@ -40,26 +40,27 @@ n == plantTime.length == growTime.length
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         // main concept is sort with growtime with max sum planttime +growtime in end
+        class Solution {
+        public:
+            int earliestFullBloom(vector<int>& p, vector<int>& g) {
+                vector<pair<int,int>> v;
+                for(int i=0;i<p.size();i++)
+                {
+                    v.push_back({g[i],p[i]});
+                }
+                sort(v.begin(),v.end(),[](pair<int,int> p1 ,pair<int,int> p2){
+                    return p1.first>p2.first;
+                } );
+                int ans=0,start=0;
+                for(int i=0;i<v.size();i++)
+                {
+                     start+=v[i].second;
+                     ans=max(ans,start+v[i].first); // most imp line
+                }
+                return ans;
+            }
+        };
           
  </pre>
 
