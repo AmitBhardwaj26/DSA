@@ -36,26 +36,44 @@ start, end, and bank[i] consist of only the characters ['A', 'C', 'G', 'T'].
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class Solution {
+            public:
+                int minMutation(string start, string end, vector<string>& bank) {
+                    int n = bank.size();
+                    int len = start.length();
+                    set<string> s;
+                    for(int i = 0; i < n; i++)
+                        s.insert(bank[i]);
+                    if(s.count(end) == 0)
+                        return -1;
+                    string all = "ACGT";
+                    unordered_map<string, bool> vis;
+                    queue<pair<string, int>> q;
+                    q.push({start, 0});
+                    while(!q.empty())
+                    {
+                        string node = q.front().first;
+                        int dis = q.front().second;
+                        q.pop();
+                        if(node == end)
+                            return dis;
+                        for(int i = 0; i < len; i++)
+                        {
+                            for(int j = 0; j < 4; j++)
+                            {
+                                string check = node;
+                                check[i] = all[j];
+                                if(s.count(check) != 0 && vis[check] != true)
+                                {
+                                    vis[check] = true;
+                                    q.push({check, dis + 1});
+                                }
+                            }
+                        }
+                    }
+                    return -1;
+                }
+            };
           
  </pre>
 
