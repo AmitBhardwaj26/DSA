@@ -39,38 +39,38 @@ words[i] consists of lowercase English letters.
  <pre>
  
          class Solution {
-public:
-    int longestPalindrome(vector<string>& w) {
-        int count=0;
-        unordered_map<string,int> m,m2;
-         for(int i=0;i<w.size();i++)
-        {
-            string s=w[i];
-            reverse(s.begin(),s.end());
-            if(s==w[i]) {m2[s]++;}
-            else m[w[i]]++;
-        }
-        bool check=0;
-        for(auto it: m2)
-        { 
-            if(it.second%2==0)  count+=it.second;
-            else 
-            {
-                if(check==0) { count++; check=1; }
-                count+=it.second-1;
-            }
+         public:
+             int longestPalindrome(vector<string>& w) {
+                 int count=0;
+                 unordered_map<string,int> m,m2;
+                  for(int i=0;i<w.size();i++)
+                 {
+                     string s=w[i];
+                     reverse(s.begin(),s.end());
+                     if(s==w[i]) {m2[s]++;}
+                     else m[w[i]]++;
+                 }
+                 bool check=0;
+                 for(auto it: m2)
+                 { 
+                     if(it.second%2==0)  count+=it.second;
+                     else 
+                     {
+                         if(check==0) { count++; check=1; }
+                         count+=it.second-1;
+                     }
 
-        }
+                 }
 
-        int ans=count;
-        for(auto it : m)
-        {
-            string s=it.first;
-            reverse(s.begin(),s.end());
-           if(m.find(s)!=m.end()) ans+=min(m[s],it.second);
-        }
-        return 2*ans;
-    }
-};
+                 int ans=count;
+                 for(auto it : m)
+                 {
+                     string s=it.first;
+                     reverse(s.begin(),s.end());
+                    if(m.find(s)!=m.end()) ans+=min(m[s],it.second);
+                 }
+                 return 2*ans;
+             }
+         };
  </pre>
 
