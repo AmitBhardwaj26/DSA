@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/word-search-ii/description/">212. Word Search II</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
  Given an m x n board of characters and a list of strings words, return all words on the board.
