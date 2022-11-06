@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/orderly-queue/">899. Orderly Queue</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
 You are given a string s and an integer k. You can choose one of the first k letters of s and append it at the end of the string..
@@ -26,11 +26,8 @@ In the second move, we move the 3rd character 'c' to the end, obtaining the fina
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= k <= s.length <= 1000
+s consist of lowercase English letters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
