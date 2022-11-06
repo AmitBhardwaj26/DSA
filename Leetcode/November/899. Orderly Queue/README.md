@@ -34,26 +34,26 @@ s consist of lowercase English letters.
  <br>
  <pre>
  
-          class Solution {
+         class Solution {
           public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
+              string orderlyQueue(string s, int k) {
+                 if(k==1)
+                 {
+                    string ans=s;
+                    s+=s;
+                    int x=ans.size();
+                    for(int i=0;i<s.size()-x;i++)
+                    {
+                        ans=min(ans,s.substr(i,x));
+                    }
+                     return ans;
+                 }   
+                 else
+                 {
+                     sort(s.begin(),s.end());
+                     return s; 
+                 }
               }
           };
-          
  </pre>
 
