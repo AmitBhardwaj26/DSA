@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/maximum-69-number/description/">1323. Maximum 69 Number</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
 You are given a positive integer num consisting only of digits 6 and 9.
@@ -39,26 +39,28 @@ num consists of only 6 and 9 digits.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class Solution {
+public:
+    int maximum69Number (int num) {
+        vector<int> a;
+        while(num)
+        {
+            a.push_back(num%10);
+            num/=10;
+        }
+        int ans=0,check=1;
+        for(int i=a.size()-1;i>=0;i--)
+        {
+            if(a[i]==9 || check==0)
+           ans=ans*10+a[i];  
+            else {
+                ans=ans*10+9;
+                check=0;
+            }
+        }
+        return ans;
+    }
+};
           
  </pre>
 
