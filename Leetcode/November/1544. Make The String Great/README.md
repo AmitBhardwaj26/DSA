@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/make-the-string-great/">1544. Make The String Great</a></h2>
-<h3>Medium</h3>
+<h3>easy</h3>
 <hr>
 <div><p>
 Given a string s of lower and upper case English letters.
@@ -43,28 +43,28 @@ s contains only lower and upper case English letters.
  <pre>
  
           class Solution {
-public:
-    string makeGood(string s) {
-        stack<char> st;
-        for(int i=0;i<s.size();i++)
-        {
-             if(st.empty()) st.push(s[i]);
-             else 
-             {
-                     char a=st.top(),b=s[i];
-                     cout<<a<<" "<<b<<"\n";
-                     if(a<='Z' && b>='a' && a-'A'==b-'a') st.pop();
-                     else if(b<='Z' && a>='a' && (a-'a')==(b-'A') ) st.pop();
-                     else st.push(s[i]);
-             }
-        }
-        string ans="";
-        while(!st.empty())
-        {
-             ans=st.top()+ans; st.pop();
-        }
-        return ans;
-    }
+          public:
+              string makeGood(string s) {
+                  stack<char> st;
+                  for(int i=0;i<s.size();i++)
+                  {
+                       if(st.empty()) st.push(s[i]);
+                       else 
+                       {
+                               char a=st.top(),b=s[i];
+                               cout<<a<<" "<<b<<"\n";
+                               if(a<='Z' && b>='a' && a-'A'==b-'a') st.pop();
+                               else if(b<='Z' && a>='a' && (a-'a')==(b-'A') ) st.pop();
+                               else st.push(s[i]);
+                       }
+                  }
+                  string ans="";
+                  while(!st.empty())
+                  {
+                       ans=st.top()+ans; st.pop();
+                  }
+                  return ans;
+              }
 };
           
  </pre>
