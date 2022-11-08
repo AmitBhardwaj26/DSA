@@ -34,11 +34,8 @@ Explanation: We have many possible scenarios, and all lead to the same answer. F
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= s.length <= 100
+s contains only lower and upper case English letters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
@@ -46,25 +43,29 @@ Constraints:
  <pre>
  
           class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+public:
+    string makeGood(string s) {
+        stack<char> st;
+        for(int i=0;i<s.size();i++)
+        {
+             if(st.empty()) st.push(s[i]);
+             else 
+             {
+                     char a=st.top(),b=s[i];
+                     cout<<a<<" "<<b<<"\n";
+                     if(a<='Z' && b>='a' && a-'A'==b-'a') st.pop();
+                     else if(b<='Z' && a>='a' && (a-'a')==(b-'A') ) st.pop();
+                     else st.push(s[i]);
+             }
+        }
+        string ans="";
+        while(!st.empty())
+        {
+             ans=st.top()+ans; st.pop();
+        }
+        return ans;
+    }
+};
           
  </pre>
 
