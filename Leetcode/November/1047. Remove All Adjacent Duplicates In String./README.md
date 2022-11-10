@@ -1,7 +1,7 @@
 
 <h2><a href="https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/">1047. Remove All Adjacent Duplicates In String
 </a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
  You are given a string s consisting of lowercase English letters. A duplicate removal consists of choosing two adjacent and equal letters and removing them.
@@ -36,28 +36,28 @@ s consists of lowercase English letters.
  <br>
  <pre>
  
-        class Solution {
-public:
-    string removeDuplicates(string s) {
-        stack<char> st;
-        for(int i=0;i<s.size();i++)
-        {
-             if(st.empty()) st.push(s[i]);
-             else 
-             {
-                  if(st.top()==s[i]) st.pop();
-                  else st.push(s[i]);
+      class Solution {
+         public:
+             string removeDuplicates(string s) {
+                 stack<char> st;
+                 for(int i=0;i<s.size();i++)
+                 {
+                      if(st.empty()) st.push(s[i]);
+                      else 
+                      {
+                           if(st.top()==s[i]) st.pop();
+                           else st.push(s[i]);
+                      }
+                 }
+                 string ans="";
+                 while(!st.empty())
+                 {
+                     ans+=st.top();
+                     st.pop();
+                 }
+                 reverse(ans.begin(),ans.end());
+                 return ans;
              }
-        }
-        string ans="";
-        while(!st.empty())
-        {
-            ans+=st.top();
-            st.pop();
-        }
-        reverse(ans.begin(),ans.end());
-        return ans;
-    }
 };
           
  </pre>
