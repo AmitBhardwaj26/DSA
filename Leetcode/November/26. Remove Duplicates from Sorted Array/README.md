@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/">26. Remove Duplicates from Sorted Array</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
  Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
@@ -43,21 +43,21 @@ nums is sorted in non-decreasing order.
  <br>
  <pre>
  
-         class Solution {
-public:
-    int removeDuplicates(vector<int>& nums) {
-     int i=0;
-        for(int j=0;j<nums.size();j++)
-        {
-            if(nums[i]!=nums[j]) 
-            {
-                i++;
-                nums[i]=nums[j]; 
-            }
-        }
-        return i+1;
-    }
-};
-          
+ class Solution {
+      public:
+          int removeDuplicates(vector<int>& nums) {
+           int i=0;
+              for(int j=0;j<nums.size();j++)
+              {
+                  if(nums[i]!=nums[j]) 
+                  {
+                      i++;
+                      nums[i]=nums[j]; 
+                  }
+              }
+              return i+1;
+          }
+      };
+
  </pre>
 
