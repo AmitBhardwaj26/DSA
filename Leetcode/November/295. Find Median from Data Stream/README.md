@@ -41,26 +41,35 @@ At most 5 * 104 calls will be made to addNum and findMedian.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class MedianFinder {
+public:
+   priority_queue<int> fst;
+   priority_queue<int,vector<int>,greater<int>> scnd;
+    MedianFinder() {
+        
+    }
+    
+    void addNum(int num) {
+        if(fst.size()>0 and fst.top()>num) fst.push(num);
+        else scnd.push(num);
+       if(fst.size()>scnd.size()+1 ) 
+       {
+           num=fst.top(); fst.pop(); scnd.push(num);
+       }
+       else if(fst.size()+1<scnd.size())
+       {
+           num=scnd.top(); scnd.pop(); fst.push(num);
+       }
+    }
+    
+    double findMedian() {
+        if(fst.size()==scnd.size() ) return ((double)(fst.top()+scnd.top()))/2;
+        else if(fst.size()>scnd.size()) return fst.top();
+        return scnd.top();
+    }
+};
+
+
           
  </pre>
 
