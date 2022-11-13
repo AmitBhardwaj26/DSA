@@ -29,11 +29,10 @@ Explanation: Your reversed string should not contain leading or trailing spaces.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= s.length <= 104
+s contains English letters (upper-case and lower-case), digits, and spaces ' '.
+There is at least one word in s.
+ 
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
