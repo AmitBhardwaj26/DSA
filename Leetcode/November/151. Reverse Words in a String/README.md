@@ -17,7 +17,7 @@ Note that s may contain leading or trailing spaces or multiple spaces between tw
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   s = "the sky is blue"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  "blue is sky the"
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
