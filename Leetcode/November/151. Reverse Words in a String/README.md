@@ -27,10 +27,10 @@ After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values
 After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
   </pre>
   
-Example 2:
+Input: s = "  hello world  "
+Output: "world hello"
+Explanation: Your reversed string should not contain leading or trailing spaces.
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
