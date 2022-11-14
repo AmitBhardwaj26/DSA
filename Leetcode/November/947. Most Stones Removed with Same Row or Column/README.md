@@ -29,11 +29,9 @@ Stone [0,0] cannot be removed since it does not share a row/column with another 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= stones.length <= 1000
+0 <= xi, yi <= 104
+No two stones are at the same coordinate point.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
