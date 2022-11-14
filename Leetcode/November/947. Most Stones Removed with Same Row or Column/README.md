@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">985. Sum of Even Numbers After Queries</a></h2>
+<h2><a href="https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/description/">947. Most Stones Removed with Same Row or Column</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
