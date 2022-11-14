@@ -3,17 +3,17 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+On a 2D plane, we place n stones at some integer coordinate points. Each coordinate point may have at most one stone.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+A stone can be removed if it shares either the same row or the same column as another stone that has not been removed.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Given an array stones of length n where stones[i] = [xi, yi] represents the location of the ith stone, return the largest possible number of stones that can be removed.
 </p>
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input:</strong>    stones = [[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]]
+<strong>Output:</strong> 5
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
