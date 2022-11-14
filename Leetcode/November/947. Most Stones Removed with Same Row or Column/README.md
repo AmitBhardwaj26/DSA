@@ -16,11 +16,13 @@ Given an array stones of length n where stones[i] = [xi, yi] represents the loca
 <strong>Output:</strong> 5
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+One way to remove 5 stones is as follows:
+1. Remove stone [2,2] because it shares the same row as [2,1].
+2. Remove stone [2,1] because it shares the same column as [0,1].
+3. Remove stone [1,2] because it shares the same row as [1,0].
+4. Remove stone [1,0] because it shares the same column as [0,0].
+5. Remove stone [0,1] because it shares the same row as [0,0].
+Stone [0,0] cannot be removed since it does not share a row/column with another stone still on the plane.
   </pre>
   
 Example 2:
