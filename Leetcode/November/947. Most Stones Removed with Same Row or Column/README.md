@@ -25,11 +25,7 @@ One way to remove 5 stones is as follows:
 Stone [0,0] cannot be removed since it does not share a row/column with another stone still on the plane.
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
