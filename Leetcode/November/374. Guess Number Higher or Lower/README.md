@@ -39,24 +39,18 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
+        class Solution {
           public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
+              int guessNumber(int n) {
+                 long long i=0,j=n,mid=(i+j)/2;
+                  while(i<=j)
                   {
-                      if(nums[i]%2==0) ans+=nums[i];
+                       mid=(i+j)/2;
+                      if(guess(mid)==0) return mid;
+                      else if(guess(mid)==1) i=mid+1;
+                      else j=mid-1;
                   }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
+                  return mid;
               }
           };
           
