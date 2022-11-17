@@ -18,8 +18,8 @@ The second rectangle is defined by its bottom-left corner (bx1, by1) and its top
 
 Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
+Input: ax1 = -2, ay1 = -2, ax2 = 2, ay2 = 2, bx1 = -2, by1 = -2, bx2 = 2, by2 = 2
+Output: 16
  
 
 Constraints:
