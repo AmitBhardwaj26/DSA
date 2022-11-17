@@ -24,11 +24,10 @@ Output: 16
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+-104 <= ax1 <= ax2 <= 104
+-104 <= ay1 <= ay2 <= 104
+-104 <= bx1 <= bx2 <= 104
+-104 <= by1 <= by2 <= 104
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
