@@ -34,26 +34,30 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+class Solution {
+public:
+    int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {
+        int Minx=min({ax1,ax2,bx1,bx2}) ,Miny=min({ay1,ay2,by1,by2});
+        // made all the coordinates in positive X,Y axis; 
+        Minx=abs(Minx); Miny=abs(Miny);
+        ax1+=Minx; ax2+=Minx; bx1+=Minx; bx2+=Minx;
+        ay1+=Miny; ay2+=Miny; by1+=Miny; by2+=Miny;
+        
+        // find the area occupied by both rectangles
+        long ans= (long)abs(ax2-ax1)*(abs(ay2-ay1)) +
+                  (long)abs(bx2-bx1)*(abs(by2-by1));
+        
+        // calculate the (x1,y1) , (x2,y2) part of overlap rectangle
+        int x1 = max(ax1,bx1),x2=min(ax2,bx2);
+        int y1=max(ay1,by1),y2=min(ay2,by2);
+        
+        // if no overlap found
+        if((x2-x1)<=0 || (y2-y1)<=0) return ans;
+        
+         // substract the overlap rectangle
+        return ans-(x2-x1)*(y2-y1);    
+    }
+};
           
  </pre>
 
