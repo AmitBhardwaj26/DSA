@@ -31,26 +31,20 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class Solution {
+public:
+    bool isUgly(int n) {
+        if(n<=0) return 0;
+        
+        while(n%2==0) n=n/2;
+         while(n%3==0) n=n/3;
+         while(n%5==0) n=n/5;
+         
+            if( n==1) return 1;
+        return 0;
+        
+    }
+};
           
  </pre>
 
