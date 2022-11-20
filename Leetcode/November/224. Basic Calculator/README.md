@@ -3,11 +3,9 @@
 <h3>Hard</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+ Given a string s representing a valid expression, implement a basic calculator to evaluate it, and return the result of the evaluation.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
-
-Return an integer array answer where answer[i] is the answer to the ith query.
+Note: You are not allowed to use any built-in function which evaluates strings as mathematical expressions, such as eval().
 </p>
 
 
