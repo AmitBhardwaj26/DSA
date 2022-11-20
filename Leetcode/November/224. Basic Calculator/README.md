@@ -34,8 +34,8 @@ Every number and running calculation will fit in a signed 32-bit integer.
  <br>
  <pre>
  
-        class Solution {
-public:
+class Solution {
+ public:
     int calculate(string s) 
     {
         long long ans = 0, level = 0, op = 0, sign = 1;
