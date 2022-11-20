@@ -34,26 +34,35 @@ Every number and running calculation will fit in a signed 32-bit integer.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+        class Solution {
+public:
+    int calculate(string s) 
+    {
+        long long ans = 0, level = 0, op = 0, sign = 1;
+         stack<int> d; d.push(1);
+        for (auto c : s)
+        {
+           if (c == ' ') continue;
+           if (c == '-' || c == '+' || c == '(' || c == ')')
+           {
+               if (op)
+               {
+                   ans += op * sign;
+                   op = 0;
+                }
+            }
+      if (c == '-' || c == '+')
+       {
+         sign = (c == '-' ? -1 : 1) * d.top();
+       }
+      else if (c >= '0' && c <= '9')
+       op = op * 10 + c - '0';
+
+       else if (c == '(') d.push(sign);
+      else if (c == ')') d.pop();
+    }
+     return ans + op * sign;
+  }
+};
  </pre>
 
