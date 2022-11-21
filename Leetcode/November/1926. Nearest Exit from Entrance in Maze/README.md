@@ -12,15 +12,16 @@ Return the number of steps in the shortest path from the entrance to the nearest
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input:</strong>   maze = [["+","+",".","+"],[".",".",".","+"],["+","+","+","."]], entrance = [1,2]
+<strong>Output:</strong> 1
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+There are 3 exits in this maze at [1,0], [0,2], and [2,3].
+Initially, you are at the entrance cell [1,2].
+- You can reach [1,0] by moving 2 steps left.
+- You can reach [0,2] by moving 1 step up.
+It is impossible to reach [2,3] from the entrance.
+Thus, the nearest exit is [0,2], which is 1 step away.
   </pre>
   
 Example 2:
