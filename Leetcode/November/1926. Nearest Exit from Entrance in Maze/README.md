@@ -24,11 +24,6 @@ It is impossible to reach [2,3] from the entrance.
 Thus, the nearest exit is [0,2], which is 1 step away.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
@@ -46,26 +41,51 @@ entrance will always be an empty cell.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        //never use dfs to find shortest distence its mith use always bfs
+class Solution {
+public:
+    int nearestExit(vector<vector<char>>& maze, vector<int>& entrance) {
+        int rows = maze.size();
+        int cols = maze[0].size();
+        if(maze[entrance[0]][entrance[1]]=='+')
+            return -1;
+        queue<pair<int,int>>q;
+        q.push({entrance[0],entrance[1]});
+        maze[entrance[0]][entrance[1]]='+';
+        int dist = -1;
+        while(!q.empty()){
+            dist++;
+            int size = q.size();
+            for(int i=0;i<size;i++){
+                auto node = q.front();q.pop();
+                
+                int x = node.first;
+                int y = node.second;
+                
+                if(((x==rows-1 or x==0) or (y==0 or y==cols-1)) and dist!=0)
+                    return dist;
+                
+                if(x+1<rows and maze[x+1][y]!='+'){
+                    maze[x+1][y]='+';
+                    q.push({x+1,y});
+                }
+                if(y+1<cols and maze[x][y+1]!='+'){
+                    maze[x][y+1]='+';
+                    q.push({x,y+1});
+                }
+                if(x-1>=0 and maze[x-1][y]!='+'){
+                    maze[x-1][y]='+';
+                    q.push({x-1,y});
+                }
+                if(y-1>=0 and maze[x][y-1]!='+'){
+                    maze[x][y-1]='+';
+                    q.push({x,y-1});
+                }
+            }
+        }
+        return -1;
+    }
+};
           
  </pre>
 
