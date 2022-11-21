@@ -32,11 +32,14 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+maze.length == m
+maze[i].length == n
+1 <= m, n <= 100
+maze[i][j] is either '.' or '+'.
+entrance.length == 2
+0 <= entrancerow < m
+0 <= entrancecol < n
+entrance will always be an empty cell.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
