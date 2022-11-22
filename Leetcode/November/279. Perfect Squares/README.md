@@ -11,22 +11,14 @@ A perfect square is an integer that is the square of an integer; in other words,
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input:</strong>   n = 12
+<strong>Output:</strong> 3
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+12 = 4 + 4 + 4.
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
