@@ -29,26 +29,33 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class Solution {
+public:
+    int dp[10001];
+    int solve(int n)
+    {
+        //base case
+        if(n<4) return n;
+        
+        //memo
+        if(dp[n]!=-1) return dp[n];
+        
+        //choice diagram
+        int ans=INT_MAX;
+        int x=sqrt(n);
+        for(int i=x;i>=2;i--)
+        {
+            ans=min(ans,1+solve(n-(i*i)));
+        }
+        return dp[n]=ans;
+    }   
+        
+    
+    int numSquares(int n) {
+        memset(dp,-1,sizeof(dp));
+       return solve(n);  
+     }
+};
           
  </pre>
 
