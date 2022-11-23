@@ -45,26 +45,62 @@ board[i][j] is a digit 1-9 or '.'.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+ class Solution {
+   public:
+
+       bool small(vector<vector<char>>& b,int x,int y)
+   {
+        int start_i=(x/3)*3;   
+        int start_j=(y/3)*3;
+
+        int val=b[x][y];
+        for(int i=start_i;i<start_i+3;i++)
+        {
+                for(int j=start_j;j<start_j+3;j++)
+                {
+                        if(val==b[i][j] and (x!=i || j!=y))
+                                return false;
+                }
+        }
+        return true;
+   }
+       bool isValidSudoku(vector<vector<char>>& b) {
+           int n=b.size(); bool check=true;
+           for(int i=0;i<n;i++) 
+           {   int a[100]={0},c[100]={0};
+               for(int j=0;j<n;j++)
+               {
+                   if(b[i][j]!=',' && b[i][j]!='.')
+                   {
+
+                      // cout<<a[b[i][j]]<<" "<<b[i][j]<<" ";
+                       if(a[b[i][j]]==1) {check=false; break;}
+                       else a[b[i][j]]=1;
+                   }
+                       if(b[j][i]!=',' && b[j][i]!='.')
+                   {
+                       if(c[b[j][i]]==1) {check=false; break;}
+                       else c[b[j][i]]=1;
+                   }
+               }
+           }
+
+            for(int i=0;i<9;i++)
+       {
+               for(int j=0;j<9;j++)
+               {
+                       if(b[i][j]!='.')
+                       if(!small(b,i,j) )
+                       {
+                               return false;
+                       }
+               }
+       }
+
+           if(check) return true; 
+           else return false;
+       }
+   };
           
  </pre>
 
