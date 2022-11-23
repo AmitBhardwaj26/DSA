@@ -31,19 +31,14 @@ Only the filled cells need to be validated according to the mentioned rules.
 </pre>
 
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+board.length == 9
+board[i].length == 9
+board[i][j] is a digit 1-9 or '.'.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
