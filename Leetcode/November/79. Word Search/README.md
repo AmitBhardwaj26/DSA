@@ -10,7 +10,7 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>   board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
