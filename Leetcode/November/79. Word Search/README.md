@@ -28,26 +28,41 @@ board and word consists of only lowercase and uppercase English letters.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+      class Solution {
+public:
+    int dir[4][2]={{-1,0},{0,-1},{0,1},{1,0}};
+    int n,m;
+    bool solve(int x,int y,vector<vector<char>> &v,int p, string w  )
+    {
+        //cout<<x<<" "<<y<<endl;
+        if(p==w.size()) return 1;
+        if(x>=n || y>=m || x<0 || y<0 || w[p]!=v[x][y]) return 0;
+        
+        char temp=v[x][y];
+        v[x][y]=' ';
+        bool check=false;
+        for(int i=0;i<4;i++)
+        {
+           int X= x+dir[i][0],Y=y+dir[i][1];
+           //cout<<X<<" "<<Y<<endl;
+          check|=solve(X,Y,v,p+1,w);
+        }
+        v[x][y]=temp;
+        return check;
+    } 
+
+    bool exist(vector<vector<char>>& b, string w) {
+      n=b.size(),m=b[0].size();
+      for(int i=0;i<n;i++)
+      {
+          for(int j=0;j<m;j++)
+          {
+              if(b[i][j]==w[0] and solve(i,j,b,0,w)) return 1;
+          }
+      }
+      return 0;    
+    }
+};
           
  </pre>
 
