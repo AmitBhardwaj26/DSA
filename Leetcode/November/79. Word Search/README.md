@@ -11,7 +11,7 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> true
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
