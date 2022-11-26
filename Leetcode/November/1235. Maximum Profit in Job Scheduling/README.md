@@ -33,26 +33,29 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+    int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
+        // step 1: generate the sorting index such that endTime[index[i]] <= endTime[index[i+1]] for 0 <= i < n-1
+        auto comp = [&endTime](const int i1, const int i2) { return endTime[i1] < endTime[i2]; };
+        int n = endTime.size();
+        vector<int> index(n);
+        iota(index.begin(), index.end(), 0);
+        sort(index.begin(), index.end(), comp);
+        
+        // step 2: in order to perform binary search, we also need the sorting endTime array
+        vector<int> endSorted(endTime.begin(), endTime.end());
+        sort(endSorted.begin(), endSorted.end());
+        
+        // step 3: calculate dp table
+        vector<int> dp(n + 1);
+        for (int i = 1; i <= n; i++) {
+            int j = upper_bound(endSorted.begin(), endSorted.end(), startTime[index[i-1]]) - endSorted.begin();
+            dp[i] = max(dp[i-1], profit[index[i-1]] + dp[j]);
+        }
+        return dp[n];
+    }
+};
           
  </pre>
 
