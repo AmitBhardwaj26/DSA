@@ -1,13 +1,13 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">985. Sum of Even Numbers After Queries</a></h2>
+<h2><a href="https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/">1235. Maximum Profit in Job Scheduling</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+ We have n jobs, where every job is scheduled to be done from startTime[i] to endTime[i], obtaining a profit of profit[i].
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+You're given the startTime, endTime and profit arrays, return the maximum profit you can take such that there are no two jobs in the subset with overlapping time range.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+If you choose a job that ends at time X you will be able to start another job that starts at time X.
 </p>
 
 
