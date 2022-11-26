@@ -24,11 +24,9 @@ Time range [1-3]+[3-6] , we get profit of 120 = 50 + 70.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= startTime.length == endTime.length == profit.length <= 5 * 104
+1 <= startTime[i] < endTime[i] <= 109
+1 <= profit[i] <= 104
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
