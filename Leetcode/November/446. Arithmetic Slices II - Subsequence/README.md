@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/arithmetic-slices-ii-subsequence/">446. Arithmetic Slices II - Subsequence</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
 Given an integer array nums, return the number of all the arithmetic subsequences of nums.
