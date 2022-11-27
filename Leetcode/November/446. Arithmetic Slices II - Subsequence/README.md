@@ -35,11 +35,8 @@ All arithmetic subsequence slices are:
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1  <= nums.length <= 1000
+-231 <= nums[i] <= 231 - 1
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
