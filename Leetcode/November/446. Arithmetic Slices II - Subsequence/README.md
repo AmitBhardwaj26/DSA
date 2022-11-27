@@ -47,26 +47,30 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         // use unordered map , to calculate the dirrence add the past map value to put into answer as [1-> 2] next if same difference come then [1->2->3] then add old map value.
+class Solution {
+public:
+    int numberOfArithmeticSlices(vector<int>& nums) {
+        int n=nums.size();
+        vector<long long> v(n,0);
+        for(int i=0;i<n;i++)
+        {
+            v[i]=nums[i]+1e10;
+        }
+        vector<unordered_map<long long,int>> m(n+1);
+        int ans=0;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i-1;j>=0;j--)
+            {
+               long long x=v[i]-v[j];
+               ans+=m[j][x];
+               m[i][x]+=m[j][x]+1;
+            }
+        }
+       return ans;       
+    }
+};
           
  </pre>
 
