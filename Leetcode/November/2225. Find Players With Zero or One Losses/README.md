@@ -19,8 +19,8 @@ The testcases will be generated such that no two matches will have the same outc
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input:</strong>   matches = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]
+<strong>Output:</strong> [[1,2,10],[4,5,7,8]]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
