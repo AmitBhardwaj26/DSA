@@ -33,11 +33,11 @@ Thus, answer[0] = [1,2,10] and answer[1] = [4,5,7,8].
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= matches.length <= 105
+matches[i].length == 2
+1 <= winneri, loseri <= 105
+winneri != loseri
+All matches[i] are unique.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
