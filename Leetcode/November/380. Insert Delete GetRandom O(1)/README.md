@@ -42,26 +42,39 @@ There will be at least one element in the data structure when getRandom is calle
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        // make a vector map store the index in the vector swap with the last index while removing
+
+class RandomizedSet {
+public:
+int x=-1,N=1e5; 
+int l=0;
+vector<int> v;
+unordered_map<int,int> m;
+    RandomizedSet() {
+        v.resize(100001);
+    }
+    
+    bool insert(int val) {
+        if(m[val]!=0) return 0;
+
+        v[l]=val; l++;
+        m[val]=l;
+        return 1;
+    }
+    
+    bool remove(int val) {
+        if(m[val]==0|| l==0) return 0;
+        else { x=m[val]; l--; m[v[l]]=x; swap(v[x-1],v[l]); m[val]=0;  }
+        return 1;
+    }
+    
+    int getRandom() {
+       x=rand()%l;
+       return v[x];
+    }
+};
+
+
           
  </pre>
 
