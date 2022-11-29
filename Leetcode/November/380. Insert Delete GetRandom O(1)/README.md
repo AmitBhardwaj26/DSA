@@ -33,11 +33,9 @@ randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom()
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+-231 <= val <= 231 - 1
+At most 2 * 105 calls will be made to insert, remove, and getRandom.
+There will be at least one element in the data structure when getRandom is called.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
