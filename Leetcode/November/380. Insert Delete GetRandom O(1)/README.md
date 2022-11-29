@@ -18,7 +18,7 @@ You must implement the functions of the class such that each function works in a
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   ["RandomizedSet", "insert", "remove", "insert", "getRandom", "remove", "insert", "getRandom"]
 [[], [1], [2], [2], [], [1], [2], []]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [null, true, false, true, 2, true, false, 2]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
