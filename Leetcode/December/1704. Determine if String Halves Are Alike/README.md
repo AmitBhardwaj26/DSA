@@ -3,11 +3,13 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+You are given a string s of even length. Split this string into two halves of equal lengths, and let a be the first half and b be the second half.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Two strings are alike if they have the same number of vowels ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'). Notice that s contains uppercase and lowercase letters.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return true if a and b are alike. Otherwise, return false.
+
+ 
 </p>
 
 
