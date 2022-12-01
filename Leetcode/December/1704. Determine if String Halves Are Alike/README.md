@@ -21,10 +21,10 @@ Return true if a and b are alike. Otherwise, return false.
 a = "bo" and b = "ok". a has 1 vowel and b has 1 vowel. Therefore, they are alike.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
+Input: s = "textbook"
+Output: false
+Explanation: a = "text" and b = "book". a has 1 vowel whereas b has 2. Therefore, they are not alike.
+Notice that the vowel o is counted twice.
  
 
 Constraints:
