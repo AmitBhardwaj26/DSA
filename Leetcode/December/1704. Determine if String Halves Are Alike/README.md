@@ -29,11 +29,9 @@ Notice that the vowel o is counted twice.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+2 <= s.length <= 1000
+s.length is even.
+s consists of uppercase and lowercase letters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
