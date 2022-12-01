@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/determine-if-string-halves-are-alike/description/">1704. Determine if String Halves Are Alike</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
 You are given a string s of even length. Split this string into two halves of equal lengths, and let a be the first half and b be the second half.
