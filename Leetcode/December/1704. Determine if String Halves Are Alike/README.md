@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">1704. Determine if String Halves Are Alike</a></h2>
+<h2><a href="https://leetcode.com/problems/determine-if-string-halves-are-alike/description/">1704. Determine if String Halves Are Alike</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
