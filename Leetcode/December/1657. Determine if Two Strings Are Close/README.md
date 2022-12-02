@@ -20,9 +20,8 @@ Given two strings, word1 and word2, return true if word1 and word2 are close, an
 <strong>Output:</strong> true
 </pre>
 <pre>
-You can attain word2 from word1 in 2 operations.
-Apply Operation 1: "abc" -> "acb"
-Apply Operation 1: "acb" -> "bca"
+1 <= word1.length, word2.length <= 105
+word1 and word2 contain only lowercase English letters.
   </pre>
 
 
