@@ -3,11 +3,15 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+ Two strings are considered close if you can attain one from the other using the following operations:
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Operation 1: Swap any two existing characters.
+For example, abcde -> aecdb
+Operation 2: Transform every occurrence of one existing character into another existing character, and do the same with the other character.
+For example, aacabb -> bbcbaa (all a's turn into b's, and all b's turn into a's)
+You can use the operations on either string as many times as necessary.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Given two strings, word1 and word2, return true if word1 and word2 are close, and false otherwise.
 </p>
 
 
