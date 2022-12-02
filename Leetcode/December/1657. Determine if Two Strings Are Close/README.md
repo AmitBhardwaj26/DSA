@@ -40,7 +40,7 @@ Constraints:
  // if the count of each character of A must matches with count of any character in string B and that character of A must present in string B then return True
 // else return false 
 class Solution {
-public:
+  public:
     bool closeStrings(string w1, string w2) {
         int l1=w1.size(),l2=w2.size();
         if(l1!=l2) return 0;
