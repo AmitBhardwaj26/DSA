@@ -18,11 +18,7 @@ Return the sorted string. If there are multiple answers, return any of them.
 So 'e' must appear before both 'r' and 't'. Therefore "eetr" is also a valid answer.
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
