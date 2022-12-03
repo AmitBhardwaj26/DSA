@@ -30,26 +30,35 @@ s consists of uppercase and lowercase English letters and digits.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        //Step1: Store the frequency of each character in unordered map 
+//Step2: Push the frequency,character in vector of pair
+//Step3: Sort the vector 
+//Step4: Traverse from the right, Append the character w.r.t their frequency into answer string    
+class Solution {
+public:
+    string frequencySort(string s) {
+        unordered_map<char,int> m;
+        for(int i=0;i<s.size();i++)
+        {
+            m[s[i]]++;
+        }
+        vector<pair<int,char>> v;
+        for(auto it : m)    v.push_back({it.second,it.first});
+        
+        sort(v.begin(),v.end());
+        s="";
+        for(int i=v.size()-1;i>=0;i--)
+        {
+           int x=v[i].first;
+           char c=v[i].second; 
+           while(x>0)
+           {
+               s+=c; x--;
+           }    
+        }
+        return s;
+    }
+};
           
  </pre>
 
