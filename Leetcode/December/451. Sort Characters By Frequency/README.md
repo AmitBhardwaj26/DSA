@@ -11,7 +11,7 @@ Return the sorted string. If there are multiple answers, return any of them.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  s = "tree"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  "eert"
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
