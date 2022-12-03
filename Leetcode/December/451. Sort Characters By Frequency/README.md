@@ -22,11 +22,8 @@ So 'e' must appear before both 'r' and 't'. Therefore "eetr" is also a valid ans
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= s.length <= 5 * 105
+s consists of uppercase and lowercase English letters and digits.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
