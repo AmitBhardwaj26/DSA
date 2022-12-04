@@ -46,26 +46,21 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+class Solution {
+  public:
+	int minimumAverageDifference(vector<int>& nums) {
+		long long  n = nums.size(),sum = 0,total = accumulate(begin(nums),end(nums),0l);
+		long long maxi = LLONG_MAX,res = 0;
+		for(long long i = 0;i<n-1;i++){
+			sum+=nums[i];
+			long long curr = abs(sum/(i+1) - (total-sum)/(n-i-1));
+			if(curr<maxi) maxi = curr,res = i;
+		}
+
+		return maxi>total/n ? n-1:res;
+	}
+};
+
           
  </pre>
 
