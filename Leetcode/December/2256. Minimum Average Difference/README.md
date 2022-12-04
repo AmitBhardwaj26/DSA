@@ -18,7 +18,7 @@ The average of 0 elements is considered to be 0.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   nums = [2,5,3,9,5,3]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  3
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
