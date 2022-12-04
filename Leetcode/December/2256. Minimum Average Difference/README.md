@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+You are given a 0-indexed integer array nums of length n.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+The average difference of the index i is the absolute difference between the average of the first i + 1 elements of nums and the average of the last n - i - 1 elements. Both averages should be rounded down to the nearest integer.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return the index with the minimum average difference. If there are multiple such indices, return the smallest one.
 </p>
 
 
