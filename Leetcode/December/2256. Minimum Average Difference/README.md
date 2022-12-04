@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/minimum-average-difference/description/">985. Sum of Even Numbers After Queries</a></h2>
+<h2><a href="https://leetcode.com/problems/minimum-average-difference/description/">2256. Minimum Average Difference</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
