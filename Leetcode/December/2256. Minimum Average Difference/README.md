@@ -30,11 +30,11 @@ The average of 0 elements is considered to be 0.
 The average difference of index 3 is the minimum average difference so return 3.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
+Input: nums = [0]
+Output: 0
+Explanation:
+The only index is 0 so return 0.
+The average difference of index 0 is: |0 / 1 - 0| = |0 - 0| = 0.
 
 Constraints:
 <pre>
