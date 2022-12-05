@@ -17,12 +17,7 @@ If there are two middle nodes, return the second middle node.
 <pre>
 The middle node of the list is node 3.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
@@ -37,26 +32,37 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        /*
+1: simple length based l/2 then travesed
+2: using fast and slow pointer
+*/
+
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* slow, *fast=head;
+        while(fast!=NULL && fast->next!=NULL)
+        {
+            slow=slow->next;
+            fast=fast->next->next;
+        }
+        return slow;
+    }
+};
+
+
+
+// class Solution {
+// public:
+//     ListNode* middleNode(ListNode* head) {
+//         int l=0;
+//         ListNode *t=head;
+//         while(t) {t=t->next; l++;}
+//         l=l/2;
+//         while(l--){ head=head->next; }
+//         return head;
+//     }
+// };
           
  </pre>
 
