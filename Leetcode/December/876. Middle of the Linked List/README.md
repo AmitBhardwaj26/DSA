@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">876. Middle of the Linked List</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
 Given the head of a singly linked list, return the middle node of the linked list.
