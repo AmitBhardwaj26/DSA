@@ -3,11 +3,13 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+The first node is considered odd, and the second node is even, and so on.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Note that the relative order inside both the even and odd groups should remain as it was in the input.
+
+You must solve the problem in O(1) extra space complexity and O(n) time complexity.
 </p>
 
 
