@@ -15,7 +15,7 @@ You must solve the problem in O(1) extra space complexity and O(n) time complexi
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   head = [1,2,3,4,5]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [1,3,5,2,4]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
