@@ -28,11 +28,8 @@ After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+The number of nodes in the linked list is in the range [0, 104].
+-106 <= Node.val <= 106
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
