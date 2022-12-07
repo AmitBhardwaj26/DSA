@@ -24,11 +24,10 @@ Explanation: Nodes 6, 7, and 10 are in the range [6, 10]. 6 + 7 + 10 = 23.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+The number of nodes in the tree is in the range [1, 2 * 104].
+1 <= Node.val <= 105
+1 <= low <= high <= 105
+All Node.val are unique.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
