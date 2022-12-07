@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">938. Range Sum of BST</a></h2>
+<h2><a href="https://leetcode.com/problems/range-sum-of-bst/description/">938. Range Sum of BST</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
