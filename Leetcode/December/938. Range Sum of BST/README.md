@@ -16,11 +16,11 @@ Given the root node of a binary search tree and two integers low and high, retur
 Nodes 7, 10, and 15 are in the range [7, 15]. 7 + 10 + 15 = 32.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
+<pre>  
+Input: root = [10,5,15,3,7,13,18,1,null,6], low = 6, high = 10
+Output: 23
+Explanation: Nodes 6, 7, and 10 are in the range [6, 10]. 6 + 7 + 10 = 23.
+ </pre>
 
 Constraints:
 <pre>
