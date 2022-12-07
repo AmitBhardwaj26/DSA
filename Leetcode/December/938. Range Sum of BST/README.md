@@ -9,7 +9,7 @@ Given the root node of a binary search tree and two integers low and high, retur
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>   root = [10,5,15,3,7,null,18], low = 7, high = 15
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
