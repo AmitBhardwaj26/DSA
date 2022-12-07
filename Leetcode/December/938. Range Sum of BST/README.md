@@ -33,27 +33,26 @@ All Node.val are unique.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+ class Solution {
+public:
+    vector<int> v;
+    void preorder(TreeNode *t)
+    {
+        if(!t) return;
+        v.push_back(t->val);
+        preorder(t->left);
+        preorder(t->right);
+    }
+    
+    int rangeSumBST(TreeNode* root, int low, int high) {
+        preorder(root); int ans=0;
+    for(int i=0;i<v.size();i++)
+    {
+        if(v[i]>=low && v[i]<=high) ans+=v[i];
+    }
+        return ans;
+    }
+};
           
  </pre>
 
