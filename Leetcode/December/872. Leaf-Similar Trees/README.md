@@ -22,11 +22,8 @@ Return true if and only if the two given trees with head nodes root1 and root2 a
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+The number of nodes in each tree will be in the range [1, 200].
+Both of the given trees will have values in the range [0, 200].
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
