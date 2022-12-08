@@ -13,7 +13,7 @@ Return true if and only if the two given trees with head nodes root1 and root2 a
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>  root1 = [3,5,1,6,2,9,8,null,null,7,4], root2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
