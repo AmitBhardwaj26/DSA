@@ -43,26 +43,46 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    void leaf(TreeNode* root,vector<int> &v)
+    {
+        if(!root) return ;
+        leaf(root->left,v);
+        if(!root->left && !root->right) v.push_back(root->val);
+        leaf(root->right,v);
+        return ;
+    }
+
+    bool leafSimilar(TreeNode* root1, TreeNode* root2) {
+        vector<int> v1,v2;
+        leaf(root1,v1);
+        leaf(root2,v2);
+        int i=0,j=0;
+        while(i<v1.size() && i<v2.size())
+        {
+            if(v1[i]!=v2[i]) return 0;
+            i++;
+        }
+        while(i<v1.size())
+        {
+            return 0;
+        }
+        while(i<v2.size()) return 0;
+        return 1;
+    }
+};
           
  </pre>
 
