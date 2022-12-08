@@ -1,6 +1,6 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">872. Leaf-Similar Trees</a></h2>
-<h3>Medium</h3>
+<h2><a href="https://leetcode.com/problems/leaf-similar-trees/description/">872. Leaf-Similar Trees</a></h2>
+<h3></h3>
 <hr>
 <div><p>
 Consider all the leaves of a binary tree, from left to right order, the values of those leaves form a leaf value sequence.
