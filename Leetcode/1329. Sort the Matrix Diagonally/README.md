@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/sort-the-matrix-diagonally/">1329. Sort the Matrix Diagonally</a></h2>
-<h3>Medium</h3>
+<h3>Med ium</h3>
 <hr>
 <div><p>
     
