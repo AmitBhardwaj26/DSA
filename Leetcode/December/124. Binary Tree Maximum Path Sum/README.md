@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+The path sum of a path is the sum of the node's values in the path.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Given the root of a binary tree, return the maximum path sum of any non-empty path.
 </p>
 
 
