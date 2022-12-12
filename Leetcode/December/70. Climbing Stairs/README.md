@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/climbing-stairs/description/">70. Climbing Stairs</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
 You are climbing a staircase. It takes n steps to reach the top.
