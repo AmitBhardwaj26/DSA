@@ -10,15 +10,13 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input:</strong>   n = 2
+<strong>Output:</strong> 2
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+There are two ways to climb to the top.
+1. 1 step + 1 step
+2. 2 steps
   </pre>
   
 Example 2:
