@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/minimum-falling-path-sum/description/">985. Sum of Even Numbers After Queries</a></h2>
+<h2><a href="https://leetcode.com/problems/minimum-falling-path-sum/description/">931. Minimum Falling Path Sum</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
@@ -21,11 +21,9 @@ There are two falling paths with a minimum sum as shown.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == matrix.length == matrix[i].length
+1 <= n <= 100
+-100 <= matrix[i][j] <= 100
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
