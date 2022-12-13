@@ -30,26 +30,41 @@ n == matrix.length == matrix[i].length
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+      class Solution {
+public:
+    int t[102][102];
+    
+    int solve(vector<vector<int>>& ma, int m, int n)
+    {
+        // base condition
+         if(m==0 ) return 0;
+        if(t[m][n]!=-1) return t[m][n];
+        
+        int ans=0;
+         
+        if(n==ma[0].size()) ans=ma[m-1][n-1]+ min(solve(ma,m-1,n-1),solve(ma,m-1,n));
+        else if(n==1) ans=ma[m-1][n-1] + min(solve(ma,m-1,n+1),solve(ma,m-1,n)); 
+        else 
+        {
+          ans= ma[m-1][n-1] + min(min(solve(ma,m-1,n-1),solve(ma,m-1,n)), solve(ma,m-1,n+1) );
+        }
+        return t[m][n]= ans;
+    }
+        
+    
+    int minFallingPathSum(vector<vector<int>>& matrix) {
+       
+        int sum=INT_MAX;
+        memset(t,-1,sizeof(t));
+        for(int i=matrix[0].size(); i>=1; i--)
+        {  
+        sum=min(sum, solve(matrix, matrix.size(),i));
+            cout<<sum<<"\n";
+        }
+        
+        return sum;
+    }
+};
           
  </pre>
 
