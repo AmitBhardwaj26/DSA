@@ -3,31 +3,21 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given an n x n array of integers matrix, return the minimum sum of any falling path through matrix.
+A falling path starts at any element in the first row and chooses the element in the next row that is either directly below or diagonally left/right. Specifically, the next element from position (row, col) will be (row + 1, col - 1), (row + 1, col), or (row + 1, col + 1).
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
-
-Return an integer array answer where answer[i] is the answer to the ith query.
+ 
 </p>
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input:</strong>  matrix = [[2,1,3],[6,5,4],[7,8,9]]
+<strong>Output:</strong> 13
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+There are two falling paths with a minimum sum as shown.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
