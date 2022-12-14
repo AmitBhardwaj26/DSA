@@ -13,7 +13,7 @@ Given an integer array nums representing the amount of money of each house, retu
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong> nums = [1,2,3,1]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 4
 </pre>
 <pre>
 Rob house 1 (money = 1) and then rob house 3 (money = 3).
