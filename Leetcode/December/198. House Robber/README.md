@@ -27,11 +27,8 @@ Total amount you can rob = 2 + 9 + 1 = 12.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= nums.length <= 100
+0 <= nums[i] <= 400
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
