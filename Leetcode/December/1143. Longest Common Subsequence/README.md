@@ -3,11 +3,13 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+ Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+For example, "ace" is a subsequence of "abcde".
+A common subsequence of two strings is a subsequence that is common to both strings.
+ 
 </p>
 
 
