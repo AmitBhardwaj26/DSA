@@ -28,11 +28,8 @@ Explanation: The longest common subsequence is "abc" and its length is 3.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= text1.length, text2.length <= 1000
+text1 and text2 consist of only lowercase English characters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
