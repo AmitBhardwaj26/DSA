@@ -21,10 +21,9 @@ A common subsequence of two strings is a subsequence that is common to both stri
 The longest common subsequence is "ace" and its length is 3.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
+Input: text1 = "abc", text2 = "abc"
+Output: 3
+Explanation: The longest common subsequence is "abc" and its length is 3.
  
 
 Constraints:
