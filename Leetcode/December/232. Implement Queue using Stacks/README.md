@@ -33,19 +33,13 @@ myQueue.pop(); // return 1, queue is [2]
 myQueue.empty(); // return false
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= x <= 9
+At most 100 calls will be made to push, pop, peek, and empty.
+All the calls to pop and peek are valid.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
