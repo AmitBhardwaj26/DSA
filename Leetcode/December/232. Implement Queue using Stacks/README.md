@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/implement-queue-using-stacks/description/">232. Implement Queue using Stacks</a></h2>
-<h3>Medium</h3>
+<h3>Easy/h3>
 <hr>
 <div><p>
  Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).
