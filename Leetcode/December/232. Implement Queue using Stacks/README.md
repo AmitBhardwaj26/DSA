@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/implement-queue-using-stacks/description/">232. Implement Queue using Stacks</a></h2>
-<h3>Easy/h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
  Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).
@@ -20,8 +20,9 @@ Depending on your language, the stack may not be supported natively. You may sim
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input: ["MyQueue", "push", "push", "peek", "pop", "empty"]
+[[], [1], [2], [], [], []]
+<strong>Output:</strong> [null, null, null, 1, 1, false]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
