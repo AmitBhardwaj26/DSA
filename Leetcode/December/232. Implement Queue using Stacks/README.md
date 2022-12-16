@@ -45,27 +45,53 @@ All the calls to pop and peek are valid.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+ /*
+push take order(1) time
+take two stack s1,s2;
+while taking the top or while poping check in satck 2;
+if empty take O(n) time 
+whole take O(1) amortised  time complexity
+*/
+
+class MyQueue {
+public:
+    stack<int> s1,s2;
+    MyQueue() {
+        
+    }
+    
+    void push(int x) {
+        s1.push(x);
+    }
+    
+    int pop() {
+        if(s1.empty()&& s2.empty()) return -1;
+        if(s2.empty()) 
+        {
+          while(!s1.empty())
+          { s2.push(s1.top()); s1.pop();}
+        }
+         
+        int t= s2.top(); s2.pop(); 
+        return t;
+    }
+    
+    int peek() {
+        if(s2.empty()&& s1.empty()) return -1;
+        if(s2.empty())
+        {
+           while(!s1.empty())
+           { s2.push(s1.top()); s1.pop();}        
+        }
+        return s2.top();
+    }
+    
+    bool empty() {
+        if(s2.empty()&& s1.empty()) return true;
+         return false;
+    }
+};
+
           
  </pre>
 
