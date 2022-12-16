@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">232. Implement Queue using Stacks</a></h2>
+<h2><a href="https://leetcode.com/problems/implement-queue-using-stacks/description/">232. Implement Queue using Stacks</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
