@@ -22,20 +22,12 @@ It is guaranteed that the given RPN expression is always valid. That means the e
 <pre>
 ((2 + 1) * 3) = 9
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= tokens.length <= 104
+tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the range [-200, 200].
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
