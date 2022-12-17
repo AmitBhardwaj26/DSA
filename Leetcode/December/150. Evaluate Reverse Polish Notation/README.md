@@ -3,11 +3,15 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Evaluate the value of an arithmetic expression in Reverse Polish Notation.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Valid operators are +, -, *, and /. Each operand may be an integer or another expression.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Note that division between two integers should truncate toward zero.
+
+It is guaranteed that the given RPN expression is always valid. That means the expression would always evaluate to a result, and there will not be any division by zero operation.
+
+ 
 </p>
 
 
