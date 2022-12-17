@@ -34,26 +34,36 @@ tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the ran
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+    int evalRPN(vector<string>& tokens) {
+        ios::sync_with_stdio(0); cin.tie(0);cout.tie(0);
+        stack<long> st; 
+        
+        for(int i=0;i<tokens.size();i++)
+        {
+            if(tokens[i]=="+" || //check token[i]== +, - ,/ ,*
+               tokens[i]=="-" || 
+               tokens[i]=="*" || 
+               tokens[i]=="/")  
+            { 
+                char c=tokens[i][0];
+                long a=st.top(); st.pop();
+                long b=st.top(); st.pop();
+                switch(c)
+                {
+                    case '+': st.push(b+a); break;
+                    case '-': st.push(b-a); break;
+                    case '*': st.push(b*a); break;
+                    case '/': st.push(b/a); break;
+                }
+            }
+            else  st.push(stoi(tokens[i]));  
+            
+        }
+        return st.top();
+    }
+};
           
  </pre>
 
