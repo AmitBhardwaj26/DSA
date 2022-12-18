@@ -26,26 +26,24 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+      class Solution {
+public:
+    vector<int> dailyTemperatures(vector<int>& temp) {
+        int n=temp.size();
+        vector<int> ans(n,0);
+        for(int i=n-1;i>=0;i--)
+        {
+            int j=i+1; bool check=1;
+            while(j<n and temp[i]>=temp[j] ) 
+            {
+                if(ans[j]==0) {ans[i]=0; check=0; break;}
+                j=ans[j]+j;  
+            }
+            if(j<n and check) ans[i]=j-i; 
+        }
+        return ans;
+    }
+};
           
  </pre>
 
