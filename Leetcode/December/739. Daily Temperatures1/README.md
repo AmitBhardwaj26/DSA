@@ -10,8 +10,8 @@ Given an array of integers temperatures represents the daily temperatures, retur
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input:</strong>    temperatures = [73,74,75,71,69,72,76,73]
+<strong>Output:</strong> [1,1,4,2,1,1,0,0]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
