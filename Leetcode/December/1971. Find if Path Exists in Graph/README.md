@@ -3,11 +3,11 @@
 <h3>Easy</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+There is a bi-directional graph with n vertices, where each vertex is labeled from 0 to n - 1 (inclusive). The edges in the graph are represented as a 2D integer array edges, where each edges[i] = [ui, vi] denotes a bi-directional edge between vertex ui and vertex vi. Every vertex pair is connected by at most one edge, and no vertex has an edge to itself.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+You want to determine if there is a valid path that exists from vertex source to vertex destination.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Given edges and the integers n, source, and destination, return true if there is a valid path from source to destination, or false otherwise.
 </p>
 
 
