@@ -39,26 +39,32 @@ There are no self edges.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+       class Solution {
+public:
+   
+    bool validPath(int n, vector<vector<int>>& e, int source, int des) {
+        vector<int> adj[n+1];
+        for(int i=0;i<e.size();i++)
+        {
+            adj[e[i][0]].push_back(e[i][1]);
+            adj[e[i][1]].push_back(e[i][0]);    
+        }
+        queue<int> q;
+        q.push(source);
+        vector<int> vis(n+1,0);
+        while(q.size()>0)
+        {
+            int node =q.front(); q.pop(); 
+            if(node==des) return 1;
+            vis[node]=1;
+            for(auto it: adj[node])
+            {
+                if( vis[it] ==0) q.push(it);
+            }
+        }
+        return 0;
+    }
+};
           
  </pre>
 
