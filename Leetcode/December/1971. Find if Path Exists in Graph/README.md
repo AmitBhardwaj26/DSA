@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">1971. Find if Path Exists in Graph</a></h2>
+<h2><a href="https://leetcode.com/problems/find-if-path-exists-in-graph/description/">1971. Find if Path Exists in Graph</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
