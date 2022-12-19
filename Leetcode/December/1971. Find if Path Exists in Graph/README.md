@@ -25,11 +25,14 @@ There are two paths from vertex 0 to vertex 2:
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= n <= 2 * 105
+0 <= edges.length <= 2 * 105
+edges[i].length == 2
+0 <= ui, vi <= n - 1
+ui != vi
+0 <= source, destination <= n - 1
+There are no duplicate edges.
+There are no self edges.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
