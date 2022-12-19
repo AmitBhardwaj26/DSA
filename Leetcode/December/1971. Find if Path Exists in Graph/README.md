@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/find-if-path-exists-in-graph/description/">1971. Find if Path Exists in Graph</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
  You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
