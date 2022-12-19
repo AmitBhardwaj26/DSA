@@ -13,7 +13,7 @@ Given edges and the integers n, source, and destination, return true if there is
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   n = 3, edges = [[0,1],[1,2],[2,0]], source = 0, destination = 2
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> true
 </pre>
 <pre>
 There are two paths from vertex 0 to vertex 2:
@@ -21,11 +21,7 @@ There are two paths from vertex 0 to vertex 2:
 - 0 → 2
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
