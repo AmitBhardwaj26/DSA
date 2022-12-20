@@ -44,26 +44,31 @@ All the values of rooms[i] are unique.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+         //basic BFS
+class Solution {
+public:
+    int vis[1001]={0};
+    bool canVisitAllRooms(vector<vector<int>>& r) {
+        int n=r.size();
+        queue<int> q;
+        q.push(0);
+        vis[0]=1;
+        while(!q.empty())
+        {
+            int x=q.front(); q.pop();
+            vis[x]=1;
+            for(int it:r[x])
+            {
+                if(vis[it]==0)
+                    q.push(it);
+            }
+        }
+        for(int i=0;i<r.size();i++)
+        {
+            if(vis[i]==0) return 0;
+        }
+        return 1;
+    }
+};
  </pre>
 
