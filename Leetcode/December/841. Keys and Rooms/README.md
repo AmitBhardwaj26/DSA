@@ -32,11 +32,12 @@ Explanation: We can not enter room number 2 since the only key that unlocks it i
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == rooms.length
+2 <= n <= 1000
+0 <= rooms[i].length <= 1000
+1 <= sum(rooms[i].length) <= 3000
+0 <= rooms[i][j] < n
+All the values of rooms[i] are unique.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
