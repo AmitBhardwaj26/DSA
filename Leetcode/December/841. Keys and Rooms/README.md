@@ -25,10 +25,9 @@ We then visit room 3.
 Since we were able to visit every room, we return true.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
+Input: rooms = [[1,3],[3,0,1],[2],[0]]
+Output: false
+Explanation: We can not enter room number 2 since the only key that unlocks it is in that room.
  
 
 Constraints:
