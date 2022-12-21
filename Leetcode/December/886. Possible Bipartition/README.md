@@ -35,26 +35,44 @@ All the pairs of dislikes are unique.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         // simply apply is graph bipartitie in each components of the graph
+class Solution {
+public:
+    bool possibleBipartition(int n, vector<vector<int>>& d) {
+        queue<int> q;
+        vector<int> adj[n+1];
+        for(int i=0;i<d.size();i++)
+        {
+            adj[d[i][0]].push_back(d[i][1]);
+            adj[d[i][1]].push_back(d[i][0]);
+        }
+        int vis[n+1];
+        memset(vis,-1,sizeof(vis));
+        
+        for(int i=1;i<=n;i++)
+        {
+            if(vis[i]==-1)
+        {q.push(i);
+        vis[1]=0;}
+        while(!q.empty())
+        {
+            int i=q.front(); q.pop();
+            for(auto it : adj[i])
+            {
+                if(vis[it]==-1)
+                {
+                    vis[it]=1-vis[i];
+                    q.push(it);
+                }
+                else if(vis[i]==vis[it])
+                    return 0;
+            }
+        }
+        }
+        return 1;
+        
+    }
+};
           
  </pre>
 
