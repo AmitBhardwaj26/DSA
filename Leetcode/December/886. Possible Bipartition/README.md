@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">886. Possible Bipartition</a></h2>
+<h2><a href="https://leetcode.com/problems/possible-bipartition/description/">886. Possible Bipartition</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
