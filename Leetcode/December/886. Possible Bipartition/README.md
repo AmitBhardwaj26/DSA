@@ -23,11 +23,12 @@ Output: false
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= n <= 2000
+0 <= dislikes.length <= 104
+dislikes[i].length == 2
+1 <= dislikes[i][j] <= n
+ai < bi
+All the pairs of dislikes are unique.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
