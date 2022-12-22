@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+There is an undirected connected tree with n nodes labeled from 0 to n - 1 and n - 1 edges.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+You are given the integer n and the array edges where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return an array answer of length n where answer[i] is the sum of the distances between the ith node in the tree and all other nodes.
 </p>
 
 
