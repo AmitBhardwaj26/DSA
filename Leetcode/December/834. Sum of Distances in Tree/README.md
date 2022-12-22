@@ -16,11 +16,10 @@ Return an array answer of length n where answer[i] is the sum of the distances b
 <strong>Output:</strong> [8,12,6,10,10,10]
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+The tree is shown above.
+We can see that dist(0,1) + dist(0,2) + dist(0,3) + dist(0,4) + dist(0,5)
+equals 1 + 1 + 2 + 2 + 2 = 8.
+Hence, answer[0] = 8, and so on.
   </pre>
   
 Example 2:
