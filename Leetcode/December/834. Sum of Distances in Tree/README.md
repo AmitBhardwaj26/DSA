@@ -13,7 +13,7 @@ Return an array answer of length n where answer[i] is the sum of the distances b
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>    n = 6, edges = [[0,1],[0,2],[2,3],[2,4],[2,5]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [8,12,6,10,10,10]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
