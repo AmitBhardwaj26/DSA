@@ -20,19 +20,13 @@ Note: You may not engage in multiple transactions simultaneously (i.e., you must
 transactions = [buy, sell, cooldown, buy, sell]
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= prices.length <= 5000
+0 <= prices[i] <= 1000
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
