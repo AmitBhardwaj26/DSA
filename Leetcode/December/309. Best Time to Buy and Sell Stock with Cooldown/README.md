@@ -32,27 +32,32 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+ class Solution {
+public:
+    int dp[5001][2];
+    int solve(vector<int> &v , int n ,bool c)
+    {
+        if(n>=v.size()) return 0;
+        
+        if(dp[n][c]!=-1) return dp[n][c];
+        
+        int a=INT_MIN,b=INT_MIN;
+        if(c)
+        a= max(-v[n]+ solve(v,n+1,0) ,solve(v,n+1,1) );
+        else 
+        {
+         b=max(v[n]+solve(v,n+2,1),solve(v,n+1,0) );
+           // ans=max(ans,b);
+        }
+        return dp[n][c]=max(a,b);
+    }
+    
+    int maxProfit(vector<int>& prices) {
+        memset(dp,-1,sizeof(dp));
+       return solve(prices,0,1);
+        //return ans;
+    }
+};
           
  </pre>
 
