@@ -3,11 +3,12 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Find the maximum profit you can achieve. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times) with the following restrictions:
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+After you sell your stock, you cannot buy stock on the next day (i.e., cooldown one day).
+Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).
 </p>
 
 
