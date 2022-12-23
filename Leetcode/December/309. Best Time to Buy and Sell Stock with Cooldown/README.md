@@ -14,7 +14,7 @@ Note: You may not engage in multiple transactions simultaneously (i.e., you must
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   prices = [1,2,3,0,2]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 3
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
