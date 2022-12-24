@@ -42,26 +42,20 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         
+class Solution {
+public:
+     #define ll long long
+    #define MOD 1000000007
+    int numTilings(int n) {
+        vector<ll> dp(n+1);
+        iota(dp.begin(),dp.end(),0);
+        dp[0] = 1;
+        for(int i=3;i<=n;i++)
+            dp[i] = (dp[i-1]+dp[i-1]+dp[i-3])%MOD;
+        return dp.back();
+    }
+};
           
  </pre>
 
