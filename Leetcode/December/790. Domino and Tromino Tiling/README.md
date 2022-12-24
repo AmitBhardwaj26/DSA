@@ -14,7 +14,7 @@ In a tiling, every square must be covered by a tile. Two tilings are different i
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>    n = 3
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 5
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
