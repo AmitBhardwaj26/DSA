@@ -13,7 +13,7 @@ A subsequence is an array that can be derived from another array by deleting som
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   nums = [4,5,2,1], queries = [3,10,21]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [2,3,4]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
