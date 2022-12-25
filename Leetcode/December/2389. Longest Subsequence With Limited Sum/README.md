@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/longest-subsequence-with-limited-sum/description/">2389. Longest Subsequence With Limited Sum</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
 You are given an integer array nums of length n, and an integer array queries of length m.
