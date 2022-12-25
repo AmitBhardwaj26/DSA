@@ -37,26 +37,25 @@ m == queries.length
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+    vector<int> answerQueries(vector<int>& nums, vector<int>& q) {
+        sort(nums.begin(),nums.end());
+        vector<int> ans;
+        for(int i=0;i<q.size();i++)
+        {
+           int sum=0,count=0;
+           for(int j=0;j<nums.size();j++)
+           {
+               sum+=nums[j];
+               if(sum<=q[i]) count++;
+               else break;
+           }  
+           ans.push_back(count);
+        }
+        return ans;
+    }
+};
           
  </pre>
 
