@@ -22,19 +22,15 @@ A subsequence is an array that can be derived from another array by deleting som
 - The subsequence [4,5,2,1] has a sum less than or equal to 21. It can be proven that 4 is the maximum size of such a subsequence, so answer[2] = 4.
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == nums.length
+m == queries.length
+1 <= n, m <= 1000
+1 <= nums[i], queries[i] <= 106
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
