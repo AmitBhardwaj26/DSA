@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+You are given an integer array nums of length n, and an integer array queries of length m.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Return an array answer of length m where answer[i] is the maximum size of a subsequence that you can take from nums such that the sum of its elements is less than or equal to queries[i].
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
 </p>
 
 
