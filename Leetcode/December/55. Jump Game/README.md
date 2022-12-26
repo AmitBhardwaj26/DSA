@@ -24,10 +24,7 @@ Jump 1 step from index 0 to 1, then 3 steps to the last index.
 Constraints:
 <pre>
 1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+0 <= nums[i] <= 105
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
