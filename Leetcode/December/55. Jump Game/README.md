@@ -1,13 +1,13 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">55. Jump Game</a></h2>
+<h2><a href="https://leetcode.com/problems/jump-game/description/">55. Jump Game</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+ You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Return true if you can reach the last index, or false otherwise.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+ 
 </p>
 
 
