@@ -21,12 +21,7 @@ There are 3 bags at full capacity, so we return 3.
 It can be shown that it is not possible to have more than 3 bags at full capacity.
 Note that there may be other ways of placing the rocks that result in an answer of 3.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
