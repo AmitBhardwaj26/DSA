@@ -25,11 +25,11 @@ Note that there may be other ways of placing the rocks that result in an answer 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == capacity.length == rocks.length
+1 <= n <= 5 * 104
+1 <= capacity[i] <= 109
+0 <= rocks[i] <= capacity[i]
+1 <= additionalRocks <= 109
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
