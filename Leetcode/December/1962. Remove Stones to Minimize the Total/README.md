@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">1962. Remove Stones to Minimize the Total</a></h2>
+<h2><a href="https://leetcode.com/problems/remove-stones-to-minimize-the-total/">1962. Remove Stones to Minimize the Total</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
