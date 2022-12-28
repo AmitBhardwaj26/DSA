@@ -19,11 +19,10 @@ floor(x) is the greatest integer that is smaller than or equal to x (i.e., round
 <strong>Output:</strong> 12
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+Steps of a possible scenario are:
+- Apply the operation on pile 2. The resulting piles are [5,4,5].
+- Apply the operation on pile 0. The resulting piles are [3,4,5].
+The total number of stones in [3,4,5] is 12.
   </pre>
   
 Example 2:
