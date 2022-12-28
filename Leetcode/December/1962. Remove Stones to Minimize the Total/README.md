@@ -16,7 +16,7 @@ floor(x) is the greatest integer that is smaller than or equal to x (i.e., round
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  piles = [5,4,9], k = 2
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 12
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
