@@ -3,11 +3,14 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+You are given a 0-indexed integer array piles, where piles[i] represents the number of stones in the ith pile, and an integer k. You should apply the following operation exactly k times:
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Choose any piles[i] and remove floor(piles[i] / 2) stones from it.
+Notice that you can apply the operation on the same pile more than once.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return the minimum possible total number of stones remaining after applying the k operations.
+
+floor(x) is the greatest integer that is smaller than or equal to x (i.e., rounds x down).
 </p>
 
 
