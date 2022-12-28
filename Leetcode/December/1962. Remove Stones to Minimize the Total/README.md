@@ -25,10 +25,7 @@ Steps of a possible scenario are:
 The total number of stones in [3,4,5] is 12.
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
