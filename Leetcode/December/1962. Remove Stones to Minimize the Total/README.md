@@ -30,11 +30,9 @@ The total number of stones in [3,4,5] is 12.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= piles.length <= 105
+1 <= piles[i] <= 104
+1 <= k <= 105
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
