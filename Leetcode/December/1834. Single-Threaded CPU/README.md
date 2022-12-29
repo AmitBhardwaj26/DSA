@@ -48,26 +48,41 @@ tasks.length == n
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+#define ll long long 
+#define ss second
+#define ff first
+#define pii pair<ll,ll>
+public:
+    vector<int> getOrder(vector<vector<int>>& task) {
+        vector<pair<ll,pii>> tasks;
+        for(int i=0;i<task.size();i++)
+        {
+            tasks.push_back({task[i][0],{task[i][1],i}});
+        }
+        sort(tasks.begin(),tasks.end());
+        priority_queue<pair<int,pii>,vector<pair<int,pii>>,greater<pair<int,pii>>> pq;
+        vector<int> ans;
+        ll i=0,t=1, n=tasks.size() ,prev=0;
+        // pq.push({tasks[i][1],0});
+        while(ans.size()!=n)
+        {
+            while(i<n && (prev>=tasks[i].ff || prev==0)) 
+            {
+                pq.push({tasks[i].ss.ff,{tasks[i].ss.ss , tasks[i].ff}}); 
+                if(prev==0) prev=tasks[i].ff;
+                i++; 
+            }
+            // cout<<prev<<"| "<<pq.top().ff<<" "<<pq.top().ss<<"\n";
+            if(pq.size()==0) {prev=0; continue;}
+            prev= max(prev,pq.top().ss.ss);
+            prev+=pq.top().ff; ans.push_back(pq.top().ss.ff);
+            // cout<<prev<<" ";
+            pq.pop();
+        }
+        return ans;
+    }
+};
           
  </pre>
 
