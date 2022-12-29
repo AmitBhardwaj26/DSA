@@ -17,8 +17,8 @@ Return the order in which the CPU will process the tasks.
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input:</strong>  tasks = [[1,2],[2,4],[3,2],[4,1]]
+<strong>Output:</strong> [0,2,3,1]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
