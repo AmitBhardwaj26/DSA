@@ -38,12 +38,11 @@ The events go as follows:
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+tasks.length == n
+1 <= n <= 105
+1 <= enqueueTimei, processingTimei <= 109
 </pre>
+  
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
  <br>
