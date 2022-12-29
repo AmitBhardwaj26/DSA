@@ -21,11 +21,17 @@ Return the order in which the CPU will process the tasks.
 <strong>Output:</strong> [0,2,3,1]
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+The events go as follows: 
+- At time = 1, task 0 is available to process. Available tasks = {0}.
+- Also at time = 1, the idle CPU starts processing task 0. Available tasks = {}.
+- At time = 2, task 1 is available to process. Available tasks = {1}.
+- At time = 3, task 2 is available to process. Available tasks = {1, 2}.
+- Also at time = 3, the CPU finishes task 0 and starts processing task 2 as it is the shortest. Available tasks = {1}.
+- At time = 4, task 3 is available to process. Available tasks = {1, 3}.
+- At time = 5, the CPU finishes task 2 and starts processing task 3 as it is the shortest. Available tasks = {1}.
+- At time = 6, the CPU finishes task 3 and starts processing task 1. Available tasks = {}.
+- At time = 10, the CPU finishes task 1 and becomes idle.
+
   </pre>
   
 Example 2:
