@@ -33,11 +33,7 @@ The events go as follows:
 - At time = 10, the CPU finishes task 1 and becomes idle.
 
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
