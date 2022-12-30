@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">797. All Paths From Source to Target</a></h2>
+<h2><a href="https://leetcode.com/problems/all-paths-from-source-to-target/description/">797. All Paths From Source to Target</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
@@ -18,12 +18,7 @@ The graph is given as follows: graph[i] is a list of all nodes you can visit fro
 <pre>
 There are two paths: 0 -> 1 -> 3 and 0 -> 2 -> 3.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
