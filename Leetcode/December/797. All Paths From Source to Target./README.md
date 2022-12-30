@@ -27,11 +27,12 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == graph.length
+2 <= n <= 15
+0 <= graph[i][j] < n
+graph[i][j] != i (i.e., there will be no self-loops).
+All the elements of graph[i] are unique.
+The input graph is guaranteed to be a DAG.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
