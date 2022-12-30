@@ -13,7 +13,7 @@ The graph is given as follows: graph[i] is a list of all nodes you can visit fro
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  graph = [[1,2],[3],[3],[]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>[[0,1,3],[0,2,3]]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
