@@ -39,26 +39,33 @@ The input graph is guaranteed to be a DAG.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class Solution {
+public: vector<vector<int>> ans;
+    void solve(vector<vector<int>> &adj, int i, vector<int> &vis,  vector<int> &v)
+    {
+        if(vis[i]==0)
+        {
+            vis[i]=1;
+            v.push_back(i);
+            if(i==adj.size()-1) ans.push_back(v);
+            for(auto it: adj[i])
+            {
+                solve(adj,it,vis,v);
+            }
+            vis[i]=0;
+            v.pop_back();
+        }
+        
+    }
+    
+    vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
+        // dfs
+        vector<int> vis(graph.size()+1,0);
+        vector<int> v;
+        solve(graph,0,vis,v);
+        return ans;
+    }
+};
           
  </pre>
 
