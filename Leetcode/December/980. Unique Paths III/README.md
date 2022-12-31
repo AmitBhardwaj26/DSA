@@ -3,11 +3,13 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+You are given an m x n integer array grid where grid[i][j] could be:
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
-
-Return an integer array answer where answer[i] is the answer to the ith query.
+1 representing the starting square. There is exactly one starting square.
+2 representing the ending square. There is exactly one ending square.
+0 representing empty squares we can walk over.
+-1 representing obstacles that we cannot walk over.
+Return the number of 4-directional walks from the starting square to the ending square, that walk over every non-obstacle square exactly once.
 </p>
 
 
