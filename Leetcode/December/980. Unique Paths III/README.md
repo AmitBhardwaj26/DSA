@@ -14,8 +14,8 @@ Return the number of 4-directional walks from the starting square to the ending 
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input:</strong>  grid = [[1,0,0,0],[0,0,0,0],[0,0,2,-1]]
+<strong>Output:</strong> 2
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
