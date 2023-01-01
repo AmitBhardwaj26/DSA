@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given a pattern and a string s, find if s follows the same pattern.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+ 
 </p>
 
 
