@@ -13,7 +13,7 @@ Here follow means a full match, such that there is a bijection between a letter 
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   pattern = "abba", s = "dog cat cat dog"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> true
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
