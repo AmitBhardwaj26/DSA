@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/word-pattern/description/">985. Sum of Even Numbers After Queries</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
 Given a pattern and a string s, find if s follows the same pattern.
@@ -12,7 +12,7 @@ Here follow means a full match, such that there is a bijection between a letter 
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>   pattern = "abba", s = "dog cat cat dog"
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
