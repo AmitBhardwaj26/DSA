@@ -39,27 +39,47 @@ All the words in s are separated by a single space.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    bool wordPattern(string s, string s1) {
+        
+       // string s1[s.size];
+
+        unordered_map<string,int> m;
+        unordered_map<int,string> m1;
+        
+        int i=0,x;
+        string z="";
+            for(int j=0;j<s1.size();j++)
+            {
+             if(s1[j]==' ')   
+             {
+                  x=s[i]-'a';
+                if( m.find(z)!=m.end()) 
+                  { if(m[z]!=x) return false;}
+                  
+                else {m[z]=x;}
+                 
+                if( m1.find(x)!=m1.end()) 
+                  { if(m1[x]!=z) return false;}
+                  
+                else {m1[x]=z;}
+                 
+                 
+                 z=""; i++; if(i==s.size()) return 0;
+            } 
+                 
+                 else { z+=s1[j];  }
+            }
+         x=s[i]-'a';
+        cout<<x<<" "<<z<<"\n";
+        if( m.find(z)!=m.end()) 
+                  { if(m[z]!=x) return false;}
+        if( m1.find(x)!=m1.end()) 
+                  { if(m1[x]!=z) return false;}
+           if(i!=s.size()-1) return 0;       
+        return true;
+    }
+};
  </pre>
 
