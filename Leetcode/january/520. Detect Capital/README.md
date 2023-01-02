@@ -17,11 +17,7 @@ Given a string word, return true if the usage of capitals in it is right.
 <strong>Output:</strong> true
 </pre>
 
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
