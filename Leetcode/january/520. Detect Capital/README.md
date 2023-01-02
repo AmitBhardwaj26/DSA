@@ -36,26 +36,32 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+  class Solution {
+    public:
+        bool detectCapitalUse(string word) {
+            bool first=false;
+            if(word[0]>='A' && word[0]<='Z' ) first=true;
+
+            if(first)
+            {
+                bool checkfcfc=true;
+                for(int i=1;i<word.size();i++)
+                {
+                    if(word[i]>='a' && word[i]<='z')
+                        {checkfcfc=false; break;}
+                }
+                if(checkfcfc) return true;
+            }
+                bool checkfffl=true;
+                for(int i=1;i<word.size();i++)
+                {
+                    if(word[i]>='A' && word[i]<='Z')
+                        {checkfffl=false; break;}
+                }
+                if(checkfffl) return true;
+            return false;
+        }
+    };
           
  </pre>
 
