@@ -33,11 +33,10 @@ Columns 0 and 2 are sorted, but column 1 is not, so you only need to delete 1 co
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == strs.length
+1 <= n <= 100
+1 <= strs[i].length <= 1000
+strs[i] consists of lowercase English letters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
