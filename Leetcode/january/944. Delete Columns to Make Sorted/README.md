@@ -29,11 +29,6 @@ The grid looks as follows:
   ghi
 Columns 0 and 2 are sorted, but column 1 is not, so you only need to delete 1 column.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
