@@ -44,25 +44,24 @@ strs[i] consists of lowercase English letters.
  <pre>
  
           class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
+              public:
+                  int minDeletionSize(vector<string>& str) {
+                    int ans=0;
+                    for(int i=0;i<str[0].size();i++)  
+                    {
+                      bool check=1;
+                      for(int j=1;j<str.size();j++)
+                      {
+                          if(str[j][i]<str[j-1][i])
+                          {
+                              check=0; break;
+                          }
+                      }
+                      if(check==0) ans++;
+                    }
+                    return ans;
                   }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+              };
           
  </pre>
 
