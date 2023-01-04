@@ -26,11 +26,8 @@ It can be shown that all the tasks cannot be completed in fewer than 4 rounds, s
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= tasks.length <= 105
+1 <= tasks[i] <= 109
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
