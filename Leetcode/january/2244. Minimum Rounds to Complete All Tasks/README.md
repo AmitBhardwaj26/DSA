@@ -21,11 +21,7 @@ Explanation To complete all the tasks, a possible plan is:
 - In the fourth round, you complete 2 tasks of difficulty level 4.  
 It can be shown that all the tasks cannot be completed in fewer than 4 rounds, so the answer is 4.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
