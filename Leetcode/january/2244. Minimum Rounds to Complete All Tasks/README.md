@@ -11,7 +11,7 @@ Return the minimum rounds required to complete all the tasks, or -1 if it is not
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   tasks = [2,2,3,3,2,4,4,4,4,4]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 4
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
