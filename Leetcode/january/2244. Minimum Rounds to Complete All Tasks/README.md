@@ -34,26 +34,28 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+    int minimumRounds(vector<int>& task) {
+        int n=task.size();
+        map<int,int > m;
+        for(int i=0;i<n;i++)
+        {
+           m[task[i]]++;
+        } 
+        int ans=0;
+        for(auto i : m)
+        {
+            int it=i.second;
+            if(it==1) return -1;
+           int x=it%3,y=it/3;
+           if(x==0) ans+=y;
+           else ans+=y+1;
+           cout<<ans<<"\n";
+        }
+        return ans;
+    }
+};
           
  </pre>
 
