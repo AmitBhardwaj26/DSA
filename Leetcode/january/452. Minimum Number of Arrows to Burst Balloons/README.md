@@ -25,11 +25,9 @@ Explanation:The balloons can be burst by 2 arrows:
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= points.length <= 105
+points[i].length == 2
+-231 <= xstart < xend <= 231 - 1
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
