@@ -21,11 +21,7 @@ Explanation:The balloons can be burst by 2 arrows:
 - Shoot an arrow at x = 11, bursting the balloons [10,16] and [7,12].
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
