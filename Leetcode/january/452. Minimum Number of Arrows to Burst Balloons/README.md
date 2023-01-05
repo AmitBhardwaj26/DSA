@@ -16,11 +16,9 @@ Given the array points, return the minimum number of arrows that must be shot to
 <strong>Output:</strong> 2
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+Explanation:The balloons can be burst by 2 arrows:
+- Shoot an arrow at x = 6, bursting the balloons [2,8] and [1,6].
+- Shoot an arrow at x = 11, bursting the balloons [10,16] and [7,12].
   </pre>
   
 Example 2:
