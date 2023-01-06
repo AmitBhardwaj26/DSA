@@ -25,11 +25,10 @@ Explanation:The boy can buy ice cream bars at indices 0,1,2,4 for a total price 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+costs.length == n
+1 <= n <= 105
+1 <= costs[i] <= 105
+1 <= coins <= 108
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
