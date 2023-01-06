@@ -15,7 +15,7 @@ Note: The boy can buy the ice cream bars in any order.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   costs = [1,3,2,4,1], coins = 7
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>4
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
