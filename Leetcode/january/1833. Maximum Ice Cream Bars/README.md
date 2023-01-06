@@ -3,11 +3,13 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+It is a sweltering summer day, and a boy wants to buy some ice cream bars.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+At the store, there are n ice cream bars. You are given an array costs of length n, where costs[i] is the price of the ith ice cream bar in coins. The boy initially has coins coins to spend, and he wants to buy as many ice cream bars as possible. 
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return the maximum number of ice cream bars the boy can buy with coins coins.
+
+Note: The boy can buy the ice cream bars in any order.
 </p>
 
 
