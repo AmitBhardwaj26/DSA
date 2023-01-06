@@ -14,7 +14,7 @@ Note: The boy can buy the ice cream bars in any order.
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>   costs = [1,3,2,4,1], coins = 7
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
