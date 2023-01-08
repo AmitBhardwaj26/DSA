@@ -33,26 +33,36 @@ All the points are unique.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+    int maxPoints(vector<vector<int>>& points) {
+        if(points.size()==1) return 1;
+        int n=points.size(),ans=2;
+        
+        for(int i=0;i<n-2;i++)
+        {
+            int x1=points[i][0],y1=points[i][1];
+            for(int j=i+1;j<n-1;j++)
+            {
+               int x2=points[j][0],y2=points[j][1];       
+                
+                int a=y1-y2,b=x2-x1,c=(x2-x1)*y1+(y1-y2)*x1;
+                int count=2;
+                for(int k=j+1;k<n;k++)
+                {
+                   int x3=points[k][0],y3=points[k][1];
+                   if((a*x3+ b*y3) == c) 
+                   {
+                       count++  ;
+                       //cout<<"[ "<<x3<<" "<<y3<<" ]\n";
+                    } 
+                }
+                ans=max(ans,count);
+            }
+        }
+        return ans;
+    }
+};
           
  </pre>
 
