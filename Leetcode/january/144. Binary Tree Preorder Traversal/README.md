@@ -9,7 +9,7 @@ Given the root of a binary tree, return the preorder traversal of its nodes' val
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   root = [1,null,2,3]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>[1,2,3]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
