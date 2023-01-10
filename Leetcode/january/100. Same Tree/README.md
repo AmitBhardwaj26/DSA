@@ -13,13 +13,7 @@ Two binary trees are considered the same if they are structurally identical, and
 <pre><strong>Input:</strong>  p = [1,2,3], q = [1,2,3]
 <strong>Output:</strong> true
 </pre>
-<pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
-  </pre>
+
 
  
 
