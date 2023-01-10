@@ -10,8 +10,8 @@ Two binary trees are considered the same if they are structurally identical, and
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input:</strong>  p = [1,2,3], q = [1,2,3]
+<strong>Output:</strong> true
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
