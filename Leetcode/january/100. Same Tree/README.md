@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">100. Same Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/same-tree/description/">100. Same Tree</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
