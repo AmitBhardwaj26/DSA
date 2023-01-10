@@ -28,25 +28,16 @@ The number of nodes in both trees is in the range [0, 100].
  <pre>
  
           class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+public:
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        if(!p && !q) return true;
+        if((!p && q)||(p && !q)) return false;
+        if(p->val!=q->val) return false;
+            bool a= isSameTree(p->left,q->left);
+            bool b= isSameTree(p->right,q->right);
+        
+        return a && b;
+    }
+};
  </pre>
 
