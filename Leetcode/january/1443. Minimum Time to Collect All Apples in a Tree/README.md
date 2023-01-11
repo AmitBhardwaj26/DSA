@@ -12,7 +12,7 @@ The edges of the undirected tree are given in the array edges, where edges[i] = 
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>   n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,true,false,true,true,false]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
