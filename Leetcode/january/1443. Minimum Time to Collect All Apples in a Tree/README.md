@@ -35,26 +35,29 @@ hasApple.length == n
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+    class Solution {
+      public:
+          vector<vector<int>> adjList;
+          int dfs(vector<bool>& hasApple,int node,int d,int prev)
+          {
+              int result=0,temp;
+              for(int &i:adjList[node])
+           if(i!=prev)
+           {
+               temp=dfs(hasApple,i,d+1,node);
+               if(temp) result+=temp-d;
+           }
+              return result||hasApple[node]?result+d:0; 
+
+          }
+          int minTime(int n, vector<vector<int>>& edges, vector<bool>& hasApple) 
+          {
+              adjList.resize(n);
+              for(vector<int> &e:edges)
+                  adjList[e[0]].push_back(e[1]),adjList[e[1]].push_back(e[0]);
+              return dfs(hasApple,0,0,-1)*2;
+          }
+      };
           
  </pre>
 
