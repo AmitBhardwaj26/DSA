@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">1443. Minimum Time to Collect All Apples in a Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/description/">1443. Minimum Time to Collect All Apples in a Tree</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
