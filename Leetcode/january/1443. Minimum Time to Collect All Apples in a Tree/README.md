@@ -18,11 +18,7 @@ The edges of the undirected tree are given in the array edges, where edges[i] = 
 <pre>
 Explanation:The figure above represents the given tree where red vertices have an apple. One optimal path to collect all apples is shown by the green arrows.  
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
