@@ -23,11 +23,12 @@ Explanation:The figure above represents the given tree where red vertices have a
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= n <= 105
+edges.length == n - 1
+edges[i].length == 2
+0 <= ai < bi <= n - 1
+fromi < toi
+hasApple.length == n
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
