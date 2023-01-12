@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">1519. Number of Nodes in the Sub-Tree With the Same Label</a></h2>
+<h2><a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/description/">1519. Number of Nodes in the Sub-Tree With the Same Label</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
