@@ -29,10 +29,6 @@ The characters in each group are equivalent and sorted in lexicographical order.
 So the answer is "makkek".
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
