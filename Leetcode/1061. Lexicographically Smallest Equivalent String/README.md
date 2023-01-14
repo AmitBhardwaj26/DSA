@@ -44,26 +44,36 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+   class Solution {
+      public:
+          int par[26];
+
+          int find(int x){
+              if(par[x]==-1) return x;
+              return par[x]=find(par[x]);
+          }
+
+          void Union(int x, int y) {
+              x = find(x);
+              y = find(y);
+
+              if (x != y) 
+                  par[max(x, y)] = min(x, y); 
+          }
+
+          string smallestEquivalentString(string s1, string s2, string baseStr) {
+
+              memset(par, -1, sizeof(par));
+
+              for (auto i = 0; i < s1.size(); ++i) 
+                  Union(s1[i] - 'a', s2[i] - 'a');
+
+              for(auto i=0;i<baseStr.size();i++) 
+                  baseStr[i]=find(baseStr[i]-'a')+'a';
+
+              return baseStr;
+          }
+      };
           
  </pre>
 
