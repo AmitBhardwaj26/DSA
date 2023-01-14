@@ -21,7 +21,7 @@ Return the lexicographically smallest equivalent string of baseStr by using the 
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   s1 = "parker", s2 = "morris", baseStr = "parser"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  "makkek"
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
