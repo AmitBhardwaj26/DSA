@@ -30,26 +30,21 @@ s[i] is either '0' or '1'.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+    int minFlipsMonoIncr(string s) {
+        int ans=INT_MAX,x0=0,y0=0;
+        for(int i=s.size()-1;i>=0;i--) if(s[i]=='0') y0++;
+        for(int i=0;i<s.size();i++)
+        {
+            ans=min(ans,y0+x0);
+            if(s[i]=='0') y0--;
+            else x0++;
+        }
+          ans=min(ans,y0+x0);
+          return ans;
+    }
+};
           
  </pre>
 
