@@ -13,7 +13,7 @@ Return the minimum number of flips to make s monotone increasing.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  s = "00110"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 1
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
