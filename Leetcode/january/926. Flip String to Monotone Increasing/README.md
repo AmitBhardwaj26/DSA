@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+A binary string is monotone increasing if it consists of some number of 0's (possibly none), followed by some number of 1's (also possibly none).
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+You are given a binary string s. You can flip s[i] changing it from 0 to 1 or from 1 to 0.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return the minimum number of flips to make s monotone increasing.
 </p>
 
 
