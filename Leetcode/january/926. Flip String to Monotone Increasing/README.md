@@ -22,11 +22,8 @@ Explanation: We flip the last digit to get 00111.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= s.length <= 105
+s[i] is either '0' or '1'.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
