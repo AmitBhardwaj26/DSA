@@ -19,11 +19,6 @@ Return the minimum number of flips to make s monotone increasing.
 Explanation: We flip the last digit to get 00111.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
