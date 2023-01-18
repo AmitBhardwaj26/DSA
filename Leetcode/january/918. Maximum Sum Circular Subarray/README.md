@@ -23,11 +23,9 @@ A subarray may only include each element of the fixed buffer nums at most once. 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == nums.length
+1 <= n <= 3 * 104
+-3 * 104 <= nums[i] <= 3 * 104
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
