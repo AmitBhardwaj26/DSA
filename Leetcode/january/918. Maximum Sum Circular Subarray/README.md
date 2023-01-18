@@ -40,26 +40,27 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        // logic behind this is simple subtract most consecutive negative subarray sum using kadane algo to total sum or ans will be maximux subarray sum in consecutive 
+
+// kadane algo take 2 variable maxmum sum, sum at each index maxsum=max(maxsum,sum) and is sum<0 then sum=0;
+
+class Solution {
+public:
+    int maxSubarraySumCircular(vector<int>& nums) {
+        int sum=0;
+        int maxi=INT_MIN,tempmaxi=0,mini=INT_MAX,tempmini=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            sum+=nums[i];
+            tempmaxi+=nums[i];  maxi=max(maxi,tempmaxi);
+            if(tempmaxi<0) tempmaxi=0;
+             tempmini+=nums[i]; mini=min(mini,tempmini);
+            if(tempmini>0) tempmini=0;
+        }
+        if(sum==mini) return maxi;
+        return max(maxi,sum-mini);
+    }
+};
           
  </pre>
 
