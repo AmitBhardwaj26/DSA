@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">918. Maximum Sum Circular Subarray</a></h2>
+<h2><a href="https://leetcode.com/problems/maximum-sum-circular-subarray/description/">918. Maximum Sum Circular Subarray</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
