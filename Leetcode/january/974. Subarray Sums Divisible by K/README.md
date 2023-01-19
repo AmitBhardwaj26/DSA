@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given an integer array nums and an integer k, return the number of non-empty subarrays that have a sum divisible by k.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+A subarray is a contiguous part of an array.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+ 
 </p>
 
 
