@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">974. Subarray Sums Divisible by K</a></h2>
+<h2><a href="https://leetcode.com/problems/subarray-sums-divisible-by-k/description/">974. Subarray Sums Divisible by K</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
