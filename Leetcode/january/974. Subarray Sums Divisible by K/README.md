@@ -43,25 +43,23 @@ Constraints:
  <pre>
  
           class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+public:
+    int subarraysDivByK(vector<int>& nums, int k) {
+        map<int,int> m;
+        int ans=0,sum=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            if(nums[i]<0) { nums[i]=k-abs(nums[i])%k;  }
+           sum+=nums[i]; 
+           sum%=k;
+           if(sum==0) ans++;
+           ans+=m[sum];
+           m[sum]++;
+        }
+      
+        return ans;
+    }
+};
           
  </pre>
 
