@@ -1,10 +1,10 @@
 
-<h2><a href="https://leetcode.com/problems/path-sum-ii/">113. Path Sum II</a></h2>
-<h3>Medium</h3>
+<h2><a href="https://leetcode.com/problems/path-sum-ii/"> 113.Path Sum II</a></h2>
+<h3>Me dium</h3>
 <hr>
 <div><p>
 
-Given the root of a binary tree and an integer  targetSum, return all root-to-leaf paths where the sum of the node values in the path equals targetSum. Each path should be returned as a list of the node values, not node references.
+Given the root of a binary tree and an integer target Sum, return all root-to-leaf paths where the sum of the node values in the path equals targetSum. Each path should be returned as a list of the node values, not node references.
 
 A root-to-leaf path is a path starting from the root and ending at any leaf node. A leaf is a node with no children.
 </p>
@@ -21,7 +21,7 @@ There are two paths whose sum equals targetSum:
   
 <p><strong>Example 2:</strong></p>
 <pre><strong>Input:</strong>  root = [1,2,3], targetSum = 5
-<strong>Output:</strong> []
+<strong>Output:</strong> [ ]
 </pre>  
 
 Constraints:
