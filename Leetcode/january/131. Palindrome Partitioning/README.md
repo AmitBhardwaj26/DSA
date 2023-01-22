@@ -37,26 +37,47 @@ s contains only lowercase English letters.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+   vector<vector<string>> ans;
+   bool pail(string s)
+   {
+       int i=0,j=s.size()-1;
+       while(i<j)
+       {
+           if(s[i]!=s[j]) return 0;
+           i++,j--;
+       }
+       return 1;
+   }
+
+   void solve(int i, string s,vector<string> a)
+   {
+       //base case 
+       if(i>=s.size()) 
+       {
+           ans.push_back(a);
+           return ;
+       }
+       // choce diagram
+       string temp="";
+       for(int j=i;j<s.size();j++)
+       {
+           temp+=s[j];
+           if(pail(temp)) 
+           {
+               a.push_back(temp);
+               solve(j+1,s,a);
+               a.pop_back();
+           }
+       }
+      
+   }
+    vector<vector<string>> partition(string s) {
+        solve(0,s,vector<string>());
+        return ans;
+    }
+};
           
  </pre>
 
