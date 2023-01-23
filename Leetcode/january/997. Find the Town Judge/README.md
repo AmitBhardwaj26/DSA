@@ -20,7 +20,7 @@ Return the label of the town judge if the town judge exists and can be identifie
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   n = 2, trust = [[1,2]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  2
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
