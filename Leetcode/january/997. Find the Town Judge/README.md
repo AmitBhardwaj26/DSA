@@ -3,11 +3,18 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+If the town judge exists, then:
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+The town judge trusts nobody.
+Everybody (except for the town judge) trusts the town judge.
+There is exactly one person that satisfies properties 1 and 2.
+You are given an array trust where trust[i] = [ai, bi] representing that the person labeled ai trusts the person labeled bi.
+
+Return the label of the town judge if the town judge exists and can be identified, or return -1 otherwise.
+
+ 
 </p>
 
 
