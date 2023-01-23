@@ -27,11 +27,12 @@ Return the label of the town judge if the town judge exists and can be identifie
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= n <= 1000
+0 <= trust.length <= 104
+trust[i].length == 2
+All the pairs of trust are unique.
+ai != bi
+1 <= ai, bi <= n
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
