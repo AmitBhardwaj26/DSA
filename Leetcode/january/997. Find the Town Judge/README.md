@@ -39,26 +39,26 @@ ai != bi
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+    int findJudge(int n, vector<vector<int>>& t) {
+        map<int,int> m,m2;
+        for(int i=0;i<t.size();i++)
+        {
+            m2[t[i][0]]++;
+            m[t[i][1]]++; m[t[i][1]]+=1;
+        }
+        for(int i=1;i<=n;i++)
+        {
+            if(m[i]==2*(n-1) && m2[i]==0 )
+            {
+                return i;
+            }
+        }
+        
+        return -1;
+    }
+};
           
  </pre>
 
