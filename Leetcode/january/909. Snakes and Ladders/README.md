@@ -37,11 +37,10 @@ This is the lowest possible number of moves to reach the last square, so return 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == board.length == board[i].length
+2 <= n <= 20
+grid[i][j] is either -1 or in the range [1, n2].
+The squares labeled 1 and n2 do not have any ladders or snakes.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
