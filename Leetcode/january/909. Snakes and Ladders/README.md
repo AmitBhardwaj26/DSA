@@ -25,17 +25,14 @@ Return the least number of moves required to reach the square n2. If it is not p
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+In the beginning, you start at square 1 (at row 5, column 0).
+You decide to move to square 2 and must take the ladder to square 15.
+You then decide to move to square 17 and must take the snake to square 13.
+You then decide to move to square 14 and must take the ladder to square 35.
+You then decide to move to square 36, ending the game.
+This is the lowest possible number of moves to reach the last square, so return 4.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
