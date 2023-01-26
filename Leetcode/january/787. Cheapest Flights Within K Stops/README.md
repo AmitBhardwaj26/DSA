@@ -30,11 +30,15 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= n <= 100
+0 <= flights.length <= (n * (n - 1) / 2)
+flights[i].length == 3
+0 <= fromi, toi < n
+fromi != toi
+1 <= pricei <= 104
+There will not be any multiple flights between two cities.
+0 <= src, dst, k < n
+src != dst
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
