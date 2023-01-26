@@ -11,8 +11,8 @@ You are also given three integers src, dst, and k, return the cheapest price fro
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<pre><strong>Input:</strong> n = 4, flights = [[0,1,100],[1,2,100],[2,0,100],[1,3,600],[2,3,200]], src = 0, dst = 3, k = 1
+<strong>Output:</strong> 700
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
