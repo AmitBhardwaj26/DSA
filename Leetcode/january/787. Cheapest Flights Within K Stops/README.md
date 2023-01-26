@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">787. Cheapest Flights Within K Stops</a></h2>
+<h2><a href="https://leetcode.com/problems/cheapest-flights-within-k-stops/description/">787. Cheapest Flights Within K Stops</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
