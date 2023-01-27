@@ -12,7 +12,7 @@ A concatenated word is defined as a string that is comprised entirely of at leas
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>  ["cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
