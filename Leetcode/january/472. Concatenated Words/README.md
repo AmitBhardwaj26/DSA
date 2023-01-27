@@ -13,7 +13,7 @@ A concatenated word is defined as a string that is comprised entirely of at leas
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  ["cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>["catsdogcats","dogcatsdog","ratcatdogcat"]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
