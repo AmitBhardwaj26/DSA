@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given an array of strings words (without duplicates), return all the concatenated words in the given list of words.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+A concatenated word is defined as a string that is comprised entirely of at least two shorter words in the given array.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+ 
 </p>
 
 
