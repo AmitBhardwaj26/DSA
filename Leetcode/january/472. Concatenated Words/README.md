@@ -21,19 +21,16 @@ A concatenated word is defined as a string that is comprised entirely of at leas
 "ratcatdogcat" can be concatenated by "rat", "cat", "dog" and "cat".
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= words.length <= 104
+1 <= words[i].length <= 30
+words[i] consists of only lowercase English letters.
+All the strings of words are unique.
+1 <= sum(words[i].length) <= 105
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
