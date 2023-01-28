@@ -3,11 +3,15 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+ 
+Given a data stream input of non-negative integers a1, a2, ..., an, summarize the numbers seen so far as a list of disjoint intervals.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Implement the SummaryRanges class:
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+SummaryRanges() Initializes the object with an empty stream.
+void addNum(int value) Adds the integer value to the stream.
+int[][] getIntervals() Returns a summary of the integers in the stream currently as a list of disjoint intervals [starti, endi]. The answer should be sorted by starti.
+ 
 </p>
 
 
