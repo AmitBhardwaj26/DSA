@@ -34,19 +34,12 @@ summaryRanges.addNum(6);      // arr = [1, 2, 3, 6, 7]
 summaryRanges.getIntervals(); // return [[1, 3], [6, 7]]
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+0 <= value <= 104
+At most 3 * 104 calls will be made to addNum and getIntervals.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
