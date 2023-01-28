@@ -46,26 +46,37 @@ At most 3 * 104 calls will be made to addNum and getIntervals.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class SummaryRanges {
+public:
+    set<int> nums;
+    SummaryRanges() {
+        
+    }
+    
+    void addNum(int value) {
+        nums.insert(value);
+    }
+    
+    vector<vector<int>> getIntervals() {
+        vector<vector<int>> intervals;
+        int start = *nums.begin();
+        int end = *nums.begin();
+        for (auto it = ++nums.begin(); it != nums.end(); it++) {
+            int val = *it;
+            if (val - end == 1) {
+                end = val;
+            } else {
+                intervals.push_back({start, end});
+                start = end = val;
+            }
+        }
+        intervals.push_back({start, end});
+        return intervals;
+        
+    }
+};
+
+
           
  </pre>
 
