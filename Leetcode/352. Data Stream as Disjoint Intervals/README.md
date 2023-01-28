@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">352. Data Stream as Disjoint Intervals</a></h2>
+<h2><a href="https://leetcode.com/problems/data-stream-as-disjoint-intervals/description/">352. Data Stream as Disjoint Intervals</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
