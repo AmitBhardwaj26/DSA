@@ -22,6 +22,7 @@ The functions get and put must each run in O(1) average time complexity.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  ["LFUCache", "put", "put", "get", "put", "get", "get", "put", "get", "get", "get"]
+[[2], [1, 1], [2, 2], [1], [3, 3], [2], [3], [4, 4], [1], [3], [4]]
 <strong>Output:</strong> [null, null, null, 1, null, -1, 3, null, -1, 3, 4]
 </pre>
 <pre>
