@@ -52,11 +52,11 @@ lfu.get(4);      // return 4
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+0 <= capacity <= 104
+0 <= key <= 105
+0 <= value <= 109
+At most 2 * 105 calls will be made to get and put.
+ 
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
