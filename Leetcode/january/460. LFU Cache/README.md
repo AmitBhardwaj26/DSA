@@ -63,26 +63,59 @@ At most 2 * 105 calls will be made to get and put.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+       //https://www.youtube.com/watch?v=xDEuM5qa0zg&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=77&t=0s
+
+class LFUCache {
+    int capacity;
+    int minFreq;
+    unordered_map<int,pair<int,int>> keyVal;
+    unordered_map<int,list<int>> freqList;
+    unordered_map<int,list<int>::iterator> pos;
+public:
+    LFUCache(int capacity) {
+        this->capacity = capacity;
+        minFreq = 0;
+    }
+    
+    int get(int key) {
+        if(keyVal.find(key) == keyVal.end())
+            return -1;
+        freqList[keyVal[key].second].erase(pos[key]);
+        keyVal[key].second++;
+        freqList[keyVal[key].second].push_back(key);
+        pos[key] = --freqList[keyVal[key].second].end();
+        if(freqList[minFreq].empty())
+            minFreq++;
+        return keyVal[key].first;
+    }
+    
+    void put(int key, int value) {
+        if(!capacity)
+            return;
+        if(keyVal.find(key) != keyVal.end()) {
+            keyVal[key].first = value;
+            freqList[keyVal[key].second].erase(pos[key]);
+            keyVal[key].second++;
+            freqList[keyVal[key].second].push_back(key);
+            pos[key] = --freqList[keyVal[key].second].end();
+            if(freqList[minFreq].empty())
+                minFreq++;
+            return;
+        }
+        if(keyVal.size() == capacity) {
+            int delKey = freqList[minFreq].front();
+            keyVal.erase(delKey);
+            pos.erase(delKey);
+            freqList[minFreq].pop_front();
+        }
+        keyVal[key] = {value,1};
+        freqList[1].push_back(key);
+        pos[key] = --freqList[1].end();
+        minFreq = 1;
+    }
+};
+
+
           
  </pre>
 
