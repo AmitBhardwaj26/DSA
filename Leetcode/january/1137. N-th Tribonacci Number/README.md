@@ -20,11 +20,6 @@ Explanation: T_3 = 0 + 1 + 1 = 2
 T_4 = 1 + 1 + 2 = 4
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
@@ -36,26 +31,18 @@ The answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+      int dp[39]={0};
+     
+    int tribonacci(int n) {
+       
+        if(n==0) return 0;
+        if(n==2||n==1) return 1;
+        if(dp[n]!=0) return dp[n];
+        return dp[n]=tribonacci(n-1)+tribonacci(n-2)+tribonacci(n-3) ;
+    }
+};4
           
  </pre>
 
