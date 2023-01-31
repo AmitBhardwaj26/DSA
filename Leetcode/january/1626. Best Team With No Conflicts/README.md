@@ -19,19 +19,13 @@ Given two lists, scores and ages, where each scores[i] and ages[i] represents th
 Explanation:You can choose all the players.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= scores.length, ages.length <= 1000
+scores.length == ages.length
+1 <= scores[i] <= 106
+1 <= ages[i] <= 1000
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
