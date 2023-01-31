@@ -13,14 +13,10 @@ Given two lists, scores and ages, where each scores[i] and ages[i] represents th
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   scores = [1,3,5,10,15], ages = [1,2,3,4,5]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 34
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+Explanation:You can choose all the players.
   </pre>
   
 Example 2:
