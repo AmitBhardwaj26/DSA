@@ -12,7 +12,7 @@ Given two lists, scores and ages, where each scores[i] and ages[i] represents th
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>   scores = [1,3,5,10,15], ages = [1,2,3,4,5]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
