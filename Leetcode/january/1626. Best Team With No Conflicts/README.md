@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">1626. Best Team With No Conflicts</a></h2>
+<h2><a href="https://leetcode.com/problems/best-team-with-no-conflicts/description/">1626. Best Team With No Conflicts</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
