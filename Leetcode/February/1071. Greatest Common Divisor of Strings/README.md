@@ -13,7 +13,7 @@ Given two strings str1 and str2, return the largest string x such that x divides
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   str1 = "ABCABC", str2 = "ABC"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  "ABC"
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
