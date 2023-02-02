@@ -36,27 +36,26 @@ All characters in words[i] and order are English lowercase letters.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+ class Solution {
+public:
+    bool isAlienSorted(vector<string>& words, string order) {
+        map<char,char> m;
+        for(int i=0;i<order.size();i++)
+        {
+            m[order[i]]=(char)('a'+i);
+        }
+        // for(auto it: m) cout<<it.first<<" "<<it.second<<"\n";
+        for(int i=1;i<words.size();i++)
+        {
+            string a=words[i-1],b=words[i];
+            for(int j=0;j<a.size();j++) a[j]=m[a[j]];
+            for(int j=0;j<b.size();j++) b[j]=m[b[j]];
+            // cout<<a<<" " <<b<<"\n";
+            if(a>b) return 0;
+        }
+        return 1;
+    }
+};
           
  </pre>
 
