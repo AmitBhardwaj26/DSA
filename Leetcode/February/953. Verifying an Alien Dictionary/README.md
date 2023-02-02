@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/verifying-an-alien-dictionary/description/">953. Verifying an Alien Dictionary</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
 In an alien language, surprisingly, they also use English lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
