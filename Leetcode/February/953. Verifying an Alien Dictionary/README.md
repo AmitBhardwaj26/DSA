@@ -27,11 +27,10 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= words.length <= 100
+1 <= words[i].length <= 20
+order.length == 26
+All characters in words[i] and order are English lowercase letters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
