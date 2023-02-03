@@ -3,11 +3,17 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+ The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+P   A   H   N
+A P L S I I G
+Y   I   R
+And then read line by line: "PAHNAPLSIIGYIR"
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Write the code that will take a string and make this conversion given a number of rows:
+
+string convert(string s, int numRows);
+ 
 </p>
 
 
