@@ -34,27 +34,26 @@ s consists of English letters (lower-case and upper-case), ',' and '.'.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ // create a string array of size n push into the string and change the direction of motion whenever required.
+
+class Solution {
+public:
+    string convert(string s, int n) {
+        if(n==1) return s;
+        string v[n+1];
+        int dir=1,ind=1;
+        for(int i=0;i<s.size();i++)
+        {
+           v[ind]+=s[i];
+           ind+=dir;
+           if(ind==n) dir=-1;
+           else if(ind==1) dir=1;
+        }
+        string ans="";
+        for(int i=1;i<=n;i++) ans+=v[i];
+        return ans;
+
+    }
+};
  </pre>
 
