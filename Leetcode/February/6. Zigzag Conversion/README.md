@@ -26,11 +26,9 @@ string convert(string s, int numRows);
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= s.length <= 1000
+s consists of English letters (lower-case and upper-case), ',' and '.'.
+1 <= numRows <= 1000
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
