@@ -19,11 +19,7 @@ Return an integer array answer where answer[i] is the answer to the ith query.
 Explanation: s2 contains one permutation of s1 ("ba").
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
