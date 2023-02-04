@@ -31,26 +31,29 @@ s1 and s2 consist of lowercase English letters.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+  class Solution {
+   public:
+       bool checkInclusion(string s1, string s2) {
+          if(s1.size()==0 || s2.size()==0 || s1.size()>s2.size()) return false;
+
+           long long a=0;
+           sort(s1.begin(),s1.end());
+           int l1=s1.size();
+           for(int i=0;i<l1;i++)   a+=pow(s1[i],3);
+
+           long long b=0;
+           for(int i=0;i<l1;i++)    b+=pow(s2[i],3);
+
+           if(a==b) return true;
+           for(int i=l1;i<s2.size();i++)
+           {
+               b+=pow(s2[i],3)-pow(s2[i-l1],3);
+               if(a==b) return true;
+           }
+           return false;
+
+       }
+};
           
  </pre>
 
