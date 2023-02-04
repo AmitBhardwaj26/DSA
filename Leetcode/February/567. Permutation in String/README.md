@@ -23,11 +23,8 @@ Explanation: s2 contains one permutation of s1 ("ba").
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= s1.length, s2.length <= 104
+s1 and s2 consist of lowercase English letters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
