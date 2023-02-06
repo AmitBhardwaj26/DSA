@@ -3,11 +3,9 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
-
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return the array in the form [x1,y1,x2,y2,...,xn,yn].
 </p>
 
 
