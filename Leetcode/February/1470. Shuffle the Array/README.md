@@ -11,7 +11,7 @@ Return the array in the form [x1,y1,x2,y2,...,xn,yn].
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   nums = [2,5,1,3,4,7], n = 3
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [2,3,5,4,1,7] 
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
