@@ -42,26 +42,28 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class Solution {
+public:
+    int totalFruit(vector<int>& f) {
+        int i=0,j=0,n=f.size();
+        map<int,int> m;
+        while(j<n && m.size()!=2) m[f[j]]++, j++;
+        int ans=j-i;
+        while(j<n) 
+        {
+            m[f[j]]++;
+            while(i<j and m.size()>2 ) 
+            {
+                if(m[f[i]]==1) m.erase(f[i]);
+                else m[f[i]]--;
+                i++;
+            }
+           ans=max(ans,j-i+1);
+           j++;
+        }
+        return ans;
+    }
+};
           
  </pre>
 
