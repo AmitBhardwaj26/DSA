@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">904. Fruit Into Baskets</a></h2>
+<h2><a href="https://leetcode.com/problems/fruit-into-baskets/description/">904. Fruit Into Baskets</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
