@@ -24,11 +24,6 @@ Given the integer array fruits, return the maximum number of fruits you can pick
 Explanation: We can pick from all 3 trees.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
