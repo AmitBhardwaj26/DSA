@@ -18,7 +18,7 @@ Given the integer array fruits, return the maximum number of fruits you can pick
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   fruits = [1,2,1]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>3
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
