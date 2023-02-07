@@ -32,11 +32,8 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= fruits.length <= 105
+0 <= fruits[i] < fruits.length
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
