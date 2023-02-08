@@ -30,10 +30,7 @@ Output: [0]
 Constraints:
 <pre>
 1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+0 <= nums[i] <= 1000
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
