@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">45. Jump Game II</a></h2>
+<h2><a href="https://leetcode.com/problems/jump-game-ii/description/">45. Jump Game II</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
