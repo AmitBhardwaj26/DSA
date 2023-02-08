@@ -33,26 +33,34 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         // brute force Memoization in dp
+class Solution {
+public:
+         
+    int solve(vector<int> &v,int m, int count, vector<int> &dp )
+    {
+        //base condition
+        if(m>=v.size()-1) return 0;
+        
+        // check
+        if(dp[m]!=-1) return dp[m];
+        
+        //choice diagram
+        int ans=10001;
+        for(int i=1;i<=v[m];i++)
+        {
+          ans=min(ans,1+solve(v,m+i,count+1,dp));  
+        }
+        return dp[m]=ans; 
+    }
+    
+    int jump(vector<int>& nums) {
+        
+        vector<int> dp(nums.size(),-1);
+        return solve(nums,0,0,dp);
+        
+    }
+};
           
  </pre>
 
