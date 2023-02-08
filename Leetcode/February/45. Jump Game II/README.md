@@ -15,7 +15,7 @@ Return the minimum number of jumps to reach nums[n - 1]. The test cases are gene
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   nums = [2,3,1,1,4]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  2
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
