@@ -35,10 +35,6 @@ The following are some examples of invalid selections:
 - ("coffee", "toffee"): Both names formed after swapping already exist in the original array.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
