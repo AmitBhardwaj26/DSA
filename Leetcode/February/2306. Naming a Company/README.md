@@ -39,11 +39,10 @@ The following are some examples of invalid selections:
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+2 <= ideas.length <= 5 * 104
+1 <= ideas[i].length <= 10
+ideas[i] consists of lowercase English letters.
+All the strings in ideas are unique.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
