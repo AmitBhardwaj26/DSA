@@ -16,11 +16,6 @@ The distance used in this problem is the Manhattan distance: the distance betwee
 <pre>
 Explanation: The cell (1, 1) is as far as possible from all the land with distance 2.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
