@@ -35,26 +35,48 @@ grid[i][j] is 0 or 1
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
+          //point 1: All grid type of questions try to do BFS not DFS
+//point 2:In which we have to traverse in each directions try to make a directions array
+//point 3: make queue of vectors insteed of pair and all
+
+class Solution {
+public:
+        
+      int maxDistance(vector<vector<int>>& grid) {
+          int n=grid.size(),m=grid[0].size(),zero=0,one=0;
+
+          queue<vector<int>> q;
+          for(int i=0;i<m;i++)
+              for(int j=0;j<n;j++)
+                if(grid[i][j]==0) zero++,grid[i][j]=INT_MAX;
+                else one++,q.push({i,j}), grid[i][j]=0;
+
+          if(one ==n*m || zero==n*m) return -1;
+
+          int dis[][2]={{-1,0},{1,0},{0,-1},{0,1}};
+          while(!q.empty())
+          {
+              int x=q.front()[0],y=q.front()[1];
+              q.pop();
+              for(int i=0;i<4;i++)
+              {
+                  int X=x+dis[i][0],Y=y+dis[i][1];
+                  if(X<0 || Y<0 || X>=m || Y>=n) continue;
+                  if(grid[X][Y]> grid[x][y]+1)
                   {
-                      if(nums[i]%2==0) ans+=nums[i];
+                      grid[X][Y]= grid[x][y]+1;
+                          q.push({X,Y});
                   }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+              }   
+          }
+
+          int ans=-1;
+          for(int i=0;i<m;i++) for(int j=0;j<n;j++)             
+               ans=max(ans,grid[i][j]);
+
+          return ans;
+      }
+};
           
  </pre>
 
