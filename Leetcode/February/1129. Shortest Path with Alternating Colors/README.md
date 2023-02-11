@@ -24,11 +24,10 @@ Return an array answer of length n, where each answer[x] is the length of the sh
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= n <= 100
+0 <= redEdges.length, blueEdges.length <= 400
+redEdges[i].length == blueEdges[j].length == 2
+0 <= ai, bi, uj, vj < n
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
