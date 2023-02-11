@@ -17,7 +17,7 @@ Return an array answer of length n, where each answer[x] is the length of the sh
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong> n = 3, redEdges = [[0,1],[1,2]], blueEdges = []
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [0,1,-1]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
