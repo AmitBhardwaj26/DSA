@@ -33,27 +33,38 @@ redEdges[i].length == blueEdges[j].length == 2
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+ class Solution {
+public:
+  vector<int> shortestAlternatingPaths(int n, vector<vector<int>>& redEdges, vector<vector<int>>& blueEdges) {
+        vector<int>ans(n,-1);
+        queue<vector<int>>q;
+        vector<pair<int,int>>adj[n];
+        for(auto it:redEdges){
+            adj[it[0]].push_back({it[1],0});
+        }
+        for(auto it:blueEdges){
+            adj[it[0]].push_back({it[1],1});
+        }
+        ans[0]=0;
+        q.push({0,0,-1}); // node, dist,color
+        while(!q.empty()){
+            vector<int>temp=q.front();
+            int node=temp[0];
+            int prev=temp[2];
+            q.pop();
+           if(ans[node]==-1) ans[node]=temp[1];
+            for(auto &x:adj[node]){
+                // Most Important step to put & while editing in the loop
+                if(x.second!=prev && x.first!=-1){
+                    q.push({x.first,temp[1]+1,x.second});
+                    x.first=-1;
+                }
+            }
+        }
+       
+        return ans;
+    }
+};
           
  </pre>
 
