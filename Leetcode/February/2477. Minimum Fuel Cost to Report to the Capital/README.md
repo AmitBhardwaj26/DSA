@@ -26,12 +26,7 @@ Explanation:- Representative1 goes directly to the capital with 1 liter of fuel.
 It costs 3 liters of fuel at minimum. 
 It can be proven that 3 is the minimum number of liters of fuel needed.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
