@@ -30,11 +30,13 @@ It can be proven that 3 is the minimum number of liters of fuel needed.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= n <= 105
+roads.length == n - 1
+roads[i].length == 2
+0 <= ai, bi < n
+ai != bi
+roads represents a valid tree.
+1 <= seats <= 105
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
