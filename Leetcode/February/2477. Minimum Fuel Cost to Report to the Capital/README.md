@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/description/">985. Sum of Even Numbers After Queries</a></h2>
+<h2><a href="https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/description/">2477. Minimum Fuel Cost to Report to the Capital</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
