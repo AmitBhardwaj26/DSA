@@ -42,26 +42,44 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+        class Solution {
+public:
+    // vector<int> adj[];
+    long long dp[100001];
+    int solve(int i,int c, vector<int> adj[])
+    {
+        long long ans=1;
+        if(dp[i]!=-1) return dp[i];
+        for(auto it: adj[i])
+        {
+             if(it!=c) ans+=solve(it,i,adj);
+        }
+        return dp[i]= ans;
+    }
+    
+
+    long long minimumFuelCost(vector<vector<int>>& r, int s) {
+        int n=r.size();
+        int a[n+1];
+        
+        vector<int> adj[n+1];
+        long long ans=0;
+        for(int i=0;i<n;i++)
+        {
+            int u=r[i][0],v=r[i][1];
+             adj[u].push_back(v);
+             adj[v].push_back(u);
+        }
+        memset(dp,-1,sizeof(dp));
+        
+        solve(0,-1,adj);
+        for(int i=1;i<=n;i++)
+        {
+             ans+=ceil((double)dp[i]/s);
+        }
+        return ans;
+    }
+};
           
  </pre>
 
