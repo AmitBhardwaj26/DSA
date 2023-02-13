@@ -14,20 +14,11 @@ Given two non-negative integers low and high. Return the count of odd numbers be
 <pre>
  Explanation: The odd numbers between 3 and 7 are [3,5,7].
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+0 <= low <= high <= 10^9
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
