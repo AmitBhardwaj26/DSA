@@ -9,14 +9,10 @@ Given two non-negative integers low and high. Return the count of odd numbers be
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong> low = 3, high = 7
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 3
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+ Explanation: The odd numbers between 3 and 7 are [3,5,7].
   </pre>
   
 Example 2:
