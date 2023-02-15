@@ -37,26 +37,41 @@ num does not contain any leading zeros except for the zero itself.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class Solution {
+public:
+    vector<int> addToArrayForm(vector<int>& num, int k) {
+        
+        vector<int> num2;
+        while(k)
+        {
+            num2.push_back(k%10); k/=10;
+        }
+       int i=0,j=num.size()-1;
+       int c=0,sum=0;
+       vector<int> ans;
+       while(i<num2.size() && j>=0)
+       {
+           sum=num2[i++] + num[j--] +c;
+           c=sum/10;
+           ans.push_back(sum%10);
+       }
+       while(i<num2.size())
+       {
+           sum=num2[i++] +c;
+           c=sum/10;
+           ans.push_back(sum%10);
+       }
+        while( j>=0 )
+       {
+           sum= num[j--] + c;
+           c=sum/10;
+           ans.push_back(sum%10);
+       }
+       if(c) ans.push_back(c);
+       reverse(ans.begin(),ans.end());
+       return ans;
+    }
+};
           
  </pre>
 
