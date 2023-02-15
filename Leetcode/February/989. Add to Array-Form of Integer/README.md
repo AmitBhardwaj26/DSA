@@ -27,11 +27,10 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= num.length <= 104
+0 <= num[i] <= 9
+num does not contain any leading zeros except for the zero itself.
+1 <= k <= 104
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
