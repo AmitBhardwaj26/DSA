@@ -13,15 +13,7 @@ A binary tree's maximum depth is the number of nodes along the longest path from
 <pre><strong>Input:</strong>  root = [3,9,20,null,null,15,7]
 <strong>Output:</strong>  3
 </pre>
-<pre>
-Explanation: 
-  </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
