@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/"></a>783. Minimum Distance Between BST Nodes</h2>
+<h2><a href="https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/"></a>783. Minimum Distance Between BST Nodes</h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
