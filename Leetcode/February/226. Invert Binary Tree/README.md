@@ -9,7 +9,7 @@ Given the root of a binary tree, invert the tree, and return its root.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   root = [4,2,7,1,3,6,9]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [4,7,2,9,6,3,1]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
