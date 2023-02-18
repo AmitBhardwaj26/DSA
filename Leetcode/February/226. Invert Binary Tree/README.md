@@ -19,12 +19,6 @@ After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values
 After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
-
 Constraints:
 <pre>
 The number of nodes in the tree is in the range [0, 100].
@@ -35,26 +29,20 @@ The number of nodes in the tree is in the range [0, 100].
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+       
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if(!root) return NULL;
+         TreeNode *temp=root->left; 
+         root->left=root->right;
+         root->right =temp;
+        TreeNode *l=invertTree(root->left);
+        TreeNode *r=invertTree(root->right);
+      
+        return root;
+    }
+};
           
  </pre>
 
