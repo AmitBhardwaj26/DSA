@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">226. Invert Binary Tree</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
 Given the root of a binary tree, invert the tree, and return its root.
@@ -21,9 +21,7 @@ The number of nodes in the tree is in the range [0, 100].
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
  <br>
- <pre>
- 
-       
+ <pre>   
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
@@ -37,6 +35,5 @@ public:
         return root;
     }
 };
-          
- </pre>
+</pre>
 
