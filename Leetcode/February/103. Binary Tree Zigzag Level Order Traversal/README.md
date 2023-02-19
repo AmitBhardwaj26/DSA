@@ -24,27 +24,33 @@ The number of nodes in the tree is in the range [0, 2000].
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+class Solution {
+public:
+    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+        bool check=false;
+        
+        vector<vector<int>> v1; vector<int> v;
+        TreeNode *t1=root ,*t=NULL;
+        
+        queue<TreeNode*> q1;
+        if(t1) q1.push(t1);
+        
+        while(!q1.empty())
+        {
+            int n=q1.size();
+            while(n-- ) {
+                 t=q1.front();  q1.pop(); v.push_back(t->val);  cout<<t->val<<" ";
+           
+                           if(t->left)  q1.push(t->left);  
+                             if(t->right) q1.push(t->right); 
+                            }
+            if(check) {reverse(v.begin(),v.end()); check=false;}
+            else check=true;
+            v1.push_back(v); v.clear();
+        }
+            return v1;
+    }
+};
           
  </pre>
 
