@@ -13,7 +13,7 @@ Return the least weight capacity of the ship that will result in all the package
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  weights = [1,2,3,4,5,6,7,8,9,10], days = 5
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 15
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
