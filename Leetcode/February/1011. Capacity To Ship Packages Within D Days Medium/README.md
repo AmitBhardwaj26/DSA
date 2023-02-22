@@ -36,27 +36,42 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+ class Solution {
+public:
+
+    int numberofdays(vector<int> &wt,int mid,int days)
+    {
+        int count=1,sum=0;
+        for(int i=0;i<wt.size();i++)
+        {
+            if(sum+wt[i]<=mid)                sum+=wt[i];
+            else 
+            {
+                sum=wt[i];
+                 count++;
+            }
+        }
+       return count;
+    } 
+    int shipWithinDays(vector<int>& wt, int days) {
+        
+        int l=0,r=0;
+        for(int i=0;i<wt.size();i++) 
+        {
+            l=max(l,wt[i]);
+            r+=wt[i];
+        }
+        int ans=r;
+        while(l<=r)
+        {
+            int mid=l+(r-l)/2, check=numberofdays(wt,mid,days);
+            //cout<<mid<<" "<<check<<"\n";
+            if(check<=days) { ans=min(ans,mid); r=mid-1; }
+            else l=mid+1;  
+        }
+        return ans;
+    }
+};
           
  </pre>
 
