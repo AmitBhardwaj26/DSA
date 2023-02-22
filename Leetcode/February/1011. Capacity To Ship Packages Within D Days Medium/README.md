@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">1011. Capacity To Ship Packages Within D Days</a></h2>
+<h2><a href="https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/">1011. Capacity To Ship Packages Within D Days</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
