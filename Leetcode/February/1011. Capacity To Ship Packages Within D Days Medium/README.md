@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+A conveyor belt has packages that must be shipped from one port to another within days days.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+The ith package on the conveyor belt has a weight of weights[i]. Each day, we load the ship with packages on the conveyor belt (in the order given by weights). We may not load more weight than the maximum weight capacity of the ship.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return the least weight capacity of the ship that will result in all the packages on the conveyor belt being shipped within days days.
 </p>
 
 
