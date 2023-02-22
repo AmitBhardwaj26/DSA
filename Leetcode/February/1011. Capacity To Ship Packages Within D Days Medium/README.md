@@ -25,20 +25,12 @@ Explanation:  A ship capacity of 15 is the minimum to ship all the packages in 5
 
 Note that the cargo must be shipped in the order given, so using a ship of capacity 14 and splitting the packages into parts like (2, 3, 4, 5), (1, 6, 7), (8), (9), (10) is not allowed.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= days <= weights.length <= 5 * 104
+1 <= weights[i] <= 500
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
