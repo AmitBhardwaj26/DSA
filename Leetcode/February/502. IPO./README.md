@@ -17,7 +17,7 @@ The answer is guaranteed to fit in a 32-bit signed integer.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>    k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  4
 </pre>
 <pre>
 Explanation:  Since your initial capital is 0, you can only start the project indexed 0.
