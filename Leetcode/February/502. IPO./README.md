@@ -44,27 +44,33 @@ n == capital.length
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+    class Solution {
+public:
+    int findMaximizedCapital(int k, int w, vector<int>& profit, vector<int>& capital) {
+        int n=profit.size();
+        vector<pair<int,int>> v;
+        for(int i=0;i<n;i++)
+        {
+            v.push_back({ capital[i] , profit[i] });
+        }
+        sort(v.begin(),v.end());
+
+        priority_queue<int> pq;
+        int ans=w;
+        for(int i=0;i<n;i++)
+        {
+            while(v[i].first>w && k>0 && pq.size()>0)
+            {
+                    w+=pq.top(); pq.pop(); k--;
+            }
+            if(v[i].first<=w) pq.push(v[i].second);
+        }  
+        while(k-- && pq.size()>0)
+        {
+            w+=pq.top(); pq.pop();
+        }
+        return w;     
+    }
+};
  </pre>
 
