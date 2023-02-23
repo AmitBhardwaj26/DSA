@@ -16,7 +16,7 @@ The answer is guaranteed to fit in a 32-bit signed integer.
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>    k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
