@@ -27,19 +27,18 @@ Since you can choose at most 2 projects, you need to finish the project indexed 
 Therefore, output the final maximized capital, which is 0 + 1 + 3 = 4.
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= k <= 105
+0 <= w <= 109
+n == profits.length
+n == capital.length
+1 <= n <= 105
+0 <= profits[i] <= 104
+0 <= capital[i] <= 109
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
