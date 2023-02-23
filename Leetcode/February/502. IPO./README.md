@@ -1,6 +1,6 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">502. IPO</a></h2>
-<h3>Medium</h3>
+<h2><a href="https://leetcode.com/problems/ipo/description/">502. IPO</a></h2>
+<h3>Hard</h3>
 <hr>
 <div><p>
 Suppose LeetCode will start its IPO soon. In order to sell a good price of its shares to Venture Capital, LeetCode would like to work on some projects to increase its capital before the IPO. Since it has limited resources, it can only finish at most k distinct projects before the IPO. Help LeetCode design the best way to maximize its total capital after finishing at most k distinct projects.
