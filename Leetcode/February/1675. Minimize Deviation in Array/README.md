@@ -3,11 +3,17 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+ You are given an array nums of n positive integers.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+You can perform two types of operations on any element of the array any number of times:
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+If the element is even, divide it by 2.
+For example, if the array is [1,2,3,4], then you can do this operation on the last element, and the array will be [1,2,3,2].
+If the element is odd, multiply it by 2.
+For example, if the array is [1,2,3,4], then you can do this operation on the first element, and the array will be [2,2,3,4].
+The deviation of the array is the maximum difference between any two elements in the array.
+
+Return the minimum deviation the array can have after performing some number of operations.
 </p>
 
 
