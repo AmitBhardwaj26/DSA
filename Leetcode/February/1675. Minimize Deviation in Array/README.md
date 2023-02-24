@@ -37,27 +37,63 @@ n == nums.length
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+    
+//     class Solution {
+// public:
+//     int minimumDeviation(vector<int>& nums) {
+//         int n = nums.size();
+//         priority_queue<int> pq;
+//         int minElement = INT_MAX, ans = INT_MAX;
+        
+//         for (auto num : nums) {
+//             if (num & 1) { // if odd make it even
+//                 pq.push(num * 2);
+//                 minElement = min(minElement, num * 2);
+//             } else {
+//                 pq.push(num);
+//                 minElement = min(minElement, num);
+//             }
+            
+//         }
+        
+//         while (!pq.empty()) {
+//             int num = pq.top(); pq.pop();
+//             ans = min(ans, num - minElement); // get the minimum deviation
+//             if(num & 1) break; // if odd break
+//             else pq.push(num / 2); // if even decrease it by half
+//             minElement = min(minElement, num / 2); // update the minElement
+//         }
+//         return ans;
+//     }
+// };
+
+    class Solution {
+public:
+    int minimumDeviation(vector<int>& nums) {
+        int n = nums.size();
+        priority_queue<int> pq;
+        int minElement = INT_MAX, ans = INT_MAX;
+        
+        for (auto num : nums) {
+            if (num & 1) { // if odd make it even
+                pq.push(num * 2);
+                minElement = min(minElement, num * 2);
+            } else {
+                pq.push(num);
+                minElement = min(minElement, num);
+            }
+            
+        }
+        
+        while (!pq.empty()) {
+            int num = pq.top(); pq.pop();
+            ans = min(ans, num - minElement); // get the minimum deviation
+            if(num & 1) break; // if odd break
+            else pq.push(num / 2); // if even decrease it by half
+            minElement = min(minElement, num / 2); // update the minElement
+        }
+        return ans;
+    }
+};  
  </pre>
 
