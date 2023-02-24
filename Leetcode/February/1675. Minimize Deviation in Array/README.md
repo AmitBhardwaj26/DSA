@@ -25,19 +25,13 @@ Return the minimum deviation the array can have after performing some number of 
 Explanation: You can transform the array to [1,2,3,2], then to [2,2,3,2], then the deviation will be 3 - 2 = 1.
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == nums.length
+2 <= n <= 5 * 104
+1 <= nums[i] <= 109
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
