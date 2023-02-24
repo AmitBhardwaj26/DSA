@@ -19,7 +19,7 @@ Return the minimum deviation the array can have after performing some number of 
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>    nums = [1,2,3,4]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  1
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
