@@ -3,11 +3,13 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+ 
 </p>
 
 
