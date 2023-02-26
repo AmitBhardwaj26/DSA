@@ -3,11 +3,13 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+ Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+You have the following three operations permitted on a word:
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Insert a character
+Delete a character
+Replace a character
 </p>
 
 
