@@ -33,27 +33,32 @@ word1 and word2 consist of lowercase English letters.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    int dp[501][501];
+    int solve(int m,int n,string w1,string w2)
+    {
+        //base case
+        if(m==0|| n==0) return max(m,n);
+        
+         
+        // memo
+        if(dp[m][n]!=-1) return dp[m][n];
+        
+        //choice diagram
+        int ans=0;
+        if(w1[m-1]==w2[n-1]) ans=solve(m-1,n-1,w1,w2);
+        else 
+            ans=1+min({solve(m-1,n,w1,w2),solve(m,n-1,w1,w2),
+                       solve(m-1,n-1,w1,w2)});
+        return dp[m][n]=ans;
+        
+    }
+    
+    int minDistance(string w1, string w2) {
+        memset(dp,-1,sizeof(dp));
+        return solve(w1.size(),w2.size(),w1,w2);
+    }
+};
  </pre>
 
