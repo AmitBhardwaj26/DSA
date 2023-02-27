@@ -59,27 +59,33 @@ n == 2x where 0 <= x <= 6
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+    
+class Solution {
+ public:
+  Node* construct(vector<vector<int>>& grid) {
+    return helper(grid, 0, 0, grid.size());
+  }
+
+ private:
+  Node* helper(const vector<vector<int>>& grid, int i, int j, int w) {
+    if (allSame(grid, i, j, w))
+      return new Node(grid[i][j], true);
+
+    Node* node = new Node(true, false);
+    node->topLeft = helper(grid, i, j, w / 2);
+    node->topRight = helper(grid, i, j + w / 2, w / 2);
+    node->bottomLeft = helper(grid, i + w / 2, j, w / 2);
+    node->bottomRight = helper(grid, i + w / 2, j + w / 2, w / 2);
+    return node;
+  }
+
+  bool allSame(const vector<vector<int>>& grid, int i, int j, int w) {
+    return all_of(begin(grid) + i, begin(grid) + i + w,
+                  [&](const vector<int>& row) {
+      return all_of(begin(row) + j, begin(row) + j + w,
+                    [&](int num) { return num == grid[i][j]; });
+    });
+  }
+};
  </pre>
 
