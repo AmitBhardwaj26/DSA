@@ -40,7 +40,8 @@ If the value of isLeaf or val is True we represent it as 1 in the list [isLeaf, 
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>   grid = [[0,1],[1,0]]
+Output: [[0,1],[1,0],[1,1],[1,1],[1,0]]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
