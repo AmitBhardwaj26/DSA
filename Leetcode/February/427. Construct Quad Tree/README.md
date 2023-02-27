@@ -3,11 +3,16 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given a n * n matrix grid of 0's and 1's only. We want to represent the grid with a Quad-Tree.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Return the root of the Quad-Tree representing the grid.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Notice that you can assign the value of a node to True or False when isLeaf is False, and both are accepted in the answer.
+
+A Quad-Tree is a tree data structure in which each internal node has exactly four children. Besides, each node has two attributes:
+
+val: True if the node represents a grid of 1's or False if the node represents a grid of 0's.
+isLeaf: True if the node is leaf node on the tree or False if the node has the four children.
 </p>
 
 
