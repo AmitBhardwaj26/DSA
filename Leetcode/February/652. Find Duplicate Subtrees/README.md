@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">652. Find Duplicate Subtrees</a></h2>
+<h2><a href="https://leetcode.com/problems/find-duplicate-subtrees/description/">652. Find Duplicate Subtrees</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
