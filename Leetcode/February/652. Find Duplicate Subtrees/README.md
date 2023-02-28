@@ -12,7 +12,7 @@ Two trees are duplicate if they have the same structure with the same node value
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>  root = [1,2,3,4,null,2,4,null,null,4]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
