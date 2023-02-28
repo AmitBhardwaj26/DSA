@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+ Given the root of a binary tree, return all duplicate subtrees.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+For each kind of duplicate subtrees, you only need to return the root node of any one of them.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Two trees are duplicate if they have the same structure with the same node values.
 </p>
 
 
