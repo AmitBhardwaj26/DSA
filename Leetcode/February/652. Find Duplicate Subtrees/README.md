@@ -42,26 +42,35 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+vector<TreeNode*> ans;
+   unordered_map<string,int > m;
+   string solve(TreeNode *root)
+   {
+        if(!root) return "#";
+        string s= solve(root->left)+ "," + solve(root->right)+ "," +to_string(root->val) ;
+        m[s]++;
+        if(m[s]==2) ans.push_back(root);  //cout<<s<<"\n";} 
+       return s;
+   }
+   
+    vector<TreeNode*> findDuplicateSubtrees(TreeNode* root) {
+        solve(root);
+        return ans;
+    }
+};
           
  </pre>
 
