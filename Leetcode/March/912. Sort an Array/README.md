@@ -16,20 +16,12 @@ You must solve the problem without using any built-in functions in O(nlog(n)) ti
 <pre>
 Explanation: After sorting the array, the positions of some numbers are not changed (for example, 2 and 3), while the positions of other numbers are changed (for example, 1 and 5).
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= nums.length <= 5 * 104
+-5 * 104 <= nums[i] <= 5 * 104
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
