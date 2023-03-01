@@ -11,7 +11,7 @@ You must solve the problem without using any built-in functions in O(nlog(n)) ti
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   nums = [5,2,3,1]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [1,2,3,5]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
