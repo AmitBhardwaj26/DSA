@@ -3,11 +3,17 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given an array of characters chars, compress it using the following algorithm:
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Begin with an empty string s. For each group of consecutive repeating characters in chars:
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+If the group's length is 1, append the character to s.
+Otherwise, append the character followed by the group's length.
+The compressed string s should not be returned separately, but instead, be stored in the input character array chars. Note that group lengths that are 10 or longer will be split into multiple characters in chars.
+
+After you are done modifying the input array, return the new length of the array.
+
+You must write an algorithm that uses only constant extra space.
 </p>
 
 
