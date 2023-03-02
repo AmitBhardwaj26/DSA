@@ -25,10 +25,7 @@ You must write an algorithm that uses only constant extra space.
 Explanation: The groups are "aa", "bb", and "ccc". This compresses to "a2b2c3".
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
