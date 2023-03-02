@@ -19,7 +19,7 @@ You must write an algorithm that uses only constant extra space.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   chars = ["a","a","b","b","c","c","c"]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> Return 6, and the first 6 characters of the input array should be: ["a","2","b","2","c","3"]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
