@@ -37,27 +37,33 @@ chars[i] is a lowercase English letter, uppercase English letter, digit, or symb
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    int compress(vector<char>& chars) {
+        int n = chars.size();
+        if (n == 1) {
+            return 1;
+        }
+        
+        int i = 0, j = 0;
+        while (i < n) {
+            int count = 1;
+            while (i < n - 1 && chars[i] == chars[i + 1]) {
+                count++;
+                i++;
+            }
+            
+            chars[j++] = chars[i++];
+            if (count > 1) {
+                string countStr = to_string(count);
+                for (char c : countStr) {
+                    chars[j++] = c;
+                }
+            }
+        }
+        
+        return j;
+    }
+};
  </pre>
 
