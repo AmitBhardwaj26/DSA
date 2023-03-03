@@ -11,7 +11,7 @@ Given two strings needle and haystack, return the index of the first occurrence 
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   haystack = "sadbutsad", needle = "sad"
-<strong>Output:</strong> "sad" occurs at index 0 and 6.
+<strong>Output:</strong> 0
 </pre>
 <pre>
 Explanation: "sad" occurs at index 0 and 6.
