@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">28. Find the Index of the First Occurrence in a String</a></h2>
+<h2><a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/">28. Find the Index of the First Occurrence in a String</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
