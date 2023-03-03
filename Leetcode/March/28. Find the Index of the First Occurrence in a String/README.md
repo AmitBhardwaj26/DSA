@@ -17,20 +17,12 @@ Given two strings needle and haystack, return the index of the first occurrence 
 Explanation: "sad" occurs at index 0 and 6.
 The first occurrence is at index 0, so we return 0.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= haystack.length, needle.length <= 104
+haystack and needle consist of only lowercase English characters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
