@@ -5,9 +5,7 @@
 <div><p>
 Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
- 
 </p>
-
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   haystack = "sadbutsad", needle = "sad"
@@ -16,8 +14,7 @@ Given two strings needle and haystack, return the index of the first occurrence 
 <pre>
 Explanation: "sad" occurs at index 0 and 6.
 The first occurrence is at index 0, so we return 0.
-  </pre>
- 
+  </pre> 
 
 Constraints:
 <pre>
@@ -28,8 +25,7 @@ haystack and needle consist of only lowercase English characters.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-         class Solution {
+ class Solution {
 public:
     int strStr(string haystack, string needle) {
         int n=haystack.size(), m=needle.size();
@@ -41,7 +37,6 @@ public:
         }
         return -1;
     }
-};
-          
+};         
  </pre>
 
