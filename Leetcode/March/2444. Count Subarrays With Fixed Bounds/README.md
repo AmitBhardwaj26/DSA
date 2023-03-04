@@ -23,19 +23,11 @@ A subarray is a contiguous part of an array.
 Explanation: The fixed-bound subarrays are [1,3,5] and [1,3,5,2].
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+2 <= nums.length <= 105
+1 <= nums[i], minK, maxK <= 106
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
