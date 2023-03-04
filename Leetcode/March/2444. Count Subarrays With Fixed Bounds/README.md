@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">2444. Count Subarrays With Fixed Bounds</a></h2>
+<h2><a href="https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/">2444. Count Subarrays With Fixed Bounds</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
