@@ -33,27 +33,19 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
+         class Solution {
+public:
+        long long countSubarrays(vector<int>& A, int minK, int maxK) {
+        long res = 0, jbad = -1, jmin = -1, jmax = -1, n = A.size();
+        for (int i = 0; i < n; ++i) {
+            if (A[i] < minK || A[i] > maxK) jbad = i;
+            if (A[i] == minK) jmin = i;
+            if (A[i] == maxK) jmax = i;
+            res += max(0L, min(jmin, jmax) - jbad);
+        }
+        return res;
+    }
+};
           
  </pre>
 
