@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/">2444. Count Subarrays With Fixed Bounds</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
 You are given an integer array nums and two integers minK and maxK.
