@@ -3,11 +3,15 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+You are given an integer array nums and two integers minK and maxK.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+A fixed-bound subarray of nums is a subarray that satisfies the following conditions:
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+The minimum value in the subarray is equal to minK.
+The maximum value in the subarray is equal to maxK.
+Return the number of fixed-bound subarrays.
+
+A subarray is a contiguous part of an array.
 </p>
 
 
