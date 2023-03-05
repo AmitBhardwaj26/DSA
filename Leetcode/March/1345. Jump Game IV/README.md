@@ -34,27 +34,45 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    int minJumps(vector<int>& arr) {
+        int n = arr.size();
+        unordered_map<int,vector<int>> mp; // unique elements to their indices
+        for(int i=0;i<n;i++)
+            mp[arr[i]].push_back(i);
+        queue<pair<int,int>> q; // {element,jumps}
+        vector<bool> vis(n);
+        vis[0] = true;
+        q.push({0,0});
+        int ans;
+        while(!q.empty()){
+            int v = q.front().first,jumps = q.front().second;
+            q.pop();
+            if(v==n-1){
+                ans = jumps;
+                break;
+            }
+            if(v+1<n and !vis[v+1]){
+                vis[v+1] = true;
+                q.push({v+1,jumps+1});
+            }
+            if(v-1>=0 and !vis[v-1]){
+                vis[v-1] = true;
+                q.push({v-1,jumps+1});
+            }
+            if(!mp.count(arr[v]))
+                continue;
+            for(auto& j:mp[arr[v]]){
+                if(!vis[j]){
+                    vis[j] = true;
+                    q.push({j,jumps+1});
+                }
+            }
+            mp.erase(arr[v]);
+        }
+        return ans;
+    }
+};
  </pre>
 
