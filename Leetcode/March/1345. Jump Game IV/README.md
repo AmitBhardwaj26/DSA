@@ -23,20 +23,12 @@ Notice that you can not jump outside of the array at any time.
 <pre>
 Explanation: You need three jumps from index 0 --> 4 --> 3 --> 9. Note that index 9 is the last index of the array.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= arr.length <= 5 * 104
+-108 <= arr[i] <= 108
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
