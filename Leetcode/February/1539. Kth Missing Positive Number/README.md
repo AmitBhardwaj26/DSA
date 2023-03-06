@@ -25,11 +25,11 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= arr.length <= 1000
+1 <= arr[i] <= 1000
+1 <= k <= 1000
+arr[i] < arr[j] for 1 <= i < j <= arr.length
+ 
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
