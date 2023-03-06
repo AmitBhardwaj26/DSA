@@ -3,11 +3,9 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given an array arr of positive integers sorted in a strictly increasing order, and an integer k.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
-
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return the kth positive integer that is missing from this array.
 </p>
 
 
