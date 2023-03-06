@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/kth-missing-positive-number/description/">1539. Kth Missing Positive Number</a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
 Given an array arr of positive integers sorted in a strictly increasing order, and an integer k.
@@ -16,12 +16,7 @@ Return the kth positive integer that is missing from this array.
 <pre>
 Explanation:  The missing positive integers are [1,5,6,8,9,10,12,13,...]. The 5th missing positive integer is 9.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
