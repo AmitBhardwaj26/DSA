@@ -35,27 +35,19 @@ arr[i] < arr[j] for 1 <= i < j <= arr.length
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    int findKthPositive(vector<int>& arr, int k) {
+     int i=0,j=arr.size()-1;
+        while(i<=j)
+        {
+            int mid=i+(j-i)/2;
+            if(arr[mid]-mid-1>=k)  j=mid-1;
+            else i=mid+1;
+        }
+        if(j>=0) return arr[j]-(arr[j]-j-1-k);
+        else return k;
+    }
+};
  </pre>
 
