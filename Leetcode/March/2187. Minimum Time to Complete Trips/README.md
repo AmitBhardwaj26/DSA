@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">2187. Minimum Time to Complete Trips</a></h2>
+<h2><a href="https://leetcode.com/problems/minimum-time-to-complete-trips/">2187. Minimum Time to Complete Trips</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
