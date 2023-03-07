@@ -16,11 +16,13 @@ You are also given an integer totalTrips, which denotes the number of trips all 
 <strong>Output:</strong> 3
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+Explanation: - At time t = 1, the number of trips completed by each bus are [1,0,0]. 
+  The total number of trips completed is 1 + 0 + 0 = 1.
+- At time t = 2, the number of trips completed by each bus are [2,1,0]. 
+  The total number of trips completed is 2 + 1 + 0 = 3.
+- At time t = 3, the number of trips completed by each bus are [3,1,1]. 
+  The total number of trips completed is 3 + 1 + 1 = 5.
+So the minimum time needed for all buses to complete at least 5 trips is 3.
   </pre>
   
 Example 2:
