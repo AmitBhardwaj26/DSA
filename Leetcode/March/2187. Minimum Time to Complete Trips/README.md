@@ -24,20 +24,12 @@ Explanation: - At time t = 1, the number of trips completed by each bus are [1,0
   The total number of trips completed is 3 + 1 + 1 = 5.
 So the minimum time needed for all buses to complete at least 5 trips is 3.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= time.length <= 105
+1 <= time[i], totalTrips <= 107
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
