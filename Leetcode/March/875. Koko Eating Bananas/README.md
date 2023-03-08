@@ -15,7 +15,7 @@ Return the minimum integer k such that she can eat all the bananas within h hour
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  piles = [3,6,7,11], h = 8
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 4
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
