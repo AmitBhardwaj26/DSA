@@ -43,27 +43,40 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+class Solution {
+public:
+    int bananahour(vector<int>& p, int beh) //beh=banana eat per hour
+    {
+        long th=0;   //total time taken by him
+        for(int i=0;i<p.size();i++)
+        { 
+             th+=ceil((double)p[i]/beh);
+        }
+        return th;
+    }
+   
+    int minEatingSpeed(vector<int>& p, int h) {
+       
+        int M=INT_MIN;
+        for(int i=0;i<p.size();i++)
+        {
+             M=max(M,p[i]);
+        }
+          if(p.size()==h) return M; //max banana eated
+        
+        int s=1;
+        int e=M;
+        int ans=0;
+        while(s<e)
+        {
+            int z=(s+e)/2;
+           int mid=bananahour(p,z) ;
+             //cout<<z<<"| ";
+             if(mid<=h)  e=z;
+            else s=z+1; 
+        }
+        return e;
+    }
+};
  </pre>
 
