@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">142. Linked List Cycle II</a></h2>
+<h2><a href="https://leetcode.com/problems/linked-list-cycle-ii/description/">142. Linked List Cycle II</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
@@ -19,11 +19,7 @@ Do not modify the linked list.
 Explanation: There is a cycle in the linked list, where tail connects to the second node.tail connects to node index 1
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
