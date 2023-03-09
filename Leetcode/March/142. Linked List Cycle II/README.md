@@ -23,11 +23,9 @@ Explanation: There is a cycle in the linked list, where tail connects to the sec
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+The number of the nodes in the list is in the range [0, 104].
+-105 <= Node.val <= 105
+pos is -1 or a valid index in the linked-list.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
