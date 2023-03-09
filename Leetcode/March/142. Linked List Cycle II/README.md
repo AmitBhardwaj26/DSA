@@ -37,27 +37,41 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ /**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *detectCycle(ListNode *head) {
+        ListNode *slow=head,*fast=head;
+        do
+        {
+            if(slow) slow=slow->next;
+            if(fast) fast=fast->next;
+            if(fast) fast=fast->next;
+            else return 0;
+        }
+        while(slow && fast && fast!=slow);
+        if(fast) fast=head;
+        
+        do
+        {
+            if(fast==slow) return slow;
+        
+            if(slow) slow=slow->next;
+            if(fast) fast=fast->next;
+            if(fast==slow) return slow;
+        
+        }
+        while(slow && fast && fast!=slow);
+        
+        return 0;
+    }
+};
  </pre>
 
