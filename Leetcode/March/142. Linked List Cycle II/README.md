@@ -13,7 +13,7 @@ Do not modify the linked list.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   head = [3,2,0,-4], pos = 1
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> tail connects to node index 1
 </pre>
 <pre>
 Explanation: There is a cycle in the linked list, where tail connects to the second node.tail connects to node index 1
