@@ -16,7 +16,7 @@ Do not modify the linked list.
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
-Explanation: tail connects to node index 1
+Explanation: There is a cycle in the linked list, where tail connects to the second node.tail connects to node index 1
   </pre>
   
 Example 2:
