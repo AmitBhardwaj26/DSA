@@ -20,20 +20,17 @@ int getRandom() Chooses a node randomly from the list and returns its value. All
 <pre>
 Explanation: [null, 1, 3, 2, 2, 3]
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+Solution solution = new Solution([1, 2, 3]);
+solution.getRandom(); // return 1
+solution.getRandom(); // return 3
+solution.getRandom(); // return 2
+solution.getRandom(); // return 2
+solution.getRandom(); // return 3
+// getRandom() should return either 1, 2, or 3 randomly. Each element should have equal probability of returning.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
