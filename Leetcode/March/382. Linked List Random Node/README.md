@@ -40,5 +40,30 @@ At most 104 calls will be made to getRandom.
  <br>
  <pre>
 
+class Solution {
+public:
+     ListNode *headn=NULL;
+    int l=0;
+    Solution(ListNode* head) {
+        headn=head;
+        while(head)
+        {
+            l++;
+            head=head->next;
+        }
+    }
+    
+    int getRandom() {
+        ListNode *h=headn;
+        //randomise();
+        int z=rand()%l;
+        while(z--)
+        {
+            h=h->next;
+        }
+        return h->val;
+    }
+};
+
  </pre>
 
