@@ -13,7 +13,8 @@ int getRandom() Chooses a node randomly from the list and returns its value. All
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong> ["Solution", "getRandom", "getRandom", "getRandom", "getRandom", "getRandom"]
+[[[1, 2, 3]], [], [], [], [], []]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
