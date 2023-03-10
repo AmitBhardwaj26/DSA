@@ -24,39 +24,15 @@ Explanation: [null, 1, 3, 2, 2, 3]
 
 Constraints:
 <pre>
-Solution solution = new Solution([1, 2, 3]);
-solution.getRandom(); // return 1
-solution.getRandom(); // return 3
-solution.getRandom(); // return 2
-solution.getRandom(); // return 2
-solution.getRandom(); // return 3
-// getRandom() should return either 1, 2, or 3 randomly. Each element should have equal probability of returning.
+The number of nodes in the linked list will be in the range [1, 104].
+-104 <= Node.val <= 104
+At most 104 calls will be made to getRandom.
+ 
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+
  </pre>
 
