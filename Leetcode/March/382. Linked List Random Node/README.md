@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/linked-list-random-node/description/">985. Sum of Even Numbers After Queries</a></h2>
+<h2><a href="https://leetcode.com/problems/linked-list-random-node/description/">382. Linked List Random Node</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
