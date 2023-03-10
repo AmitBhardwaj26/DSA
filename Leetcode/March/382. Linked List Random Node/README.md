@@ -3,11 +3,12 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given a singly linked list, return a random node's value from the linked list. Each node must have the same probability of being chosen.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Implement the Solution class:
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Solution(ListNode head) Initializes the object with the head of the singly-linked list head.
+int getRandom() Chooses a node randomly from the list and returns its value. All the nodes of the list should be equally likely to be chosen.
 </p>
 
 
