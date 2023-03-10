@@ -24,7 +24,7 @@ solution.getRandom(); // return 3
 solution.getRandom(); // return 2
 solution.getRandom(); // return 2
 solution.getRandom(); // return 3
-// getRandom() should return either 1, 2, or 3 randomly. Each element should have equal probability of returning.
+ getRandom() should return either 1, 2, or 3 randomly. Each element should have equal probability of returning.
   </pre>
 
 
