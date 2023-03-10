@@ -18,7 +18,13 @@ int getRandom() Chooses a node randomly from the list and returns its value. All
 <strong>Output:</strong> [null, 1, 3, 2, 2, 3]
 </pre>
 <pre>
-Explanation: [null, 1, 3, 2, 2, 3]
+Explanation:Solution solution = new Solution([1, 2, 3]);
+solution.getRandom(); // return 1
+solution.getRandom(); // return 3
+solution.getRandom(); // return 2
+solution.getRandom(); // return 2
+solution.getRandom(); // return 3
+// getRandom() should return either 1, 2, or 3 randomly. Each element should have equal probability of returning.
   </pre>
 
 
