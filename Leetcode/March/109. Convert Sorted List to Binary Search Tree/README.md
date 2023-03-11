@@ -19,11 +19,7 @@ height-balanced
 Explanation:One possible answer is [0,-3,9,-10,null,5], which represents the shown height balanced BST.
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
@@ -34,27 +30,51 @@ The number of nodes in head is in the range [0, 2 * 104].
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ /**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    TreeNode* constructBST(ListNode *leftHead, ListNode *rightHead) {
+        if (leftHead == rightHead)
+            return nullptr;
+        ListNode *slow = leftHead, *fast = leftHead;
+        while (fast != rightHead && fast -> next != rightHead) {
+            slow = slow -> next;
+            fast = fast -> next -> next;
+        }
+        TreeNode *root = new TreeNode(slow -> val);
+        root -> left = constructBST(leftHead, slow);
+        root -> right = constructBST(slow -> next, rightHead);
+        return root;
+    }
+    TreeNode* sortedListToBST(ListNode* head) {
+        if (head == nullptr)
+            return nullptr;
+        if (head -> next == nullptr) {
+            TreeNode *root = new TreeNode(head -> val);
+            return root;
+        }
+        return constructBST(head, nullptr);
+    }
+};
  </pre>
 
