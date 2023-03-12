@@ -11,7 +11,7 @@ Merge all the linked-lists into one sorted linked-list and return it.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   lists = [[1,4,5],[1,3,4],[2,6]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [1,1,2,3,4,4,5,6]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
