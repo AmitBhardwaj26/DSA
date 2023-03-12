@@ -23,20 +23,16 @@ Explanation: The linked-lists are:
 merging them into one sorted list:
 1->1->2->3->4->4->5->6
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+k == lists.length
+0 <= k <= 104
+0 <= lists[i].length <= 500
+-104 <= lists[i][j] <= 104
+lists[i] is sorted in ascending order.
+The sum of lists[i].length will not exceed 104.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
