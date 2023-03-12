@@ -39,26 +39,43 @@ The sum of lists[i].length will not exceed 104.
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+class Solution {
+public:
+
+    void insert(ListNode *head , ListNode *temp )
+    {
+        cout<<temp->val<<" ";
+          ListNode *t=head,*p=NULL;
+        if(!head || head->val>temp->val) {temp->next=head; head=temp;}
+        else
+        {
+            while(t && t->val<=temp->val)
+            {
+              p=t;   t=t->next;
+            }
+            
+           if(p) p->next=temp; temp->next=t;
+        }
+    }
+    
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        ListNode *head=NULL;
+        
+        for(int  i=0;i<lists.size();i++)
+        {
+            ListNode *t=lists[i],*p=NULL;
+            while(t)
+            {
+                p=t->next;
+                if(head && head->val>=t->val) {t->next=head; head=t;}
+                else if(head==NULL) {head=t; t->next=NULL; cout<<head->val<<" ";} 
+                else insert(head,t);
+                
+                t=p;
+            }
+        }
+        return head;
+    }
+};
  </pre>
 
