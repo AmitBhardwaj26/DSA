@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/merge-k-sorted-lists/description/">23. Merge k Sorted Lists</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
 You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
