@@ -15,11 +15,9 @@ Given the root of a binary tree, check whether it is a mirror of itself (i.e., s
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+The number of nodes in the tree is in the range [1, 1000].
+-100 <= Node.val <= 100
+ 
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
