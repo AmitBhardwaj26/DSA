@@ -9,7 +9,7 @@ Given the root of a binary tree, check whether it is a mirror of itself (i.e., s
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  root = [1,2,2,3,4,4,3]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  true
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
