@@ -24,11 +24,7 @@ The root-to-leaf path 1->3 represents the number 13.
 Therefore, sum = 12 + 13 = 25.
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
