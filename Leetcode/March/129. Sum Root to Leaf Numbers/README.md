@@ -16,7 +16,7 @@ A leaf node is a node with no children.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   root = [1,2,3]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 25
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
