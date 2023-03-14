@@ -28,11 +28,9 @@ Therefore, sum = 12 + 13 = 25.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+The number of nodes in the tree is in the range [1, 1000].
+0 <= Node.val <= 9
+The depth of the tree will not exceed 10.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
