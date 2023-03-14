@@ -39,26 +39,24 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+class Solution {
+public:
+    int ans=0;
+    void sol(TreeNode* root,string s)
+    {
+        if(!root) return;
+        s+=to_string(root->val);
+        if(!root->left && !root->right) 
+        {
+            ans+=stoi(s); return; 
+        }
+        sol(root->left,s);
+        sol(root->right,s);  
+    }
+    int sumNumbers(TreeNode* root) {
+        sol(root,"");
+        return ans;
+    }
+};
  </pre>
 
