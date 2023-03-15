@@ -27,27 +27,41 @@ The number of nodes in the tree is in the range [1, 100].
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    bool isCompleteTree(TreeNode* root) {
+        if (root == nullptr) {
+            return true;
+        }
+        queue<TreeNode*> q;
+        q.push(root);
+      
+        bool  nullNodeFound=0;
+        while(!q.empty())
+        {
+                TreeNode* node=q.front(); q.pop();
+
+                if (node == nullptr) {         nullNodeFound = true;  }
+                else {    if (nullNodeFound)     return false;         
+                
+                q.push(node->left);
+                q.push(node->right);
+                }
+        }       
+       
+        return 1;
+    }
+};
  </pre>
 
