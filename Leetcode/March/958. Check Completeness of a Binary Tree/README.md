@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">958. Check Completeness of a Binary Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/">958. Check Completeness of a Binary Tree</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
