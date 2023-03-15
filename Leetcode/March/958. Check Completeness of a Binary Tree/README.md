@@ -16,11 +16,6 @@ In a complete binary tree, every level, except possibly the last, is completely 
 <pre>
 Explanation:  Every level before the last is full (ie. levels with node-values {1} and {2, 3}), and all nodes in the last level ({4, 5, 6}) are as far left as possible.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
