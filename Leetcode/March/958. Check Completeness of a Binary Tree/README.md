@@ -10,7 +10,7 @@ In a complete binary tree, every level, except possibly the last, is completely 
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong> root = [1,2,3,4,5,6]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
