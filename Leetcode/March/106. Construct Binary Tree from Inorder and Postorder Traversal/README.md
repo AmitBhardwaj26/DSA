@@ -9,7 +9,7 @@ Given two integer arrays inorder and postorder where inorder is the inorder trav
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [3,9,20,null,null,15,7]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
