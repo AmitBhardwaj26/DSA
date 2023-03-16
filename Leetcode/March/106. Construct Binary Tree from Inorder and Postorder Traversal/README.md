@@ -8,7 +8,7 @@ Given two integer arrays inorder and postorder where inorder is the inorder trav
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>   inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
