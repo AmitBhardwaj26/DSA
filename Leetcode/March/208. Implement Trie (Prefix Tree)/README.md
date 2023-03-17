@@ -30,11 +30,6 @@ trie.insert("app");
 trie.search("app");     // return True
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
