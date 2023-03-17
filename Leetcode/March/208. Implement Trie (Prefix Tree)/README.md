@@ -18,7 +18,7 @@ boolean startsWith(String prefix) Returns true if there is a previously inserted
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
 [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [null, null, true, false, true, null, true]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
