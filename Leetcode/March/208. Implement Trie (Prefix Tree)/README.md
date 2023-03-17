@@ -38,11 +38,9 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= word.length, prefix.length <= 2000
+word and prefix consist only of lowercase English letters.
+At most 3 * 104 calls in total will be made to insert, search, and startsWith.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
