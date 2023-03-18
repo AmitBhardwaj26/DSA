@@ -15,7 +15,8 @@ string forward(int steps) Move steps forward in history. If you can only forward
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>  ["BrowserHistory","visit","visit","visit","back","back","forward","visit","forward","back","back"]
+[["leetcode.com"],["google.com"],["facebook.com"],["youtube.com"],[1],[1],[1],["linkedin.com"],[2],[2],[7]]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
