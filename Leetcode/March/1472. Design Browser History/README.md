@@ -21,11 +21,18 @@ string forward(int steps) Move steps forward in history. If you can only forward
 
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+Explanation: BrowserHistory browserHistory = new BrowserHistory("leetcode.com");
+browserHistory.visit("google.com");       // You are in "leetcode.com". Visit "google.com"
+browserHistory.visit("facebook.com");     // You are in "google.com". Visit "facebook.com"
+browserHistory.visit("youtube.com");      // You are in "facebook.com". Visit "youtube.com"
+browserHistory.back(1);                   // You are in "youtube.com", move back to "facebook.com" return "facebook.com"
+browserHistory.back(1);                   // You are in "facebook.com", move back to "google.com" return "google.com"
+browserHistory.forward(1);                // You are in "google.com", move forward to "facebook.com" return "facebook.com"
+browserHistory.visit("linkedin.com");     // You are in "facebook.com". Visit "linkedin.com"
+browserHistory.forward(2);                // You are in "linkedin.com", you cannot move forward any steps.
+browserHistory.back(2);                   // You are in "linkedin.com", move back two steps to "facebook.com" then to "google.com". return "google.com"
+browserHistory.back(7);                   // You are in "google.com", you can move back only one step to "leetcode.com". return "leetcode.com"
+ 
   </pre>
   
 Example 2:
