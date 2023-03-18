@@ -53,27 +53,33 @@ At most 5000 calls will be made to visit, back, and forward.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+class BrowserHistory {
+public:
+    vector<string> history;
+    int cur_idx;
+
+    BrowserHistory(string homepage) {
+        history.push_back(homepage);
+        cur_idx = 0;
+    }
+    
+    void visit(string url) {
+        history.resize(cur_idx + 1); // Clear forward history as we can't go forward
+        history.push_back(url);
+        cur_idx++;
+    }
+    
+    string back(int steps) {
+        int prev_idx = max(0, cur_idx - steps);
+        cur_idx = prev_idx;
+        return history[cur_idx];
+    }
+    
+    string forward(int steps) {
+        int next_idx = min((int)history.size() - 1, cur_idx + steps);
+        cur_idx = next_idx;
+        return history[cur_idx];
+    }
+};
  </pre>
 
