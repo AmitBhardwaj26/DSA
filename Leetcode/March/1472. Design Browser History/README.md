@@ -43,11 +43,11 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= homepage.length <= 20
+1 <= url.length <= 20
+1 <= steps <= 100
+homepage and url consist of  '.' or lower case English letters.
+At most 5000 calls will be made to visit, back, and forward.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
