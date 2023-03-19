@@ -3,12 +3,14 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Design a data structure that supports adding new words and finding if a string matches any previously added string.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Implement the WordDictionary class:
 
-Return an integer array answer where answer[i] is the answer to the ith query.
-</p>
+WordDictionary() Initializes the object.
+void addWord(word) Adds word to the data structure, it can be matched later.
+bool search(word) Returns true if there is any string in the data structure that matches word or false otherwise. word may contain dots '.' where dots can be matched with any letter.
+ </p>
 
 
 <p><strong>Example 1:</strong></p>
