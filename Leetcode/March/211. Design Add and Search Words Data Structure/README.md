@@ -16,7 +16,7 @@ bool search(word) Returns true if there is any string in the data structure that
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  ["WordDictionary","addWord","addWord","addWord","search","search","search","search"]
 [[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [null,null,null,null,false,true,true,true]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
