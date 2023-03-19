@@ -14,7 +14,8 @@ bool search(word) Returns true if there is any string in the data structure that
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>  ["WordDictionary","addWord","addWord","addWord","search","search","search","search"]
+[[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
