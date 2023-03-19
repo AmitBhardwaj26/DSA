@@ -37,11 +37,11 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= word.length <= 25
+word in addWord consists of lowercase English letters.
+word in search consist of '.' or lowercase English letters.
+There will be at most 3 dots in word for search queries.
+At most 104 calls will be made to addWord and search.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
