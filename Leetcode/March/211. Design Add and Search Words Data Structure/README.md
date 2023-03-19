@@ -29,11 +29,7 @@ wordDictionary.search(".ad"); // return True
 wordDictionary.search("b.."); // return True
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
