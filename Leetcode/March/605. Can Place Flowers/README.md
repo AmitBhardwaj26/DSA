@@ -13,7 +13,7 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   flowerbed = [1,0,0,0,1], n = 1
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  true
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
