@@ -28,27 +28,28 @@ There are no two adjacent flowers in flowerbed.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    bool canPlaceFlowers(vector<int>& f, int n) {
+        int count=0;
+        if(n==0) return true;
+        if(f.size()==1)
+        {
+            if(f[0]==0 && n==1) return true;
+            else return false;
+           }
+        if(f[0]==0) { if(f[1]==0)  {f[0]=1; count++;} }
+        if(f.size()>2 && f[f.size()-1]==0) 
+        { if(f[f.size()-2]==0) { f[f.size()-1]=1; count++; } }
+        cout<<count<<"\n";
+        for(int i=1;i<f.size()-1;i++)
+        {
+            if(f[i-1]==0 && f[i+1]==0 && f[i]!=1) {f[i]=1; count++; cout<<i<<" "; }
+        }
+        cout<<count<<"\n";
+        if(count>=n) return true;
+        else return false;
+    }
+};
  </pre>
 
