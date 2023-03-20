@@ -19,11 +19,10 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= flowerbed.length <= 2 * 104
+flowerbed[i] is 0 or 1.
+There are no two adjacent flowers in flowerbed.
+0 <= n <= flowerbed.length
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
