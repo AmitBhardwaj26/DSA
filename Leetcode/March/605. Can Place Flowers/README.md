@@ -12,7 +12,7 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>   flowerbed = [1,0,0,0,1], n = 1
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
