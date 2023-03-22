@@ -42,27 +42,32 @@ There is at least one path between 1 and n.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    int minScore(int n, vector<vector<int>>& r) {
+       // int n=r.size();
+        vector<pair<int,int>> adj[n+1];
+       for(int i=0;i<r.size();i++)
+       {
+           adj[r[i][0]].push_back({r[i][1],r[i][2]});
+           adj[r[i][1]].push_back({r[i][0],r[i][2]});
+       }
+        int ans=INT_MAX;
+	vector<int> vis(n+1, 0); vis[0] = 1;
+	queue<int> q; q.push(1);
+	while (!q.empty()) 
+	{
+		int node = q.front(); q.pop();
+		// ans=min(ans,adj[node].second);
+		for (auto it: adj[node])
+		{
+            ans=min(ans,it.second);
+			if (!vis[it.first]) { 
+                                  q.push(it.first); vis[it.first] = 1; } 
+		}
+	}
+	    return ans;
+    }
+};
  </pre>
 
