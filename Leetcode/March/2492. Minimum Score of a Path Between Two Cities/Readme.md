@@ -25,20 +25,18 @@ The test cases are generated such that there is at least one path between 1 and 
 Explanation: The path from city 1 to 4 with the minimum score is: 1 -> 2 -> 4. The score of this path is min(9,5) = 5.
 It can be shown that no other path has less score.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+2 <= n <= 105
+1 <= roads.length <= 105
+roads[i].length == 3
+1 <= ai, bi <= n
+ai != bi
+1 <= distancei <= 104
+There are no repeated edges.
+There is at least one path between 1 and n.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
