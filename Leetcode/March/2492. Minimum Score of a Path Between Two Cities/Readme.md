@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/"></a></h2>2492. Minimum Score of a Path Between Two Cities
+<h2><a href="https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/description/"></a></h2>2492. Minimum Score of a Path Between Two Cities
 <h3>Medium</h3>
 <hr>
 <div><p>
