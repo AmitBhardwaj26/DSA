@@ -34,27 +34,43 @@ No two computers are connected by more than one cable.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ // simple DFS anf find the total number of disconneted components by making count in for loop
+
+class Solution {
+public:
+    int vis[100001]={0};
+    vector<int> adj[100001];
+    void dfs(int i)
+    {
+        vis[i]=1;
+        for(auto it: adj[i])
+        {
+            if(vis[it]==0)  dfs(it);
+        }
+        return ;
+    }
+    
+    int makeConnected(int n, vector<vector<int>>& con) {
+        // vector<int> adj[n]; N=n;
+        for(int i=0;i<con.size();i++)
+        {
+            adj[con[i][0]].push_back(con[i][1]);
+            adj[con[i][1]].push_back(con[i][0]);   
+        }
+        int ans=0;
+        for(int i=0;i<n;i++)
+        {
+            if(vis[i]==0) 
+            {
+                dfs(i);
+                // cout<<i<<" ";
+                ans++;
+            }
+        }
+        
+        if(n-1>con.size()) return -1;
+        return ans-1;
+    }
+};
  </pre>
 
