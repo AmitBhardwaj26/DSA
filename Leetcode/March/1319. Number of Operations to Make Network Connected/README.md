@@ -22,11 +22,13 @@ Explanation:Remove cable between computer 1 and 2 and place between computers 1 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= n <= 105
+1 <= connections.length <= min(n * (n - 1) / 2, 105)
+connections[i].length == 2
+0 <= ai, bi < n
+ai != bi
+There are no repeated connections.
+No two computers are connected by more than one cable.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
