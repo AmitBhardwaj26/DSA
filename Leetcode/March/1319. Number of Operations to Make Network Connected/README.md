@@ -18,12 +18,7 @@ Return the minimum number of times you need to do this in order to make all the 
 <pre>
 Explanation:Remove cable between computer 1 and 2 and place between computers 1 and 3.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
