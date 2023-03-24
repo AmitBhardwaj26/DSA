@@ -26,11 +26,11 @@ Explanation: Change the direction of edges show in red such that each node can r
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+2 <= n <= 5 * 104
+connections.length == n - 1
+connections[i].length == 2
+0 <= ai, bi <= n - 1
+ai != bi
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
