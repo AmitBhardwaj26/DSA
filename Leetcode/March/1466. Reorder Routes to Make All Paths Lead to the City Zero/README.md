@@ -22,12 +22,7 @@ It's guaranteed that each city can reach city 0 after reorder.
 <pre>
 Explanation: Change the direction of edges show in red such that each node can reach the node 0 (capital).
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
