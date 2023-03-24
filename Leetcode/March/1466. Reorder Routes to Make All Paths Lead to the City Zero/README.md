@@ -3,11 +3,15 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+There are n cities numbered from 0 to n - 1 and n - 1 roads such that there is only one way to travel between two different cities (this network form a tree). Last year, The ministry of transport decided to orient the roads in one direction because they are too narrow.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Roads are represented by connections where connections[i] = [ai, bi] represents a road from city ai to city bi.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+This year, there will be a big event in the capital (city 0), and many people want to travel to this city.
+
+Your task consists of reorienting some roads such that each city can visit the city 0. Return the minimum number of edges changed.
+
+It's guaranteed that each city can reach city 0 after reorder.
 </p>
 
 
