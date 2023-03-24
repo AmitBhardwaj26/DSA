@@ -16,7 +16,7 @@ It's guaranteed that each city can reach city 0 after reorder.
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>  n = 6, connections = [[0,1],[1,3],[2,3],[4,0],[4,5]]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
