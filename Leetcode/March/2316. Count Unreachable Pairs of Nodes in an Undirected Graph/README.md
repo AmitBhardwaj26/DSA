@@ -13,7 +13,7 @@ Return the number of pairs of different nodes that are unreachable from each oth
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>    n = 3, edges = [[0,1],[0,2],[1,2]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 0
 </pre>
 <pre>
 Explanation: There are no pairs of nodes that are unreachable from each other. Therefore, we return 0.
