@@ -38,27 +38,63 @@ There are no repeated edges.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+   
+    int dfs(int i, vector<int> adj[], vector<int>& vis)
+    {
+        vis[i]=1;
+        int ans=1;
+        for(auto it: adj[i])
+        {
+           if(vis[it]==0)
+           {
+               vis[it]=1;
+               ans+=dfs(it,adj,vis);
+           }
+        }
+        return ans;
+    }
+
+    long long countPairs(int n, vector<vector<int>>& edges) {
+        vector<long long> temp; long long ans=0;
+        vector<int> adj[n+1];
+        vector<int> vis(n+1,0);
+        for(int i=0;i<edges.size();i++)
+        {
+            adj[edges[i][0]].push_back(edges[i][1]);
+            adj[edges[i][1]].push_back(edges[i][0]);
+        }
+        for(int i=0;i<n;i++)
+        { 
+            if(vis[i]==0)
+            {
+             long long x=dfs(i,adj,vis);
+              temp.push_back(x); 
+              cout<<i<<" "<<x<<"\n";
+            }
+        }
+
+        sort(temp.begin(),temp.end());
+        vector<long long > t1(temp.begin(),temp.end());
+       // for(int i=0;i<temp.size();i++) cout<<temp[i]<<" ";
+        //cout<<endl;
+
+        long long sum=0;
+        for(int i=temp.size()-1; i>=0;i--)
+        {
+            sum+=temp[i];
+            temp[i]=sum;
+        }
+        // for(int i=0;i<temp.size();i++) cout<<temp[i]<<" ";
+
+        for(int i=0;i<temp.size()-1;i++)
+        {
+            ans+=t1[i]*temp[i+1];
+        }
+
+        return ans;
+    }
+};
  </pre>
 
