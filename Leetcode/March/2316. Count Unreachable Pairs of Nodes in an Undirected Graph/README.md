@@ -19,12 +19,6 @@ Return the number of pairs of different nodes that are unreachable from each oth
 Explanation: There are no pairs of nodes that are unreachable from each other. Therefore, we return 0.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
-
 Constraints:
 <pre>
 1 <= n <= 105
