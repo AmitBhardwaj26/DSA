@@ -35,27 +35,64 @@ edges[i] != i
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+   // intution is simple 
+   // step 1: find toposort it remove the edges which is a part of cycle
+   // step 2: in any node do dfs call to find cycle 
+    
+    vector<int> Toposort(vector<int> &ed)
+    {
+        int n=ed.size();
+        vector<int> ans(n,0),indegree(n,0);
+        for(int i=0;i<n;i++)
+          if(ed[i]>=0)  indegree[ed[i]]++;
+         
+        queue<int> q;   
+        for(int i=0;i<n;i++)
+        {
+            if(indegree[i]==0 ) q.push(i);
+        }
+        while(!q.empty())
+        {
+            int x=q.front(); q.pop();
+            ans[x]=1;
+            if(ed[x]>=0) indegree[ed[x]]--;
+            if(ed[x]>=0 &&indegree[ed[x]]==0) q.push(ed[x]);
+        }
+        return ans;
+    }
+
+    int dfs(int it,vector<int> &ed , vector<int> &vis, vector<int> &dis )
+    {
+        // cout<<it<<" ";
+        vis[it]=1;
+        dis[it]=1;
+        int x=ed[it];
+        if(dis[x]==1 && vis[x]==1) return 1;
+        if(vis[x]==0)
+        {
+            return 1+dfs(x,ed,vis,dis);
+        } 
+        dis[it]=0;
+        return 1;
+    }
+    
+    int longestCycle(vector<int>& ed) {
+        // apply toposoprth
+        vector<int> vis= Toposort(ed);
+        int n=ed.size(),ans=0;
+        //for(int i=0;i<n;i++) cout<<vis[i]<<" ";
+        //cout<<endl;
+        
+        vector<int> dis(n,0);
+        for(int i=0;i<n;i++)
+        {
+           if(vis[i]==0 && ed[i]>=0) ans=max(ans,dfs(i,ed,vis,dis));
+        }
+        if(ans==0) return -1;
+        return ans;                                                     
+    }
+};
  </pre>
 
