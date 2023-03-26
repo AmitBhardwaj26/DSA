@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/longest-cycle-in-a-graph/description/">985. Sum of Even Numbers After Queries</a></h2>
+<h2><a href="https://leetcode.com/problems/longest-cycle-in-a-graph/description/">2360. Longest Cycle in a Graph</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
