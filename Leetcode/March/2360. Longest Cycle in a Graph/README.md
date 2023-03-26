@@ -15,7 +15,7 @@ A cycle is a path that starts and ends at the same node.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   edges = [3,3,4,2,3]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 3
 </pre>
 <pre>
 Explanation:The longest cycle in the graph is the cycle: 2 -> 4 -> 3 -> 2.
