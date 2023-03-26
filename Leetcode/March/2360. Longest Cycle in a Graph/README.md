@@ -22,19 +22,14 @@ Explanation:The longest cycle in the graph is the cycle: 2 -> 4 -> 3 -> 2.
 The length of this cycle is 3, so 3 is returned.
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == edges.length
+2 <= n <= 105
+-1 <= edges[i] < n
+edges[i] != i
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
