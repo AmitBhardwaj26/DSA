@@ -20,11 +20,10 @@ Explanation: Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+m == grid.length
+n == grid[i].length
+1 <= m, n <= 200
+0 <= grid[i][j] <= 100
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
