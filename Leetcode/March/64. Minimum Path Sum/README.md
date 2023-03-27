@@ -40,10 +40,8 @@ public:
          
         if(dp[i][j]!=-1) return dp[i][j];
         
-         return dp[i][j]= grid[i][j] +min(solve(grid,i+1,j) , solve(grid,i,j+1));
-            
+         return dp[i][j]= grid[i][j] +min(solve(grid,i+1,j) , solve(grid,i,j+1)); 
     }
-    
     int minPathSum(vector<vector<int>>& grid) {
         memset(dp,-1,sizeof(dp));
         return solve(grid,0,0);
