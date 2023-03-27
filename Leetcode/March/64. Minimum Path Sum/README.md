@@ -11,7 +11,7 @@ Note: You can only move either down or right at any point in time.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong> grid = [[1,3,1],[1,5,1],[4,2,1]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 7
 </pre>
 <pre>
 Explanation: Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.
