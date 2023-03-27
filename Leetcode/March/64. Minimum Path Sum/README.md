@@ -16,11 +16,6 @@ Note: You can only move either down or right at any point in time.
 <pre>
 Explanation: Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
@@ -36,26 +31,24 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+class Solution {
+public:
+    int dp[201][201];
+    int solve(vector<vector<int>>& grid,int i ,int j)
+    {
+        if(i==grid.size()-1 && j==grid[0].size()-1) return grid[i][j];
+        if(i==grid.size() || j==grid[0].size()) return 1110;
+         
+        if(dp[i][j]!=-1) return dp[i][j];
+        
+         return dp[i][j]= grid[i][j] +min(solve(grid,i+1,j) , solve(grid,i,j+1));
+            
+    }
+    
+    int minPathSum(vector<vector<int>>& grid) {
+        memset(dp,-1,sizeof(dp));
+        return solve(grid,0,0);
+    }
+};
  </pre>
 
