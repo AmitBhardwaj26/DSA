@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/symmetric-tree/">101. Symmetric Tree</a></h2>
-<h3>Med</h3>
+<h3>Medium</h3>
 <hr>
 <div><p>
 Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
@@ -38,4 +38,3 @@ public:
     }
 };
  </pre>
-
