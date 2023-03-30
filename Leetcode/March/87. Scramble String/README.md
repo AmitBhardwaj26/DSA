@@ -33,11 +33,9 @@ As one possible scenario led s1 to be scrambled to s2, we return true.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+s1.length == s2.length
+1 <= s1.length <= 30
+s1 and s2 consist of lowercase English letters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
