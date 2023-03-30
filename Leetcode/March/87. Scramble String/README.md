@@ -29,11 +29,6 @@ Explanation:One possible scenario applied on s1 is:
 The algorithm stops now, and the result string is "rgeat" which is s2.
 As one possible scenario led s1 to be scrambled to s2, we return true.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
