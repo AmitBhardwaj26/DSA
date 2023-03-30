@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/scramble-string/description/">87. Scramble String</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
 We can scramble a string s to get a string t using the following algorithm:
