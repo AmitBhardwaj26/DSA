@@ -22,11 +22,11 @@ Explanation:The figure above shows the three ways to cut the pizza. Note that pi
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= rows, cols <= 50
+rows == pizza.length
+cols == pizza[i].length
+1 <= k <= 10
+pizza consists of characters 'A' and '.' only.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
