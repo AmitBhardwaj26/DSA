@@ -13,7 +13,7 @@ Return the number of ways of cutting the pizza such that each piece contains at 
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  pizza = ["A..","AAA","..."], k = 3
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 3 
 </pre>
 <pre>
 Explanation:The figure above shows the three ways to cut the pizza. Note that pieces must contain at least one apple.
