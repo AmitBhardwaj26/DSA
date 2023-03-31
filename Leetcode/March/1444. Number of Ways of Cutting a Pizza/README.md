@@ -19,11 +19,6 @@ Return the number of ways of cutting the pizza such that each piece contains at 
 Explanation:The figure above shows the three ways to cut the pizza. Note that pieces must contain at least one apple.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
