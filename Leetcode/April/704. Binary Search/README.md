@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/binary-search/description/"></a></h2>
+<h2><a href="https://leetcode.com/problems/binary-search/description/">704. Binary Search</a></h2>
 <h3>Easy</h3>
 <hr>
 <div><p>
