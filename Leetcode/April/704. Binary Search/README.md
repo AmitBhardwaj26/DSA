@@ -35,27 +35,19 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int i=0,j=nums.size()-1, mid;
+        while(i<=j)
+        {
+            mid=(i+j)/2;
+            if(nums[mid]==target) return mid;
+            else if(nums[mid]<target) i=mid+1;
+            else j=mid-1;
+        }
+        return -1;
+    }
+};
  </pre>
 
