@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/binary-search/description/"></a></h2>
-<h3>Medium</h3>
+<h3>Easy</h3>
 <hr>
 <div><p>
  Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
