@@ -17,10 +17,7 @@ You must write an algorithm with O(log n) runtime complexity.
 Explanation: 9 exists in nums and its index is 4
   </pre>
   
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
