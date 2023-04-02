@@ -42,27 +42,30 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
+        int n = spells.size();
+        int m = potions.size();
+        vector<int> pairs(n, 0);
+        sort(potions.begin(), potions.end());
+        for (int i = 0; i < n; i++) {
+            int spell = spells[i];
+            int left = 0;
+            int right = m - 1;
+            while (left <= right) {
+                int mid = left + (right - left) / 2;
+                long long product = (long long)spell * (long long)potions[mid];
+                if (product >= success) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
+            }
+            pairs[i] = m - left;
+        }
+        return pairs;
+    }
+}; 
  </pre>
 
