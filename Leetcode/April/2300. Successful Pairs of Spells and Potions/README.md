@@ -14,7 +14,7 @@ Return an integer array pairs of length n where pairs[i] is the number of potion
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>  spells = [5,1,3], potions = [1,2,3,4,5], success = 7
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
