@@ -3,11 +3,13 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+ You are given two positive integer arrays spells and potions, of length n and m respectively, where spells[i] represents the strength of the ith spell and potions[j] represents the strength of the jth potion.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+You are also given an integer success. A spell and potion pair is considered successful if the product of their strengths is at least success.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return an integer array pairs of length n where pairs[i] is the number of potions that will form a successful pair with the ith spell.
+
+ 
 </p>
 
 
