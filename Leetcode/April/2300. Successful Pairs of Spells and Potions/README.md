@@ -23,20 +23,15 @@ Explanation: - 0th spell: 5 * [1,2,3,4,5] = [5,10,15,20,25]. 4 pairs are success
 - 2nd spell: 3 * [1,2,3,4,5] = [3,6,9,12,15]. 3 pairs are successful.
 Thus, [4,0,3] is returned.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == spells.length
+m == potions.length
+1 <= n, m <= 105
+1 <= spells[i], potions[i] <= 105
+1 <= success <= 1010
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
