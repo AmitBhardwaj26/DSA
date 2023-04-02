@@ -15,7 +15,7 @@ Return an integer array pairs of length n where pairs[i] is the number of potion
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  spells = [5,1,3], potions = [1,2,3,4,5], success = 7
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [4,0,3]
 </pre>
 <pre>
 Explanation: - 0th spell: 5 * [1,2,3,4,5] = [5,10,15,20,25]. 4 pairs are successful.
