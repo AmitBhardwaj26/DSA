@@ -20,11 +20,8 @@ Explanation: 1 boat (1, 2)
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= people.length <= 5 * 104
+1 <= people[i] <= limit <= 3 * 104
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
