@@ -11,7 +11,7 @@ Return the minimum number of boats to carry every given person.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  people = [1,2], limit = 3
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 1
 </pre>
 <pre>
 Explanation: 1 boat (1, 2)
