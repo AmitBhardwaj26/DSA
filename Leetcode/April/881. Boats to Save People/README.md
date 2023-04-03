@@ -17,11 +17,6 @@ Return the minimum number of boats to carry every given person.
 Explanation: 1 boat (1, 2)
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
