@@ -3,11 +3,13 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given a string s, partition the string into one or more substrings such that the characters in each substring are unique. That is, no letter appears in a single substring more than once.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Return the minimum number of substrings in such a partition.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Note that each character should belong to exactly one substring in a partition.
+
+ 
 </p>
 
 
