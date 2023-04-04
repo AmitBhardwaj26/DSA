@@ -21,11 +21,7 @@ Note that each character should belong to exactly one substring in a partition.
 Explanation: Two possible partitions are ("a","ba","cab","a") and ("ab","a","ca","ba").
 It can be shown that 4 is the minimum number of substrings needed.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
