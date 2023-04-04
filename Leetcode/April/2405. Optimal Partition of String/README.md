@@ -26,11 +26,8 @@ It can be shown that 4 is the minimum number of substrings needed.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= s.length <= 105
+s consists of only English lowercase letters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
