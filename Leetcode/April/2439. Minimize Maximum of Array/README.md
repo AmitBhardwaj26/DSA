@@ -16,7 +16,7 @@ Return the minimum possible value of the maximum integer of nums after performin
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   nums = [3,7,1,6]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  5
 </pre>
 <pre>
 Explanation: One set of optimal operations is as follows:
