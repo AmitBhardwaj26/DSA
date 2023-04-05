@@ -19,11 +19,12 @@ Return the minimum possible value of the maximum integer of nums after performin
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+Explanation: One set of optimal operations is as follows:
+1. Choose i = 1, and nums becomes [4,6,1,6].
+2. Choose i = 3, and nums becomes [4,6,2,5].
+3. Choose i = 1, and nums becomes [5,5,2,5].
+The maximum integer of nums is 5. It can be shown that the maximum number cannot be less than 5.
+Therefore, we return 5.
   </pre>
   
 Example 2:
