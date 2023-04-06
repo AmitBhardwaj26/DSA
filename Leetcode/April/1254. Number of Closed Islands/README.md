@@ -13,17 +13,12 @@ Return the number of closed islands.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   grid = [[1,1,1,1,1,1,1,0],[1,0,0,0,0,1,1,0],[1,0,1,0,1,1,1,0],[1,0,0,0,0,1,0,1],[1,1,1,1,1,1,1,0]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 2
 </pre>
 <pre>
 Explanation: Islands in gray are closed because they are completely surrounded by water (group of 1s).
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
