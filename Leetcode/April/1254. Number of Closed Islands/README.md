@@ -22,11 +22,8 @@ Explanation: Islands in gray are closed because they are completely surrounded b
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= grid.length, grid[0].length <= 100
+0 <= grid[i][j] <=1
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
