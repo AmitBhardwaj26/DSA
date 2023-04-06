@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">1254. Number of Closed Islands</a></h2>
+<h2><a href="https://leetcode.com/problems/number-of-closed-islands/description/">1254. Number of Closed Islands</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
