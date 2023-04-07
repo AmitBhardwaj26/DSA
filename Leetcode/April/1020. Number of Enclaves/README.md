@@ -13,7 +13,7 @@ Return the number of land cells in grid for which we cannot walk off the boundar
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  grid = [[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 3
 </pre>
 <pre>
 Explanation: There are three 1s that are enclosed by 0s, and one 1 that is not enclosed because its on the boundary.
