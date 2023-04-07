@@ -18,11 +18,6 @@ Return the number of land cells in grid for which we cannot walk off the boundar
 <pre>
 Explanation: There are three 1s that are enclosed by 0s, and one 1 that is not enclosed because its on the boundary.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
