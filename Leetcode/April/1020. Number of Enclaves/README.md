@@ -31,27 +31,41 @@ grid[i][j] is either 0 or 1.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ // traverse in all four sides of rectangle if any value is 1 then mark dfs on it and count all corner ones substract it with all one to get the ans
+
+class Solution {
+public:
+    int vis[501][501]={0};
+    int DFS(int i,int j,vector<vector<int>>& grid)
+    {
+        vis[i][j]=1;
+        int count=1;
+        if(i-1>=0 && grid[i-1][j]==1 && vis[i-1][j]==0)
+           count+= DFS(i-1,j,grid);
+        if(j-1>=0 && grid[i][j-1]==1 && vis[i][j-1]==0)
+           count+= DFS(i,j-1,grid);
+        if(i+1<grid.size() && grid[i+1][j]==1 && vis[i+1][j]==0)
+           count+= DFS(i+1,j,grid);
+        if(j+1<grid[0].size() && grid[i][j+1]==1 && vis[i][j+1]==0)
+           count+= DFS(i,j+1,grid);
+       return count; 
+    }
+    
+    int numEnclaves(vector<vector<int>>& grid) {
+        int m=grid.size(),n=grid[0].size(),ans=0,one=0;
+        
+        for(int i=0;i<m;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(grid[i][j]==1) one++;
+                if((i==0 || j==0 || i==m-1 || j==n-1) &&
+                   vis[i][j]==0 && grid[i][j]==1)
+               { ans+=DFS(i,j,grid);  }
+            }
+        }
+        return one-ans;
+    }
+};
  </pre>
 
