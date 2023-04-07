@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+You are given an m x n binary matrix grid, where 0 represents a sea cell and 1 represents a land cell.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+A move consists of walking from one land cell to another adjacent (4-directionally) land cell or walking off the boundary of the grid.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return the number of land cells in grid for which we cannot walk off the boundary of the grid in any number of moves.
 </p>
 
 
