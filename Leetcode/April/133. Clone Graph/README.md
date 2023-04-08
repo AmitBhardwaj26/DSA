@@ -38,20 +38,16 @@ Explanation:  There are 4 nodes in the graph.
 3rd node (val = 3)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
 4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+The number of nodes in the graph is in the range [0, 100].
+1 <= Node.val <= 100
+Node.val is unique for each node.
+There are no repeated edges and no self-loops in the graph.
+The Graph is connected and all nodes can be visited starting from the given node.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
