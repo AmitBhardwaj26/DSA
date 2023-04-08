@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given a reference of a node in a connected undirected graph.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Return a deep copy (clone) of the graph.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors.
 </p>
 
 
