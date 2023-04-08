@@ -29,7 +29,7 @@ The given node will always be the first node with val = 1. You must return the c
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong> adjList = [[2,4],[1,3],[2,4],[1,3]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  [[2,4],[1,3],[2,4],[1,3]]
 </pre>
 <pre>
 Explanation:  There are 4 nodes in the graph.
