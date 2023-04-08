@@ -41,27 +41,70 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ /*
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    vector<Node*> neighbors;
+    Node() {
+        val = 0;
+        neighbors = vector<Node*>();
+    }
+    Node(int _val) {
+        val = _val;
+        neighbors = vector<Node*>();
+    }
+    Node(int _val, vector<Node*> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+};
+*/
+
+class Solution {
+public:
+    void dfs(Node *node,Node *Real,vector<Node*> &visited)
+    {
+      //  if(node==NULL) return ;
+        visited[Real->val]=Real;
+        for(auto it:node->neighbors)
+        {
+            if(visited[it->val]==NULL)
+            {
+                
+              Node *t=new Node(it->val);
+              // visited[it->val]=t;
+                Real->neighbors.push_back(t);
+              dfs(it,t,visited);
+                
+            } 
+            else Real->neighbors.push_back(visited[it->val]);
+        }
+    }
+    
+    Node* cloneGraph(Node* node) {
+        if(node==NULL) return NULL;
+        Node *Copy=new Node();
+        Copy->val=node->val;
+        vector<Node *> visited(105,NULL);
+        visited[Copy->val] = Copy;
+        for(auto it:node->neighbors)
+        {
+            if(visited[it->val]==NULL)
+            {
+                
+              Node *t=new Node(it->val);
+               Copy->neighbors.push_back(t);
+              
+              dfs(it,t,visited);
+                
+            } 
+            else Copy->neighbors.push_back(visited[it->val]);
+        }
+        
+        return Copy;
+    }
+};
  </pre>
 
