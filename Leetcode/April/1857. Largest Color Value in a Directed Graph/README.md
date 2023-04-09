@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/largest-color-value-in-a-directed-graph/description/">1857. Largest Color Value in a Directed Graph</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
 There is a directed graph of n colored nodes and m edges. The nodes are numbered from 0 to n - 1.
