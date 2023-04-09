@@ -34,27 +34,131 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ // class Solution {
+// public:
+//    vector<int> TOPOSORT(int it,int n, vector<int> adj[],vector<int> &hastopo )
+//    {
+//        vector<int> indegree(n,0);
+//         vector<int> ans;
+
+//        for(int i=0;i<n;i++)
+//        {
+//            for(auto it: adj[i])
+//            {
+//                indegree[it]++;
+//            }
+//        }
+//        queue<int> q;
+//        for(int i=0;i<n;i++)
+//        {
+//            if(indegree[i]==0) q.push(i);
+//        }
+//        while(!q.empty())
+//        {
+//            int node=q.front(); q.pop();
+//            ans.push_back(node);
+//            hastopo[node]=1;
+//            for(auto it: adj[node])
+//            {
+//               indegree[it]--;
+//               if(indegree[it]==0) q.push(it);
+//            }
+//        }
+//        return ans;
+//    }
+
+
+//    int dfs(int it, string color,vector<int> adj[],vector<int>& vis, vector<int>& has,vector<int> &hastopo )
+//    {
+//        vis[it]=1;
+//        int x=color[it]-'a';
+//        has[x]++;
+//        cout<<"it = "<<it<<" "<<x<<"\n";
+//       int ans=0;
+//        for(auto i: adj[it])
+//        {
+//            if(vis[i]==0 && hastopo[i]==1)
+//            {
+//               ans=max(ans,dfs(i,color,adj,vis,has,hastopo));
+//            }
+//        }
+//        x=0;
+//        for(int i=0;i<26;i++) x=max(x,has[i]);
+//        has[x]--;
+//        return max(ans,x);
+//    }
+    
+
+
+//     int largestPathValue(string colors, vector<vector<int>>& edges) {
+//         int n=colors.size();
+//         vector<int> adj[n];
+//         for(int i=0;i<edges.size();i++)
+//         {
+//             adj[edges[i][0]].push_back(edges[i][1]);
+//         }
+//         vector<int> hastopo(n,0);
+//         vector<int> topo=TOPOSORT(0,n, adj,hastopo);
+//         if(topo.size()==0) return -1;
+         
+//         for(int i=0;i<topo.size();i++) cout<<topo[i]<<" ";  
+
+//         vector<int> vis(n,0); 
+//         int ans=0;
+//         for(int i=0;i<topo.size();i++)
+//         {
+//             if(vis[i]==0)
+//             {    
+//                 vector<int> has(26,0);
+//                 ans=max(ans, dfs(i,colors,adj,vis, has,hastopo));
+//             }
+//         }
+//         return ans;
+//     }
+// };
+
+class Solution {
+public:
+    int largestPathValue(string colors, vector<vector<int>>& edges) {
+        int n = colors.size();
+        int k = 26;
+        vector<int> indegrees(n, 0);
+        vector<vector<int>> graph(n, vector<int>());
+        for (vector<int>& edge : edges) {
+            int u = edge[0];
+            int v = edge[1];
+            graph[u].push_back(v);
+            indegrees[v]++;
+        }
+        unordered_set<int> zero_indegree;
+        for (int i = 0; i < n; i++) {
+            if (indegrees[i] == 0) {
+                zero_indegree.insert(i);
+            }
+        }
+        vector<vector<int>> counts(n, vector<int>(k, 0));
+        for (int i = 0; i < n; i++) {
+            counts[i][colors[i] - 'a']++;
+        }
+        int max_count = 0;
+        int visited = 0;
+        while (!zero_indegree.empty()) {
+            int u = *zero_indegree.begin();
+            zero_indegree.erase(u);
+            visited++;
+            for (int v : graph[u]) {
+                for (int i = 0; i < k; i++) {
+                    counts[v][i] = max(counts[v][i], counts[u][i] + (colors[v] - 'a' == i ? 1 : 0));
+                }
+                indegrees[v]--;
+                if (indegrees[v] == 0) {
+                    zero_indegree.insert(v);
+                }
+            }
+            max_count = max(max_count, *max_element(counts[u].begin(), counts[u].end()));
+        }
+        return visited == n ? max_count : -1;
+    }
+};
  </pre>
 
