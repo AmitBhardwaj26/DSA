@@ -21,11 +21,6 @@ Return the largest color value of any valid path in the given graph, or -1 if th
 Explanation:  The path 0 -> 2 -> 3 -> 4 contains 3 nodes that are colored "a" (red in the above image).
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
