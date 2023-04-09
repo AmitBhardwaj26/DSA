@@ -24,11 +24,12 @@ Explanation:  The path 0 -> 2 -> 3 -> 4 contains 3 nodes that are colored "a" (r
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == colors.length
+m == edges.length
+1 <= n <= 105
+0 <= m <= 105
+colors consists of lowercase English letters.
+0 <= aj, bj < n
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
