@@ -29,27 +29,31 @@ s consists of parentheses only '()[]{}'.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    bool isValid(string s) {
+        
+        stack<int> st; bool c=true;
+        for(int i=0;i<(int)s.size();i++)
+        {
+            
+            if( s[i]=='(' || s[i]=='[' || s[i]=='{')
+             {   st.push(s[i]);}
+            else 
+            { 
+                if(st.empty()) return false;
+                char ch=st.top();
+                
+                if(s[i]==')') if(ch!='(') return false; else st.pop();
+                else if(s[i]=='}') if(ch!='{') return false; else st.pop();
+                else if(s[i]==']') if(ch!='[') return false; else st.pop();
+                
+            }
+                
+        }
+        if(!st.empty()) return false;
+        return true;
+    }
+};
  </pre>
 
