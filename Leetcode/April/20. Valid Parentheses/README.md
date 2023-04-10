@@ -22,11 +22,8 @@ Every close bracket has a corresponding open bracket of the same type.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= s.length <= 104
+s consists of parentheses only '()[]{}'.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
