@@ -27,11 +27,10 @@ There are no more stars, so we return "lecoe".
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= s.length <= 105
+s consists of lowercase English letters and stars *.
+The operation above can be performed on s.
+
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
