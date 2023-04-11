@@ -13,7 +13,7 @@ Return an integer array answer where answer[i] is the answer to the ith quer](ht
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  s = "leet**cod*e"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  "lecoe"
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
