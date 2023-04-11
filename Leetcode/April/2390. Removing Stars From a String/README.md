@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">2390. Removing Stars From a String</a></h2>
+<h2><a href="https://leetcode.com/problems/removing-stars-from-a-string/description/">2390. Removing Stars From a String</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
