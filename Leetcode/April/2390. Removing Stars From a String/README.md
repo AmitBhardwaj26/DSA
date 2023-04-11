@@ -23,10 +23,6 @@ Explanation: Performing the removals from left to right:
 There are no more stars, so we return "lecoe".
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
