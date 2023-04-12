@@ -21,7 +21,7 @@ Return the simplified canonical path.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  path = "/home/"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> "/home"
 </pre>
 <pre>
 Explanation:  Note that there is no trailing slash after the last directory name.
