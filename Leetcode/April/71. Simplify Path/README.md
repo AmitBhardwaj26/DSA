@@ -26,12 +26,7 @@ Return the simplified canonical path.
 <pre>
 Explanation:  Note that there is no trailing slash after the last directory name.
   </pre>
-  
-Example 2:
 
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
