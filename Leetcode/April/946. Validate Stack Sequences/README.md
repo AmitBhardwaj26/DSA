@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">946. Validate Stack Sequences</a></h2>
+<h2><a href="https://leetcode.com/problems/validate-stack-sequences/description/">946. Validate Stack Sequences</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
