@@ -19,11 +19,6 @@ push(5),
 pop() -> 5, pop() -> 3, pop() -> 2, pop() -> 1
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
