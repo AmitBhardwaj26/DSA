@@ -36,13 +36,12 @@ popped is a permutation of pushed.
 public:
     bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {
         int i=0,j=0,n=popped.size();
-        stack<int> st;
+        stack< int > st;
         for(auto it: pushed)
         {
-            st.push(it);
-            while(j<n && !st.empty() && popped[j]==st.top())
-                {st.pop(); j++;}
-              
+            st.push( it );
+            while(j < n && !st.empty() && popped[j]==st.top())
+                { st.pop();  j++;}   
         }
         return n==j;
     }
