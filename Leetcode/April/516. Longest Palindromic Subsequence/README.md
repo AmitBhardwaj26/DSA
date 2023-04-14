@@ -11,7 +11,7 @@ A subsequence is a sequence that can be derived from another sequence by deletin
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   s = "bbbab"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 4
 </pre>
 <pre>
 Explanation: One possible longest palindromic subsequence is "bbbb".
