@@ -28,11 +28,10 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == piles.length
+1 <= n <= 1000
+1 <= piles[i][j] <= 105
+1 <= k <= sum(piles[i].length) <= 2000
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
