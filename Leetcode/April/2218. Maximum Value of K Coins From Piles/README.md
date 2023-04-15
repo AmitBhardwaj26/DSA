@@ -20,12 +20,6 @@ Explanation: The above diagram shows the different ways we can choose k coins.
 The maximum total we can obtain is 101.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
-
 Constraints:
 <pre>
 n == piles.length
