@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+There are n piles of coins on a table. Each pile consists of a positive number of coins of assorted denominations.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+In one move, you can choose any coin on top of any pile, remove it, and add it to your wallet.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Given a list piles, where piles[i] is a list of integers denoting the composition of the ith pile from top to bottom, and a positive integer k, return the maximum total value of coins you can have in your wallet if you choose exactly k coins optimally.
 </p>
 
 
