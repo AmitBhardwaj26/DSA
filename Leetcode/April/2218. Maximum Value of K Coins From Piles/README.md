@@ -13,7 +13,7 @@ Given a list piles, where piles[i] is a list of integers denoting the compositio
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  piles = [[1,100,3],[7,8,9]], k = 2
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 101
 </pre>
 <pre>
 Explanation: The above diagram shows the different ways we can choose k coins.
