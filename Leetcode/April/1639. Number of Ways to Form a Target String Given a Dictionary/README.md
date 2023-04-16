@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/description/">985. Sum of Even Numbers After Queries</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
 You are given a list of strings of the same length words and a string target.
