@@ -44,27 +44,44 @@ words[i] and target contain only lowercase English letters.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+#define ll long long
+class Solution {
+    int md = 1e9+7;
+
+    int solve(vector<string>& words, string &target,
+     vector<vector<ll>> &ichar, int i, int j, vector<vector<ll>> &dp){
+        if (j>=target.size())
+            return 1;
+        if (i>=words[0].size())
+            return 0;
+        if (dp[i][j]!=-1)
+            return dp[i][j] ;
+
+        ll inc = 0 , exc = 0;
+
+        if (ichar[i][target[j]-'a'])
+            inc = ( (ichar[i][target[j]-'a'])*(solve(words,target,ichar,i+1,j+1,dp)) )%md;
+        
+        exc = solve(words,target,ichar,i+1,j,dp) ;
+
+        return dp[i][j] = (inc+exc)%md;
+    }
+
+public:
+    int numWays(vector<string>& words, string target) {
+        int N = words.size() , M = words[0].size() ;
+
+        vector<vector<ll>> ichar(M,vector<ll>(26)) ;
+
+        for (string &s : words){
+            for (int i=0; i<M; i++)
+                ichar[i][s[i]-'a']++;
+        }
+
+        vector<vector<ll>> dp(M+1,vector<ll>(target.size()+1,-1)) ;
+
+        return solve(words,target,ichar,0,0,dp) ;
+    }
+};
  </pre>
 
