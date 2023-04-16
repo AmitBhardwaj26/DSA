@@ -30,20 +30,15 @@ Explanation: There are 6 ways to form target.
 "aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("acca")
 "aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("caca")
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= words.length <= 1000
+1 <= words[i].length <= 1000
+All strings in words have the same length.
+1 <= target.length <= 1000
+words[i] and target contain only lowercase English letters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
