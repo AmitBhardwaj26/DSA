@@ -27,11 +27,10 @@ Explanation: If you give all extraCandies to:
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == candies.length
+2 <= n <= 100
+1 <= candies[i] <= 100
+1 <= extraCandies <= 50
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
