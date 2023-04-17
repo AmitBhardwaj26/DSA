@@ -13,7 +13,7 @@ Note that multiple kids can have the greatest number of candies.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong> candies = [2,3,5,1,3], extraCandies = 3
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>[true,true,true,false,true] 
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
