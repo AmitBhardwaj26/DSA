@@ -33,27 +33,20 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    string mergeAlternately(string word1, string word2) {
+        string ans="";
+        int i=0,j=0;
+        while(i<word1.size() && j<word2.size())
+        {
+            ans+=word1[i++];
+            ans+=word2[j++];
+        }
+        while(i<word1.size()) ans+=word1[i++];
+        while(j<word2.size()) ans+=word2[j++];
+        return ans;
+    }
+};
  </pre>
 
