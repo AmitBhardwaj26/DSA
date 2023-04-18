@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">1768. Merge Strings Alternately</a></h2>
+<h2><a href="https://leetcode.com/problems/merge-strings-alternately/description/">1768. Merge Strings Alternately</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
