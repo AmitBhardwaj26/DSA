@@ -19,11 +19,6 @@ word1:  a   b   c
 word2:    p   q   r
 merged: a p b q c r
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
