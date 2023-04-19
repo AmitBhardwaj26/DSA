@@ -39,26 +39,31 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+class Solution {
+public:
+    int ans=0;
+    void solve(TreeNode* root, int dir,int count)
+    {
+        if(root==NULL) return ;
+        ans=max(ans,count);
+        if(dir==1) 
+        {
+            solve(root->left,1,1);
+            solve(root->right,2,count+1);
+        }
+        else 
+        {
+          solve(root->left,1,count+1);
+          solve(root->right,2,1);
+        } 
+        return ;
+    }
+    
+    int longestZigZag(TreeNode* root) {
+        solve(root->left,1,1);
+        solve(root->right,2,1);
+        return ans;
+    }
+};
  </pre>
 
