@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">1372. Longest ZigZag Path in a Binary Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/">1372. Longest ZigZag Path in a Binary Tree</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
