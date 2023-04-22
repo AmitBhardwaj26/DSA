@@ -15,7 +15,7 @@ A Palindrome String is one that reads the same backward as well as forward.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   s = "zzazz"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 0
 </pre>
 <pre>
 Explanation: The string "zzazz" is already palindrome we do not need any insertions.
