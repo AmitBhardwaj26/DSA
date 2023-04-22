@@ -24,11 +24,8 @@ Explanation: The string "zzazz" is already palindrome we do not need any inserti
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= s.length <= 500
+s consists of lowercase English letters.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
