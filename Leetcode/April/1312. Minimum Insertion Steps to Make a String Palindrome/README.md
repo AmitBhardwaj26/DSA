@@ -3,11 +3,13 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given a string s. In one step you can insert any character at any index of the string.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Return the minimum number of steps to make s palindrome.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+A Palindrome String is one that reads the same backward as well as forward.
+
+ 
 </p>
 
 
