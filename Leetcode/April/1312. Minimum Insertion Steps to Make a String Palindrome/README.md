@@ -20,11 +20,6 @@ A Palindrome String is one that reads the same backward as well as forward.
 <pre>
 Explanation: The string "zzazz" is already palindrome we do not need any insertions.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
