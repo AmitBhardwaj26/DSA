@@ -29,11 +29,8 @@ we combine 1 and 1 to get 0 so the array converts to [1] then that's the value o
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= stones.length <= 30
+1 <= stones[i] <= 1000
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
