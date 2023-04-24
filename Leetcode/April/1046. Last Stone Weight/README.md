@@ -36,27 +36,24 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    int lastStoneWeight(vector<int>& s) {
+        priority_queue<int> q;
+        for(int i=0;i<s.size();i++)
+        {
+            q.push(s[i]);
+        }
+        while(q.size()>1)
+        {
+            int x=q.top(); q.pop();
+            int y=q.top(); q.pop();
+            if(x!=y) q.push(abs(y-x));
+            
+        }
+        if(q.size()==0) return 0;
+        return q.top();
+    }
+};
  </pre>
 
