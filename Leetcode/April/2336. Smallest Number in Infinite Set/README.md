@@ -17,7 +17,7 @@ void addBack(int num) Adds a positive integer num back into the infinite set, if
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  ["SmallestInfiniteSet", "addBack", "popSmallest", "popSmallest", "popSmallest", "addBack", "popSmallest", "popSmallest", "popSmallest"]
 [[], [2], [], [], [], [1], [], [], []]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [null, null, 1, 2, 3, null, 1, 4, 5]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
