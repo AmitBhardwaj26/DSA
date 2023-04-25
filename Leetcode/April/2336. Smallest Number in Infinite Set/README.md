@@ -3,11 +3,14 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+You have a set which contains all positive integers [1, 2, 3, 4, 5, ...].
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Implement the SmallestInfiniteSet class:
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+SmallestInfiniteSet() Initializes the SmallestInfiniteSet object to contain all positive integers.
+int popSmallest() Removes and returns the smallest integer contained in the infinite set.
+void addBack(int num) Adds a positive integer num back into the infinite set, if it is not already in the infinite set.
+ 
 </p>
 
 
