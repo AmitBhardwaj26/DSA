@@ -31,11 +31,6 @@ smallestInfiniteSet.popSmallest(); // return 1, since 1 was added back to the se
 smallestInfiniteSet.popSmallest(); // return 4, and remove it from the set.
 smallestInfiniteSet.popSmallest(); // return 5, and remove it from the set.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
