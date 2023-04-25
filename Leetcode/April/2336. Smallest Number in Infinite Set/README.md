@@ -35,11 +35,8 @@ smallestInfiniteSet.popSmallest(); // return 5, and remove it from the set.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= num <= 1000
+At most 1000 calls will be made in total to popSmallest and addBack.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
