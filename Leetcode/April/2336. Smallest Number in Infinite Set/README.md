@@ -20,11 +20,16 @@ void addBack(int num) Adds a positive integer num back into the infinite set, if
 <strong>Output:</strong> [null, null, 1, 2, 3, null, 1, 4, 5]
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+Explanation: SmallestInfiniteSet smallestInfiniteSet = new SmallestInfiniteSet();
+smallestInfiniteSet.addBack(2);    // 2 is already in the set, so no change is made.
+smallestInfiniteSet.popSmallest(); // return 1, since 1 is the smallest number, and remove it from the set.
+smallestInfiniteSet.popSmallest(); // return 2, and remove it from the set.
+smallestInfiniteSet.popSmallest(); // return 3, and remove it from the set.
+smallestInfiniteSet.addBack(1);    // 1 is added back to the set.
+smallestInfiniteSet.popSmallest(); // return 1, since 1 was added back to the set and
+                                   // is the smallest number, and remove it from the set.
+smallestInfiniteSet.popSmallest(); // return 4, and remove it from the set.
+smallestInfiniteSet.popSmallest(); // return 5, and remove it from the set.
   </pre>
   
 Example 2:
