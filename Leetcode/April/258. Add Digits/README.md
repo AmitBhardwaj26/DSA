@@ -26,11 +26,7 @@ Since 2 has only one digit, return it.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+0 <= num <= 231 - 1
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
