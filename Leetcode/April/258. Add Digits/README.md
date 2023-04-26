@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">258. Add Digits</a></h2>
+<h2><a href="https://leetcode.com/problems/add-digits/description/">258. Add Digits</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
