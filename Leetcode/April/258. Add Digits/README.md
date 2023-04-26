@@ -13,7 +13,7 @@ Return an integer array answer where answer[i] is the answer to the ith query.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   num = 38
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 2
 </pre>
 <pre>
 Explanation: The process is
