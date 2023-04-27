@@ -3,11 +3,11 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+There are n bulbs that are initially off. You first turn on all the bulbs, then you turn off every second bulb.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+On the third round, you toggle every third bulb (turning on if it's off or turning off if it's on). For the ith round, you toggle every i bulb. For the nth round, you only toggle the last bulb.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return the number of bulbs that are on after n rounds.
 </p>
 
 
