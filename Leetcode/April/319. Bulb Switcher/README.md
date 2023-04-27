@@ -26,11 +26,7 @@ After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+0 <= n <= 109
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
