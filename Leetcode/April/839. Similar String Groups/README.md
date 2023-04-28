@@ -17,7 +17,7 @@ We are given a list strs of strings where every string in strs is an anagram of 
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   strs = ["tars","rats","arts","star"]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 2
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
