@@ -45,27 +45,37 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    int numSimilarGroups(vector<string>& strs) {
+        int groups = 0, n = strs.size();
+        vector<bool> vis(n, false);
+        for(int i=0;i<strs.size();i++){
+            if(vis[i]) continue;
+            groups++;
+            dfs(i, strs, vis);
+        }
+        return groups;
+    }
+
+    void dfs(int i, vector<string>& strs, vector<bool>& vis){
+        vis[i] = true;
+        for(int j=0;j<strs.size();j++){
+            if(vis[j]) continue;
+            if(is_similar(strs[i], strs[j])){
+                dfs(j, strs, vis);
+            }
+        }
+    }
+
+    bool is_similar(string a, string b){
+        int count=0;
+        for(int i=0; i<a.length(); i++){
+            if(a[i] != b[i]) count++;
+        }
+        return (count == 2 || count == 0);
+    }
+
+};
  </pre>
 
