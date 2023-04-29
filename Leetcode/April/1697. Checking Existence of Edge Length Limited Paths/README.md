@@ -16,11 +16,9 @@ Return a boolean array answer, where answer.length == queries.length and the jth
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+Explanation: The above figure shows the given graph. Note that there are two overlapping edges between 0 and 1 with distances 2 and 16.
+For the first query, between 0 and 1 there is no path where each distance is less than 2, thus we return false for this query.
+For the second query, there is a path (0 -> 1 -> 2) of two edges with distances less than 5, thus we return true for this query.
   </pre>
   
 Example 2:
