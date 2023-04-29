@@ -24,11 +24,15 @@ For the second query, there is a path (0 -> 1 -> 2) of two edges with distances 
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+2 <= n <= 105
+1 <= edgeList.length, queries.length <= 105
+edgeList[i].length == 3
+queries[j].length == 3
+0 <= ui, vi, pj, qj <= n - 1
+ui != vi
+pj != qj
+1 <= disi, limitj <= 109
+There may be multiple edges between two nodes.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
