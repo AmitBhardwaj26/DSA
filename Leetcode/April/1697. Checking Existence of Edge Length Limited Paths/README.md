@@ -13,7 +13,7 @@ Return a boolean array answer, where answer.length == queries.length and the jth
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  n = 3, edgeList = [[0,1,2],[1,2,4],[2,0,8],[1,0,16]], queries = [[0,1,2],[0,2,5]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [false,true]
 </pre>
 <pre>
 Explanation: The above figure shows the given graph. Note that there are two overlapping edges between 0 and 1 with distances 2 and 16.
