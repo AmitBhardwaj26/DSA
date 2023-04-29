@@ -21,11 +21,6 @@ For the first query, between 0 and 1 there is no path where each distance is les
 For the second query, there is a path (0 -> 1 -> 2) of two edges with distances less than 5, thus we return true for this query.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
