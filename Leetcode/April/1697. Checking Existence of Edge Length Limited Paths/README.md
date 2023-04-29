@@ -12,7 +12,7 @@ Return a boolean array answer, where answer.length == queries.length and the jth
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>  n = 3, edgeList = [[0,1,2],[1,2,4],[2,0,8],[1,0,16]], queries = [[0,1,2],[0,2,5]]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
