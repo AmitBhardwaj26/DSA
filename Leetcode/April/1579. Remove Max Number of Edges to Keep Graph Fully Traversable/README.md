@@ -15,7 +15,7 @@ Return the maximum number of edges you can remove, or return -1 if Alice and Bob
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>    n = 4, edges = [[3,1,2],[3,2,3],[1,1,3],[1,2,4],[1,1,2],[2,3,4]]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
