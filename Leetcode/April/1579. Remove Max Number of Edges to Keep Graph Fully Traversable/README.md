@@ -30,11 +30,12 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= n <= 105
+1 <= edges.length <= min(105, 3 * n * (n - 1) / 2)
+edges[i].length == 3
+1 <= typei <= 3
+1 <= ui < vi <= n
+All tuples (typei, ui, vi) are distinct.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
