@@ -41,28 +41,91 @@ All tuples (typei, ui, vi) are distinct.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class DisjointSet {
+    vector<int> rank, parent, size;
+public:
+    DisjointSet(int n) {
+        rank.resize(n + 1, 0);
+        parent.resize(n + 1);
+        size.resize(n + 1);
+        for (int i = 0; i <= n; i++) {
+            parent[i] = i;
+            size[i] = 1;
+        }
+    }
+
+    int findUPar(int node) {
+        if (node == parent[node])
+            return node;
+        return parent[node] = findUPar(parent[node]);
+    }
+
+    void unionBySize(int u, int v) {
+        int ulp_u = findUPar(u);
+        int ulp_v = findUPar(v);
+        if (ulp_u == ulp_v) return;
+        if (size[ulp_u] < size[ulp_v]) {
+            parent[ulp_u] = ulp_v;
+            size[ulp_v] += size[ulp_u];
+        }
+        else {
+            parent[ulp_v] = ulp_u;
+            size[ulp_u] += size[ulp_v];
+        }
+    }
+};
+
+
+class Solution {
+public:
+    int maxNumEdgesToRemove(int n, vector<vector<int>>& edges) {
+        DisjointSet ds1(n),ds2(n);
+        int ans=0;
+        //cout<<edges.size()<<" ";
+        for(auto it: edges)
+        {
+            bool check1=0,check2=0;
+            if(it[0]==3 )
+            {
+                if(ds1.findUPar(it[1])!=ds1.findUPar(it[2]))
+                   ds1.unionBySize(it[1],it[2]); 
+                else check1=1;
+
+                if(ds2.findUPar(it[1])!=ds2.findUPar(it[2]))
+                   ds2.unionBySize(it[1],it[2]);
+                else check2=1;
+
+                if(check1 && check2) ans++;
+            }   
+        }
+        //cout<<ans<<"\n";
+        for(auto it: edges)
+        {
+            if(it[0]==1 )
+            {
+                if(ds1.findUPar(it[1])!=ds1.findUPar(it[2]))
+                   ds1.unionBySize(it[1],it[2]);
+                else ans++;
+            }
+            else if(it[0]==2 )
+            {
+                if(ds2.findUPar(it[1])!=ds2.findUPar(it[2]))
+                   ds2.unionBySize(it[1],it[2]);
+                else ans++;
+            } 
+        }
+        set<int> s1,s2;
+        for(int i=1;i<=n;i++)
+        {
+            int x=ds1.findUPar(i),y=ds2.findUPar(i);
+            if(x>0) s1.insert(x); 
+            if(y>0) s2.insert(y);
+            if(s1.size()>1 || s2.size()>1 ) return -1;
+        }
+
+        return ans;
+    }
+};
  </pre>
 
 
