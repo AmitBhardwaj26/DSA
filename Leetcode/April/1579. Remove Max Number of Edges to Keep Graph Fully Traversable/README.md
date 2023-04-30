@@ -3,11 +3,14 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Alice and Bob have an undirected graph of n nodes and three types of edges:
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+Type 1: Can be traversed by Alice only.
+Type 2: Can be traversed by Bob only.
+Type 3: Can be traversed by both Alice and Bob.
+Given an array edges where edges[i] = [typei, ui, vi] represents a bidirectional edge of type typei between nodes ui and vi, find the maximum number of edges you can remove so that after removing the edges, the graph can still be fully traversed by both Alice and Bob. The graph is fully traversed by Alice and Bob if starting from any node, they can reach all other nodes.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return the maximum number of edges you can remove, or return -1 if Alice and Bob cannot fully traverse the graph.
 </p>
 
 
