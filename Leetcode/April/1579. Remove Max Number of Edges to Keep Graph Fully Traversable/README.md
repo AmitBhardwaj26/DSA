@@ -16,7 +16,7 @@ Return the maximum number of edges you can remove, or return -1 if Alice and Bob
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>    n = 4, edges = [[3,1,2],[3,2,3],[1,1,3],[1,2,4],[1,1,2],[2,3,4]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 2
 </pre>
 <pre>
 Explanation: If we remove the 2 edges [1,1,2] and [1,1,3]. The graph will still be fully traversable by Alice and Bob. Removing any additional edge will not make it so. So the maximum number of edges we can remove is 2.
