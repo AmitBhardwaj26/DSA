@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">1491. Average Salary Excluding the Minimum and Maximum Salary</a></h2>
+<h2><a href="https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/description/">1491. Average Salary Excluding the Minimum and Maximum Salary</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
