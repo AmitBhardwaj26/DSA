@@ -18,12 +18,6 @@ Explanation: Minimum salary and maximum salary are 1000 and 4000 respectively.
 Average salary excluding minimum and maximum salary is (2000+3000) / 2 = 2500
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
-
 Constraints:
 <pre>
 3 <= salary.length <= 100
