@@ -26,11 +26,9 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+3 <= salary.length <= 100
+1000 <= salary[i] <= 106
+All the integers of salary are unique.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
