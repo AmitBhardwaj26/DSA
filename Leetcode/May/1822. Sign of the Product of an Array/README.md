@@ -3,11 +3,14 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+There is a function signFunc(x) that returns:
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+1 if x is positive.
+-1 if x is negative.
+0 if x is equal to 0.
+You are given an integer array nums. Let product be the product of all values in the array nums.
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+Return signFunc(product).
 </p>
 
 
