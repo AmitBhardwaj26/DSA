@@ -16,7 +16,7 @@ Return signFunc(product).
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   nums = [-1,-2,-3,-4,3,2,1]
-<strong>Output:</strong> The product of all values in the array is 144, and signFunc(144) = 1
+<strong>Output:</strong> 1
 </pre>
 <pre>
 Explanation: The product of all values in the array is 144, and signFunc(144) = 1
