@@ -13,7 +13,7 @@ Note that the integers in the lists may be returned in any order.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong>  [[1,3],[4,6]]
 </pre>
 <pre>
 Explanation: For nums1, nums1[1] = 2 is present at index 0 of nums2, whereas nums1[0] = 1 and nums1[2] = 3 are not present in nums2. Therefore, answer[0] = [1,3].
