@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">2215. Find the Difference of Two Arrays</a></h2>
+<h2><a href="https://leetcode.com/problems/find-the-difference-of-two-arrays/description/">2215. Find the Difference of Two Arrays</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
