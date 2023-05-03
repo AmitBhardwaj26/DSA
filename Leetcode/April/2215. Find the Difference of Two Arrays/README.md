@@ -36,26 +36,36 @@ Constraints:
  <br>
  <pre>
  
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+       class Solution {
+public:
+    vector<vector<int>> findDifference(vector<int>& n1, vector<int>& n2) {
+        //sort(n1.begin(),n1.end());
+        //sort(n2.begin(),n2.end());
+        set<int> s1,s2;
+        for(int i=0;i<n1.size();i++)
+        {
+            s1.insert(n1[i]);
+        }
+        for(int i=0;i<n2.size();i++)
+        {
+            s2.insert(n2[i]);
+        }
+        vector<vector<int>> ans;
+        vector<int> v1,v2;
+        for(auto it: s1)
+        {
+            if(s2.find(it)==s2.end()) v1.push_back(it);
+        }
+        ans.push_back(v1);
+         for(auto it: s2)
+        {
+            if(s1.find(it)==s1.end()) v2.push_back(it);
+        }
+        ans.push_back(v2);
+      return ans;        
+        
+        
+    }
+};
  </pre>
 
