@@ -26,11 +26,6 @@ Explanation: The first senator comes from Radiant and he can just ban the next s
 And the second senator can't exercise any rights anymore since his right has been banned. 
 And in round 2, the first senator can just announce the victory since he is the only guy in the senate who can vote.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
