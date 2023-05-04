@@ -19,7 +19,7 @@ Suppose every senator is smart enough and will play the best strategy for his ow
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  senate = "RD"
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> "Radiant"
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
