@@ -22,11 +22,9 @@ Suppose every senator is smart enough and will play the best strategy for his ow
 <strong>Output:</strong> "Radiant"
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+Explanation: The first senator comes from Radiant and he can just ban the next senator's right in round 1. 
+And the second senator can't exercise any rights anymore since his right has been banned. 
+And in round 2, the first senator can just announce the victory since he is the only guy in the senate who can vote.
   </pre>
   
 Example 2:
