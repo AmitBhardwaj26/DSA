@@ -35,11 +35,9 @@ Output: [0]
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+n == senate.length
+1 <= n <= 104
+senate[i] is either 'R' or 'D'.
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
