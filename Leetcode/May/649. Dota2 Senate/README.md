@@ -43,27 +43,20 @@ senate[i] is either 'R' or 'D'.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    string predictPartyVictory(string senate) {
+        queue<int> q1, q2;
+        int n = senate.length();
+        for(int i = 0; i<n; i++)
+            (senate[i] == 'R')?q1.push(i):q2.push(i);
+        while(!q1.empty() && !q2.empty()){
+            int r_index = q1.front(), d_index = q2.front();
+            q1.pop(), q2.pop();
+            (r_index < d_index)?q1.push(r_index + n):q2.push(d_index + n);
+        }
+        return (q1.size() > q2.size())? "Radiant" : "Dire";
+    }
+};
  </pre>
 
