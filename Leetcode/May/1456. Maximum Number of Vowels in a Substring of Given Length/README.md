@@ -28,27 +28,31 @@ s consists of lowercase English letters.
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+   static boolean isVowel(char c)
+   {
+       String s="aeiou";
+       for(int i=0;i<5;i++) if(s.charAt(i)==c) return true;
+       return false;
+   }
+
+    public int maxVowels(String s, int k) {
+        int count=0,i=0,j=0,ans=0,n=s.length();
+
+        for(i=0;i<k;i++)
+        {
+            if(isVowel(s.charAt(i))) count++;
+        }
+        ans=Math.max(ans,count);
+        while(i<n)
+        {
+            if(isVowel(s.charAt(j))) count--;
+            if(isVowel(s.charAt(i))) count++;
+            ans=Math.max(ans,count);
+            i++;j++;
+        }
+        return ans;
+    }
+}
  </pre>
 
