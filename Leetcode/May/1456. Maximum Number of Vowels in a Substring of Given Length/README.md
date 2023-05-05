@@ -17,11 +17,6 @@ Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
 Explanation: The substring "iii" contains 3 vowel letters.
   </pre>
   
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
