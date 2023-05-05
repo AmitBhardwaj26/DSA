@@ -3,11 +3,9 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+Given a string s and an integer k, return the maximum number of vowel letters in any substring of s with length k.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
-
-Return an integer array answer where answer[i] is the answer to the ith query.
+Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
 </p>
 
 
