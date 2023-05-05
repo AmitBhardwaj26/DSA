@@ -11,7 +11,7 @@ Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>    s = "abciiidef", k = 3
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 3
 </pre>
 <pre>
 Explanation: The substring "iii" contains 3 vowel letters.
