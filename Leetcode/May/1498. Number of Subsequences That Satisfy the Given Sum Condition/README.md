@@ -13,7 +13,7 @@ Return an integer array answer where answer[i] is the answer to the ith query.
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>   nums = [3,5,6,7], target = 9
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 4
 </pre>
 <pre>
 Explanation: There are 4 subsequences that satisfy the condition.
