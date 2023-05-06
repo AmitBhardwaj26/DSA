@@ -26,11 +26,9 @@ Explanation: There are 4 subsequences that satisfy the condition.
 
 Constraints:
 <pre>
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
-1 <= queries.length <= 104
--104 <= vali <= 104
-0 <= indexi < nums.length
+1 <= nums.length <= 105
+1 <= nums[i] <= 106
+1 <= target <= 106
 </pre>
 <hr>
  <h2><strong><b>Solution</b></strong></h2>
