@@ -22,11 +22,6 @@ Explanation: There are 4 subsequences that satisfy the condition.
 [3,5,6] -> (3 + 6 <= 9)
 [3,6] -> (3 + 6 <= 9)
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
  
 
 Constraints:
