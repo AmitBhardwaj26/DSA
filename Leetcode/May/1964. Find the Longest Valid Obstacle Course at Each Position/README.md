@@ -26,12 +26,6 @@ Explanation: The longest valid obstacle course at each position is:
 - i = 2: [1,2,3], [1,2,3] has length 3.
 - i = 3: [1,2,3,2], [1,2,2] has length 3.
   </pre>
-  
-Example 2:
-
-Input: nums = [1], queries = [[4,0]]
-Output: [0]
- 
 
 Constraints:
 <pre>
