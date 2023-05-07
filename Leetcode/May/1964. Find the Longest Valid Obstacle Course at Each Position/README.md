@@ -16,7 +16,7 @@ Return an array ans of length n, where ans[i] is the length of the longest obsta
 
 
 <p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong>   nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+<pre><strong>Input:</strong>   obstacles = [1,2,3,2]
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
