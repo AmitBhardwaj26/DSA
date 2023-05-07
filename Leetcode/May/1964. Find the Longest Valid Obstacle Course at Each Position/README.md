@@ -43,27 +43,35 @@ n == obstacles.length
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ //`the question is simple based on the approach of longest increasing subsequenece 
+// as there are duplicate elements can be present that why use upper bound intead of lower bound at each point iterator is the answer
+class Solution {
+public:
+    vector<int> longestObstacleCourseAtEachPosition(vector<int>& obs) {
+        int n=obs.size();
+        vector<int> ans;
+        vector<int> dp;
+
+        dp.push_back(obs[0]); 
+        ans.push_back(1);
+        
+        for(int i=1;i<n;i++)
+        {
+            if(dp.back()<=obs[i]) 
+            {
+              dp.push_back(obs[i]); 
+              ans.push_back(dp.size());
+            }
+            else
+            {
+                 int it=upper_bound(dp.begin(),dp.end(),obs[i])-dp.begin();
+                //cout<<it<<" ";
+                 dp[it]=obs[i];
+                ans.push_back(it+1);  
+            }
+        }
+        return ans;
+    }
+};
  </pre>
 
