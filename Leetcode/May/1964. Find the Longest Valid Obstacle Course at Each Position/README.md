@@ -1,6 +1,6 @@
 
 <h2><a href="https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/description/">1964. Find the Longest Valid Obstacle Course at Each Position</a></h2>
-<h3>Medium</h3>
+<h3>Hard</h3>
 <hr>
 <div><p>
 You want to build some obstacle courses. You are given a 0-indexed integer array obstacles of length n, where obstacles[i] describes the height of the ith obstacle.
