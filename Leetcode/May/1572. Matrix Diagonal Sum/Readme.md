@@ -14,11 +14,8 @@ Only include the sum of all the elements on the primary diagonal and all the ele
 <strong>Output:</strong> [8,6,2,4]
 </pre>
 <pre>
-Explanation: At the beginning, the array is [1,2,3,4].
-After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+Explanation: Diagonals sum: 1 + 5 + 9 + 3 + 7 = 25
+Notice that element mat[1][1] = 5 is counted only once.
   </pre>
   
 Example 2:
