@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/matrix-diagonal-sum/description/">985. Sum of Even Numbers After Queries</a></h2>
+<h2><a href="https://leetcode.com/problems/matrix-diagonal-sum/description/">1572. Matrix Diagonal Sum</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
