@@ -11,7 +11,7 @@ Only include the sum of all the elements on the primary diagonal and all the ele
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  mat = [[1,2,3], [4,5,6], [7,8,9]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> 25
 </pre>
 <pre>
 Explanation: Diagonals sum: 1 + 5 + 9 + 3 + 7 = 25
