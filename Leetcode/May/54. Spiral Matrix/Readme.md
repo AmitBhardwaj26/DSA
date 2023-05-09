@@ -9,7 +9,7 @@
 
 <p><strong>Example 1:</strong></p>
 <pre><strong>Input:</strong>  matrix = [[1,2,3],[4,5,6],[7,8,9]]
-<strong>Output:</strong> [8,6,2,4]
+<strong>Output:</strong> [1,2,3,6,9,8,7,4,5]
 </pre>
 <pre>
 Explanation: At the beginning, the array is [1,2,3,4].
