@@ -32,27 +32,36 @@ n == matrix[i].length
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        int m=matrix.size(),n=matrix[0].size();
+        if(m==1) return matrix[0];
+        vector<int> ans;
+        int si =m*n;
+        int c=0;
+        if(n==1) 
+        {
+            for(int i=0;i<m;i++) ans.push_back(matrix[i][0]);
+            return ans;
+         }
+
+        int rs=0,cs=0,ce=n-1,re=m-1,ccs=0;
+        while(rs<=re && cs<=ce)
+        {
+            for(int i=rs;i<ce;i++) ans.push_back(matrix[rs][i]);
+            rs++;
+            for(int i=cs;i<re;i++) ans.push_back(matrix[i][ce]);
+            cs++;
+            for(int i=ce;i>=rs;i--) ans.push_back(matrix[re][i]);
+            ce--;
+            for(int i=re;i>=rs;i--) ans.push_back(matrix[i][ccs]);
+              ccs++; re--;  
+        }
+        ans.push_back(matrix[m/2][n/2]);
+       while(ans.size()>si) ans.pop_back();
+        return ans;
+    }
+};
  </pre>
 
