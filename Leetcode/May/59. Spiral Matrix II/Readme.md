@@ -41,27 +41,31 @@ Constraints:
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+    vector<vector<int>> generateMatrix(int n) {
+        int rs=0,cs=0,ccs=0,re=n-1,ce=n-1;
+        vector<vector<int>> ans(n,vector<int> (n,0));
+        int x=1;
+        while(rs<=re && cs<=ce)
+        {
+            for(int i=rs;i<ce;i++)
+            ans[rs][i]=x++;
+            rs++;
+            for(int i=cs;i<re;i++)
+                ans[i][ce]=x++;
+            cs++;
+            for(int i=ce;i>=rs;i--)
+            ans[re][i]=x++;
+            ce--;
+            for(int i=re;i>=rs;i--)
+            ans[i][ccs]=x++;
+            ccs++,re--;
+            
+        }
+      if(n%2!=0) ans[n/2][n/2]=n*n;
+        return ans;
+    }
+};
  </pre>
 
