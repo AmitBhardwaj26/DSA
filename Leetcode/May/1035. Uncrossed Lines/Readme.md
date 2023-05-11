@@ -3,11 +3,15 @@
 <h3>Medium</h3>
 <hr>
 <div><p>
- You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
+You are given two integer arrays nums1 and nums2. We write the integers of nums1 and nums2 (in the order they are given) on two separate horizontal lines.
 
-For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
+We may draw connecting lines: a straight line connecting two numbers nums1[i] and nums2[j] such that:
 
-Return an integer array answer where answer[i] is the answer to the ith query.
+nums1[i] == nums2[j], and
+the line we draw does not intersect any other connecting (non-horizontal) line.
+Note that a connecting line cannot intersect even at the endpoints (i.e., each number can only belong to one connecting line).
+
+Return the maximum number of connecting lines we can draw in this way.
 </p>
 
 
