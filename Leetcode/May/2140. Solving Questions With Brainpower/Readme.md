@@ -1,5 +1,5 @@
 
-<h2><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/">2140. Solving Questions With Brainpower</a></h2>
+<h2><a href="https://leetcode.com/problems/solving-questions-with-brainpower/description/">2140. Solving Questions With Brainpower</a></h2>
 <h3>Medium</h3>
 <hr>
 <div><p>
