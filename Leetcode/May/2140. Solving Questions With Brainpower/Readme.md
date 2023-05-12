@@ -43,27 +43,29 @@ questions[i].length == 2
  <h2><strong><b>Solution</b></strong></h2>
  <br>
  <pre>
- 
-          class Solution {
-          public:
-              vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& q) {
-                  int ans=0;
-                  for(int i=0;i<nums.size();i++)
-                  {
-                      if(nums[i]%2==0) ans+=nums[i];
-                  }
-                  vector<int> v;
-                  for(int i=0;i<q.size();i++)
-                  {
-                      int val=q[i][0],ind=q[i][1];
-                      if(nums[ind]%2==0) ans-=nums[ind];
-                      nums[ind]+=val;
-                      if(nums[ind]%2==0) ans+=nums[ind];
-                      v.push_back(ans);
-                  }
-                  return v;
-              }
-          };
-          
+ class Solution {
+public:
+     vector<long long> dp;
+    long long solve(vector<vector<int>>& q, int n ) 
+    {
+        //base case
+        if(n>=q.size() ) return 0;
+        
+         if( dp[n]!=-1) return dp[n]; 
+         
+         
+        //choice diagram
+        return dp[n]=max((long long)q[n][0]+(long long)solve(q,n+q[n][1]+1) , (long long)solve(q,n+1) );
+       
+    }
+    
+    
+    long long mostPoints(vector<vector<int>>& qu) {
+        int n=qu.size();
+         dp.resize(n+1,-1);
+        //memset(dp,-1,sizeof(dp));
+        return solve(qu,0);
+    }
+};
  </pre>
 
