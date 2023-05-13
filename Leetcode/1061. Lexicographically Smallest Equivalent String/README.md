@@ -28,9 +28,7 @@ Return the lexicographically smallest equivalent string of baseStr by using the 
 The characters in each group are equivalent and sorted in lexicographical order.
 So the answer is "makkek".
   </pre>
-  
  
-
 Constraints:
 <pre>
 1 <= nums.length <= 104
